@@ -1,0 +1,22 @@
+/*内容*/
+h1 {
+  font-size: 45px;
+  margin-top: 1.2em;
+  margin-bottom: -0.2em;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+p,
+li {
+  font-size: 15px;
+}
+
+@media (min-width: 790px) {
+  p,
+  li {
+    font-size: 20px;
+  }
+}
