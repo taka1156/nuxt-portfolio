@@ -8,26 +8,26 @@
 </template>
 
 <script>
-import CardList from "@/components/Card/CardList";
+import CardList from '@/components/Card/CardList';
 
 export default {
-  name: "Portfolio",
+  name: 'Portfolio',
   components: {
-    "card-list": CardList
+    'card-list': CardList,
+  },
+  async asyncData({ $axios }) {
+    const MCMS_PORTFOLIO = 'https://taka_portfolio.microcms.io/api/v1/portfolio';
+    const OPTION = '?fields=title,img,content1,content2,link';
+    const { contents } = await $axios.$get(MCMS_PORTFOLIO + OPTION, {
+      headers: { 'X-API-KEY': process.env.MICRO_CMS },
+    });
+    return { portfolios: contents };
   },
   data() {
     return {
-      portfolios: []
+      portfolios: [],
     };
   },
-  async asyncData({ $axios }) {
-    const MICRO_CMS_PORTFOLIO = "https://taka_portfolio.microcms.io/api/v1/portfolio";
-    const OPTION = "?fields=title,img,content1,content2,link";
-    const { contents } = await $axios.$get(MICRO_CMS_PORTFOLIO + OPTION, {
-      headers: { "X-API-KEY": process.env.MICRO_CMS }
-    });
-    return { portfolios: contents };
-  }
 };
 </script>
 

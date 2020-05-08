@@ -19,7 +19,7 @@ export default {
       this.$router.push('/home');
       clearTimeout(JUMP);
     }, 1800);
-  }
+  },
 };
 </script>
 

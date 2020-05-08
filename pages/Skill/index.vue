@@ -8,25 +8,25 @@
 </template>
 
 <script>
-import CardList from "@/components/Card/CardList";
+import CardList from '@/components/Card/CardList';
 
 export default {
-  name: "Skill",
+  name: 'Skill',
   components: {
-    "card-list": CardList
+    'card-list': CardList,
+  },
+  async asyncData({ $axios }) {
+    const MCMS_SKILL = 'https://taka_portfolio.microcms.io/api/v1/skill';
+    const OPTION = '?fields=title,img,content1,content2';
+    const { contents } = await $axios.$get(MCMS_SKILL + OPTION, {
+      headers: { 'X-API-KEY': process.env.MICRO_CMS },
+    });
+    return { skills: contents };
   },
   data() {
     return {
-      skills: []
+      skills: [],
     };
   },
-  async asyncData({ $axios }) {
-    const MICRO_CMS_SKILL = "https://taka_portfolio.microcms.io/api/v1/skill";
-    const OPTION = "?fields=title,img,content1,content2";
-    const { contents } = await $axios.$get(MICRO_CMS_SKILL + OPTION, {
-      headers: { "X-API-KEY": process.env.MICRO_CMS }
-    });
-    return { skills: contents };
-  }
 };
 </script>
