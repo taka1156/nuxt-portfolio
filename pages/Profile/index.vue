@@ -70,23 +70,23 @@ export default {
       Skills: [
         {
           name: 'ITパスポート',
-          contents: '2017年 10月'
+          contents: '2017年 10月',
         },
         {
           name: '情報セキュリティマネジメント',
-          contents: '2018年 5月'
+          contents: '2018年 5月',
         },
         {
           name: '基本情報技術者試験',
-          contents: '2018年 11月'
+          contents: '2018年 11月',
         },
         {
           name: '応用情報技術者試験',
-          contents: '2019年  6月'
-        }
-      ]
+          contents: '2019年  6月',
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
