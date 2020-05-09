@@ -10,10 +10,10 @@
           <h2 class="contents__title">最近やっていること</h2>
           <div class="contents__box">
             <ul class="contents__list">
-              <li>VueやNuxtについて、作りながら学ぶ。</li>
+              <li>ConohaでLaravel環境を作って開発</li>
               <li>JavaScript(ES6)について学習。</li>
-              <li>electronでデスクトップアプリを作る</li>
-              <li>laravelの学習</li>
+              <li>FireBaseを利用した開発</li>
+              <li>Laravelの学習</li>
             </ul>
           </div>
         </section>
@@ -22,8 +22,7 @@
           <h2 class="contents__title">これからやりたいこと</h2>
           <div class="contents__box">
             <ul class="contents__list">
-              <li>Express.jsの学習</li>
-              <li>MEVNでサーバ環境構築。</li>
+              <li>TypeScriptの学習</li>
               <li>Vue + Ionicでアプリ作成</li>
               <li>SASSの学習</li>
             </ul>
@@ -36,8 +35,8 @@
             <ul class="contents__list">
               <li>Homebrew</li>
               <li>VScode</li>
-              <li>docker(+ docker-compose)</li>
-              <li>Laradock</li>
+              <li>Docker(+ docker-compose)</li>
+              <li>LaraDock</li>
               <li>phpMyAdmin</li>
             </ul>
           </div>
@@ -118,6 +117,34 @@ export default {
   width: 90%;
 }
 
+.contents__list {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+}
+
+.contents__list li {
+  border: solid 1px dimgray;
+  position: relative;
+  margin: 7px;
+  font-size: 0.6em;
+  padding-left: 40px;
+  line-height: 30px;
+  color: dimgray;
+}
+
+.contents__list li:before {
+  content: ' ';
+  position: absolute;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  background: dimgray;
+  top: 0%;
+}
+
 @media (min-width: 790px) {
   .contents__box {
     width: 60%;
@@ -126,10 +153,10 @@ export default {
   .jumbotron {
     width: 80%;
   }
-}
 
-.contents__list {
-  text-align: left;
+  .contents__list li {
+    font-size: 16px;
+  }
 }
 
 table {
