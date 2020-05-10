@@ -10,8 +10,7 @@
           <h2 class="contents__title">最近やっていること</h2>
           <div class="contents__box">
             <ul class="contents__list">
-              <li>ConohaでLaravel環境を作って開発</li>
-              <li>JavaScript(ES6)について学習。</li>
+              <li>JS(ES6)について学習。</li>
               <li>FireBaseを利用した開発</li>
               <li>Laravelの学習</li>
             </ul>
@@ -35,8 +34,8 @@
             <ul class="contents__list">
               <li>Homebrew</li>
               <li>Git</li>
-              <li>VS code</li>
-              <li>Docker(+ docker-compose)</li>
+              <li>VScode</li>
+              <li>Docker</li>
               <li>LaraDock</li>
               <li>phpMyAdmin</li>
             </ul>
@@ -47,10 +46,10 @@
           <h2 class="contents__title">資格</h2>
           <div class="contents__box">
             <ul class="contents__list">
-              <li>ITパスポート【2017/10】</li>
-              <li>情報セキュリティマネジメント【2018/5】</li>
-              <li>基本情報技術者【2018/11】</li>
-              <li>応用情報技術者【2019/6】</li>
+              <li>ITパスポート</li>
+              <li>情報セキュリティマネジメント</li>
+              <li>基本情報技術者</li>
+              <li>応用情報技術者</li>
             </ul>
           </div>
         </section>
@@ -105,7 +104,7 @@ export default {
   border: solid 1px dimgray;
   position: relative;
   margin: 7px auto;
-  font-size: 0.5em;
+  font-size: 14px;
   font-weight: bold;
   padding-left: 40px;
   line-height: 30px;
