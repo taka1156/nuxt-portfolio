@@ -34,7 +34,8 @@
           <div class="contents__box">
             <ul class="contents__list">
               <li>Homebrew</li>
-              <li>VScode</li>
+              <li>Git</li>
+              <li>VS code</li>
               <li>Docker(+ docker-compose)</li>
               <li>LaraDock</li>
               <li>phpMyAdmin</li>
@@ -43,18 +44,15 @@
         </section>
 
         <section class="contents">
-          <h2 class="contents__title">資格一覧</h2>
-          <table class="contents__box">
-            <tbody v-for="(skill, index) in Skills" :key="index">
-              <tr>
-                <th class="table-title" colspan="2">{{ skill.name }}</th>
-              </tr>
-              <tr>
-                <th width="30%">合格日</th>
-                <th width="60%">{{ skill.contents }}</th>
-              </tr>
-            </tbody>
-          </table>
+          <h2 class="contents__title">資格</h2>
+          <div class="contents__box">
+            <ul class="contents__list">
+              <li>ITパスポート【2017/10】</li>
+              <li>情報セキュリティマネジメント【2018/5】</li>
+              <li>基本情報技術者【2018/11】</li>
+              <li>応用情報技術者【2019/6】</li>
+            </ul>
+          </div>
         </section>
       </div>
     </div>
@@ -64,28 +62,6 @@
 <script>
 export default {
   name: 'Profile',
-  data() {
-    return {
-      Skills: [
-        {
-          name: 'ITパスポート',
-          contents: '2017年 10月',
-        },
-        {
-          name: '情報セキュリティマネジメント',
-          contents: '2018年 5月',
-        },
-        {
-          name: '基本情報技術者試験',
-          contents: '2018年 11月',
-        },
-        {
-          name: '応用情報技術者試験',
-          contents: '2019年  6月',
-        },
-      ],
-    };
-  },
 };
 </script>
 
@@ -100,8 +76,8 @@ export default {
 }
 
 .profile-icon {
-  height: 30%;
-  width: 30%;
+  height: 25%;
+  width: 25%;
 }
 
 .contents {
@@ -118,7 +94,7 @@ export default {
 }
 
 .contents__list {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   text-align: left;
   list-style-type: none;
@@ -128,8 +104,9 @@ export default {
 .contents__list li {
   border: solid 1px dimgray;
   position: relative;
-  margin: 7px;
-  font-size: 0.6em;
+  margin: 7px auto;
+  font-size: 0.5em;
+  font-weight: bold;
   padding-left: 40px;
   line-height: 30px;
   color: dimgray;
@@ -146,6 +123,11 @@ export default {
 }
 
 @media (min-width: 790px) {
+  .profile-icon {
+    height: 20%;
+    width: 20%;
+  }
+
   .contents__box {
     width: 60%;
   }
@@ -157,19 +139,5 @@ export default {
   .contents__list li {
     font-size: 16px;
   }
-}
-
-table {
-  width: 97%;
-  border-collapse: collapse;
-}
-
-.table-title {
-  background-color: #d3d3d3;
-}
-
-tr,
-th {
-  border: solid 3px #d3d3d3;
 }
 </style>
