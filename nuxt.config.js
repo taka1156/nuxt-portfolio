@@ -15,7 +15,14 @@ export default {
         hid: "description",
         name: "description",
         content: process.env.npm_package_description || ""
-      }
+      },
+      { property: "og:title", content: "Taka's Portfolio" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://taka1156.github.io/TakasPortfolioSite"},
+      { property: "og:image", content: "https://github.com/identicons/tomotaka.png" },
+      { property: "og:site_name", content: "Taka's Portfolio" },
+      { property: "og:description", content: "Takaのポートフォリオです" },
+      { name: " twitter:card", content: "summary" }
     ],
     link: [
       {rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons" },
