@@ -3,15 +3,15 @@
     <div class="border__group">
       <span
         class="border__top"
-        :class="[isOpen ? 'border__top--true' : 'border__top--false']"
+        :class="[isOpen ? 'border__top--open' : 'border__top--close']"
       ></span>
       <span
         class="border__middle"
-        :class="{ 'border__middle--true': isOpen }"
+        :class="{ 'border__middle--fade': isOpen }"
       ></span>
       <span
         class="border__bottom"
-        :class="[isOpen ? 'border__bottom--true' : 'border__bottom--false']"
+        :class="[isOpen ? 'border__bottom--open' : 'border__bottom--close']"
       ></span>
     </div>
   </div>
@@ -23,9 +23,9 @@ export default {
   props: {
     isOpen: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 };
 </script>
 
@@ -52,25 +52,25 @@ span {
   border-radius: 1px;
 }
 
-.border__top--false {
+.border__top--close {
   transform: translateY(-10px);
 }
 
-.border__bottom--false {
+.border__bottom--close {
   transform: translateY(10px);
 }
 
-.border__top--true {
+.border__top--open {
   animation: top 0.6s ease;
   transform: rotate(-45deg);
 }
 
-.border__middle--true {
+.border__middle--fade {
   animation: middle 0.6s ease;
   opacity: 0;
 }
 
-.border__bottom--true {
+.border__bottom--open {
   animation: bottom 0.6s ease;
   transform: rotate(45deg);
 }

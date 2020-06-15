@@ -2,8 +2,10 @@
   <div class="Splash">
     <div class="splash__bg">
       <div class="splash__logo">
-        <div class="splash__title">Taka's&nbsp;Portfolio&nbsp;Site</div>
-        <p class="splash__text">
+        <div class="splash__text splash__text--title">
+          Taka's&nbsp;Portfolio&nbsp;Site
+        </div>
+        <p class="splash__text splash__text--author">
           created&nbsp;by&nbsp;Taka
         </p>
       </div>
@@ -40,7 +42,6 @@ export default {
   position: 0 auto;
 }
 
-.splash__title,
 .splash__text {
   color: white;
   font-family: 'Caveat', cursive;
@@ -48,16 +49,16 @@ export default {
   animation: anime-opacity 1.8s;
 }
 
-.splash__title {
+.splash__text--title {
   font-size: 50px;
 }
 
-.splash__text {
+.splash__text--author {
   font-size: 2.5em;
 }
 
 @media (min-width: 790px) {
-  .splash__title {
+  .splash__text--title {
     font-size: 80px;
   }
 }
