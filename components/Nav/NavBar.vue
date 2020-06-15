@@ -5,7 +5,7 @@
         <div class="navbar__box">
           <a class="navbar__brand" href="/">Taka'sPortfolioSite</a>
           <div @click="changeState">
-            <hamberger-icon :is-open="isOpen" />
+            <hamburger-icon :is-open="isOpen" />
           </div>
         </div>
       </div>
@@ -47,30 +47,30 @@
 </template>
 
 <script>
-import HambergerIcon from "./HamburgerIcon";
+import HamburgerIcon from './HamburgerIcon';
 
 export default {
-  name: "NaviBar",
+  name: 'NaviBar',
   components: {
-    "hamberger-icon": HambergerIcon
+    'hamburger-icon': HamburgerIcon,
   },
   data() {
     return {
-      isOpen: false
+      isOpen: false,
     };
   },
   computed: {
     isSplashRoute() {
       // スプラッシュページの時はナビゲーションバー非表示
-      return this.$route.path === "/";
-    }
+      return this.$route.path === '/';
+    },
   },
   methods: {
     changeState() {
       // ナビゲーションバーの開閉管理
       this.isOpen = !this.isOpen;
-    }
-  }
+    },
+  },
 };
 </script>
 
