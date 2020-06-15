@@ -8,10 +8,7 @@
       >
         <h2 class="contents__title">{{ cardInfo.title }}</h2>
         <figure>
-          <img
-            :src="cardInfo.img.url"
-            class="contents__img"
-          />
+          <img :src="cardInfo.img.url" class="contents__img" />
           <figcaption>
             <p class="contents__text">
               {{ cardInfo.content1 }}
@@ -28,26 +25,26 @@
 
 <script>
 export default {
-  name: "CardLayout",
+  name: 'CardLayout',
   props: {
     cardInfo: {
       type: Object,
-      default: null
-    }
+      default: null,
+    },
   },
   data() {
     return {
-      isVisible: false
+      isVisible: false,
     };
   },
   created() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   },
   mounted() {
     if (this.$el.getBoundingClientRect().top < 220) this.isVisible = true;
   },
   destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
     handleScroll() {
@@ -60,8 +57,8 @@ export default {
       if (link !== '') {
         location.href = link;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -90,15 +87,6 @@ export default {
   text-align: left;
   word-wrap: break-word;
   border: solid 0.5px lightgray;
-}
-
-/* lazy-loadのスタイル */
-[lazy="loading"] {
-  opacity: 0;
-}
-
-[lazy="loaded"] {
-  opacity: 1;
 }
 
 /* cardのアニメーション */

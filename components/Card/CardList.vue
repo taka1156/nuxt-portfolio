@@ -14,14 +14,14 @@ import CardLayout from './CardLayout';
 export default {
   name: 'CardLayout',
   components: {
-    'card-layout': CardLayout
+    'card-layout': CardLayout,
   },
   props: {
     cards: {
       type: Array,
-      default: () => []
-    }
-  }
+      default: () => [],
+    },
+  },
 };
 </script>
 
