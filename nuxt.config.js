@@ -1,38 +1,54 @@
-require("dotenv").config();
+/* eslint-disable quotes */
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-unused-vars */
+/* eslint-disable prettier/prettier */
+require('dotenv').config();
 const { MICRO_CMS } = process.env;
 
 export default {
-  mode: "spa",
+  mode: 'spa',
   /*
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: process.env.npm_package_name || '',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: "description",
-        name: "description",
-        content: process.env.npm_package_description || ""
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || '',
       },
-      { property: "og:title", content: "Taka's Portfolio" },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://taka1156.github.io/TakasPortfolioSite"},
-      { property: "og:image", content: "https://github.com/identicons/tomotaka.png" },
-      { property: "og:site_name", content: "Taka's Portfolio" },
-      { property: "og:description", content: "Takaのポートフォリオです" },
-      { name: " twitter:card", content: "summary" }
+      { property: 'og:title', content: "Taka\'s Portfolio" },
+      { property: 'og:type', content: 'website' },
+      {
+        property: 'og:url',
+        content: 'https://taka1156.github.io/TakasPortfolioSite',
+      },
+      {
+        property: 'og:image',
+        content: 'https://github.com/identicons/tomotaka.png',
+      },
+      { property: 'og:site_name', content: 'Taka\'s Portfolio' },
+      { property: 'og:description', content: 'Takaのポートフォリオです' },
+      { name: ' twitter:card', content: 'summary' },
     ],
     link: [
-      {rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons" },
-      { rel:"stylesheet", href:"https://fonts.googleapis.com/css?family=Caveat|M+PLUS+Rounded+1c" }
-    ]
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Caveat|M+PLUS+Rounded+1c',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#fff" },
+  loading: { color: '#fff' },
   /*
    ** Global CSS
    */
@@ -40,7 +56,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~plugins/components.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -50,9 +66,9 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    "@nuxtjs/axios",
+    '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    "@nuxtjs/dotenv"
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Axios module configuration
@@ -64,7 +80,7 @@ export default {
    *  env
    */
   env: {
-    MICRO_CMS
+    MICRO_CMS,
   },
 
   /*
@@ -74,6 +90,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
-  }
+    extend(config, ctx) {},
+  },
 };
