@@ -1,6 +1,6 @@
 # nuxt-portfolio
 
-taka のポートフォリオサイトです(https://takaportfoliosite.netlify.com)
+taka のポートフォリオサイトです(https://nuxt-takasportfolio.netlify.com)
 
 # 使用したもの
 
