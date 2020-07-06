@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       apiInfo: {
-        url: 'https://taka_portfolio.microcms.io/api/v1/portfolio',
+        url: 'https://taka_portfolio.microcms.io/api/v1/skill',
         fields: 'title,img,content1,content2,link',
       },
     };
