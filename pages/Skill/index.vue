@@ -2,7 +2,7 @@
   <div class="Skill">
     <div class="container">
       <h1>Skill</h1>
-      <card-list :api-info="apiInfo" />
+      <card-list :cards="skills" />
     </div>
   </div>
 </template>
@@ -15,12 +15,17 @@ export default {
   components: {
     'card-list': CardList,
   },
+  async asyncData({ $axios }) {
+    const MCMS_SKILL = 'https://taka_portfolio.microcms.io/api/v1/skill';
+    const { contents } = await $axios.$get(MCMS_SKILL, {
+      params: { fields: 'title,img,content1,content2' },
+      headers: { 'X-API-KEY': process.env.MICRO_CMS },
+    });
+    return { skills: contents };
+  },
   data() {
     return {
-      apiInfo: {
-        url: 'https://taka_portfolio.microcms.io/api/v1/skill',
-        fields: 'title,img,content1,content2',
-      },
+      skills: [],
     };
   },
 };

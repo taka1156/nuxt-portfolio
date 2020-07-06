@@ -2,7 +2,7 @@
   <div class="Portfolio">
     <div class="container">
       <h1>Portfolio</h1>
-      <card-list :api-info="apiInfo" />
+      <card-list :cards="portfolios" />
     </div>
   </div>
 </template>
@@ -15,12 +15,17 @@ export default {
   components: {
     'card-list': CardList,
   },
+  async asyncData({ $axios }) {
+    const MCMS_PORTFOLIO = 'https://taka_portfolio.microcms.io/api/v1/portfolio';
+    const { contents } = await $axios.$get(MCMS_PORTFOLIO, {
+      params: { fields: 'title,img,content1,content2,link' },
+      headers: { 'X-API-KEY': process.env.MICRO_CMS },
+    });
+    return { portfolios: contents };
+  },
   data() {
     return {
-      apiInfo: {
-        url: 'https://taka_portfolio.microcms.io/api/v1/portfolio',
-        fields: 'title,img,content1,content2,link',
-      },
+      portfolios: [],
     };
   },
 };

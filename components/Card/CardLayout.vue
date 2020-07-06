@@ -1,19 +1,25 @@
 <template>
   <div class="CardLayout">
-    <article class="contents" @click="jump(cardInfo.link ? cardInfo.link : '')">
-      <h2 class="contents__title">{{ cardInfo.title }}</h2>
-      <figure>
-        <img :src="cardInfo.img.url" class="contents__img" />
-        <figcaption>
-          <p class="contents__text">
-            {{ cardInfo.content1 }}
-          </p>
-          <p class="contents__text">
-            {{ cardInfo.content2 }}
-          </p>
-        </figcaption>
-      </figure>
-    </article>
+    <transition name="card-fade">
+      <article
+        v-show="isVisible"
+        class="contents"
+        @click="jump(cardInfo.link ? cardInfo.link : '')"
+      >
+        <h2 class="contents__title">{{ cardInfo.title }}</h2>
+        <figure>
+          <img :src="cardInfo.img.url" class="contents__img" />
+          <figcaption>
+            <p class="contents__text">
+              {{ cardInfo.content1 }}
+            </p>
+            <p class="contents__text">
+              {{ cardInfo.content2 }}
+            </p>
+          </figcaption>
+        </figure>
+      </article>
+    </transition>
   </div>
 </template>
 
@@ -26,7 +32,27 @@ export default {
       default: null,
     },
   },
+  data() {
+    return {
+      isVisible: false,
+    };
+  },
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  mounted() {
+    if (this.$el.getBoundingClientRect().top < 220) this.isVisible = true;
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
   methods: {
+    handleScroll() {
+      if (!this.isVisible) {
+        const TOP = this.$el.getBoundingClientRect().top;
+        this.isVisible = TOP < window.innerHeight;
+      }
+    },
     jump(link) {
       if (link !== '') {
         location.href = link;
@@ -61,5 +87,17 @@ export default {
   text-align: left;
   word-wrap: break-word;
   border: solid 0.5px lightgray;
+}
+
+/* cardのアニメーション */
+.card-fade-enter,
+.card-fade-leave-to {
+  opacity: 0;
+  transform: translate3d(0, -60px, 0);
+}
+
+.card-fade-enter-active,
+.card-fade-leave-active {
+  transition: 1s;
 }
 </style>
