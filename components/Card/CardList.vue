@@ -1,14 +1,18 @@
 <template>
   <div class="CardLayout">
     <div class="cardlist">
-      <div v-for="(cardInfo, index) in cards" :key="index" class="card">
+      <div v-for="(cardInfo, index) in posts" :key="index" class="card">
         <card-layout :card-info="cardInfo" />
       </div>
     </div>
+    <infinite-loading spinner="bubbles" @infinite="infiniteHandler">
+      <span slot="no-more"></span>
+    </infinite-loading>
   </div>
 </template>
 
 <script>
+const POSTS_PER_PAGE = 10;
 import CardLayout from './CardLayout';
 
 export default {
@@ -17,9 +21,47 @@ export default {
     'card-layout': CardLayout,
   },
   props: {
-    cards: {
-      type: Array,
-      default: () => [],
+    apiInfo: {
+      type: Object,
+      default: () => {},
+      required: true,
+    },
+  },
+  data() {
+    return {
+      page: 0,
+      posts: [],
+      isLoaded: false,
+    };
+  },
+  computed: {
+    pageIndex() {
+      return this.page * POSTS_PER_PAGE;
+    },
+  },
+  methods: {
+    async infiniteHandler($state) {
+      if (!this.isLoaded) {
+        const OPTIONS = {
+          fields: this.apiInfo.fields,
+          limit: POSTS_PER_PAGE,
+          offset: this.pageIndex,
+        };
+        // コンテンツの取得
+        const { contents } = await this.$axios.$get(this.apiInfo.url, {
+          params: { ...OPTIONS },
+          headers: { 'X-API-KEY': process.env.MICRO_CMS },
+        });
+        // ページング
+        if (contents.length > 0) {
+          this.page++;
+          this.posts.push(...contents);
+          $state.loaded();
+        } else {
+          $state.complete();
+          this.isLoaded = true;
+        }
+      }
     },
   },
 };
