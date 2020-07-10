@@ -5,9 +5,11 @@
         <card-layout :card-info="cardInfo" />
       </div>
     </div>
-    <infinite-loading spinner="bubbles" @infinite="infiniteHandler">
-      <span slot="no-more"></span>
-    </infinite-loading>
+    <client-only>
+      <infinite-loading spinner="bubbles" @infinite="infiniteHandler">
+        <span slot="no-more"></span>
+      </infinite-loading>
+    </client-only>
   </div>
 </template>
 
