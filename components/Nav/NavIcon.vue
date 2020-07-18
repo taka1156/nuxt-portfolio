@@ -1,5 +1,5 @@
 <template>
-  <div class="HamburgerIcon">
+  <div class="NavIcon">
     <div class="border__group">
       <span
         class="border__top"
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'HamburgerIcon',
+  name: 'NavIcon',
   props: {
     isOpen: {
       type: Boolean,
