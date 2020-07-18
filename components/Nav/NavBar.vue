@@ -52,7 +52,7 @@ export default {
         },
         {
           name: 'Porfile',
-          to: '/porfile',
+          to: '/profile',
           icon: require('assets/img/ui/profile.svg'),
         },
         {
