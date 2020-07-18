@@ -50,6 +50,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    { src: '~assets/css/font.css' },
     { src: '~plugins/InfiniteLoading.js', mode: 'client' },
     { src: '~plugins/LazyLoad.js', mode: 'client' },
   ],
