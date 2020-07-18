@@ -1,6 +1,6 @@
 <template>
   <div class="CardLayout">
-    <div class="cardlist">
+    <div class="cards">
       <div v-for="(cardInfo, index) in posts" :key="index" class="card">
         <card-layout :card-info="cardInfo" />
       </div>
@@ -70,7 +70,7 @@ export default {
 </script>
 
 <style scoped>
-.cardlist {
+.cards {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
