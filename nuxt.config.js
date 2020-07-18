@@ -45,12 +45,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/layout.css'],
+  css: ['@/assets/css/layout.css', '@/assets/css/font.css'],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~assets/css/font.css' },
     { src: '~plugins/InfiniteLoading.js', mode: 'client' },
     { src: '~plugins/LazyLoad.js', mode: 'client' },
   ],
