@@ -39,10 +39,6 @@ export default {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
-      },
-      {
-        rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Caveat|M+PLUS+Rounded+1c',
       },
     ],

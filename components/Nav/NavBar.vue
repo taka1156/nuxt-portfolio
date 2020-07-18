@@ -14,28 +14,15 @@
         <div v-show="isOpen" class="nav__contents">
           <div class="nav__items">
             <ul class="nav__none">
-              <li class="nav__item" @click="changeState">
-                <nuxt-link to="/home">
-                  <i class="material-icons">home</i>
-                  Home
-                </nuxt-link>
-              </li>
-              <li class="nav__item" @click="changeState">
-                <nuxt-link to="/profile">
-                  <i class="material-icons">account_box</i>
-                  Profile
-                </nuxt-link>
-              </li>
-              <li class="nav__item" @click="changeState">
-                <nuxt-link to="/skill">
-                  <i class="material-icons">edit</i>
-                  Skill
-                </nuxt-link>
-              </li>
-              <li class="nav__item" @click="changeState">
-                <nuxt-link to="/portfolio">
-                  <i class="material-icons">folder</i>
-                  Portfolio
+              <li
+                v-for="(item, index) in routers"
+                :key="index"
+                class="nav__item"
+                @click="changeState"
+              >
+                <nuxt-link :to="item.to">
+                  <img :src="item.icon" class="nav__icon" />
+                  {{ item.name }}
                 </nuxt-link>
               </li>
             </ul>
@@ -57,6 +44,28 @@ export default {
   data() {
     return {
       isOpen: false,
+      routers: [
+        {
+          name: 'Home',
+          to: '/home',
+          icon: require('assets/img/ui/home.svg'),
+        },
+        {
+          name: 'Porfile',
+          to: '/porfile',
+          icon: require('assets/img/ui/profile.svg'),
+        },
+        {
+          name: 'Skill',
+          to: '/skill',
+          icon: require('assets/img/ui/skill.svg'),
+        },
+        {
+          name: 'Portfolio',
+          to: '/portfolio',
+          icon: require('assets/img/ui/portfolio.svg'),
+        },
+      ],
     };
   },
   computed: {
@@ -128,7 +137,7 @@ export default {
   text-align: left;
 }
 
-.material-icons {
+.nav__icon {
   font-size: 50px;
 }
 
