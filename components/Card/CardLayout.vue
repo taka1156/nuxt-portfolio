@@ -1,32 +1,19 @@
 <template>
   <div class="CardLayout">
-    <transition name="card-fade">
-      <article
-        v-show="isVisible"
-        class="contents"
-        @click="jump(cardInfo.link ? cardInfo.link : '')"
-      >
-        <h2 class="contents__title">{{ cardInfo.title }}</h2>
-        <figure>
-          <picture>
-            <source
-              type="image/webp"
-              :srcset="fomatImg(cardInfo.img.url, true)"
-              class="contents__img"
-            />
-            <img :src="fomatImg(cardInfo.img.url, false)" class="contents__img" />
-          </picture>
-          <figcaption>
-            <p class="contents__text">
-              {{ cardInfo.content1 }}
-            </p>
-            <p class="contents__text">
-              {{ cardInfo.content2 }}
-            </p>
-          </figcaption>
-        </figure>
-      </article>
-    </transition>
+    <article class="contents" @click="jump(cardInfo.link ? cardInfo.link : '')">
+      <h2 class="contents__title">{{ cardInfo.title }}</h2>
+      <figure>
+        <img v-lazy="fomatImg(cardInfo.img.url)" class="contents__img" />
+        <figcaption>
+          <p class="contents__text">
+            {{ cardInfo.content1 }}
+          </p>
+          <p class="contents__text">
+            {{ cardInfo.content2 }}
+          </p>
+        </figcaption>
+      </figure>
+    </article>
   </div>
 </template>
 
@@ -39,33 +26,9 @@ export default {
       default: null,
     },
   },
-  data() {
-    return {
-      isVisible: false,
-    };
-  },
-  created() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  mounted() {
-    if (this.$el.getBoundingClientRect().top < 220) this.isVisible = true;
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
   methods: {
-    handleScroll() {
-      if (!this.isVisible) {
-        const TOP = this.$el.getBoundingClientRect().top;
-        this.isVisible = TOP < window.innerHeight;
-      }
-    },
-    fomatImg(img, isWebp = false) {
-      if (isWebp) {
-        return `${img}?fit=fillmax&fill-color=gray&w=388&h=312&fm=webp`;
-      } else {
-        return `${img}?fit=fillmax&fill-color=gray&w=388&h=312`;
-      }
+    fomatImg(img) {
+      return `${img}?fit=fillmax&fill-color=gray&w=388&h=312`;
     },
     jump(link) {
       if (link !== '') {
@@ -102,15 +65,17 @@ export default {
   border: solid 0.5px lightgray;
 }
 
-/* cardのアニメーション */
-.card-fade-enter,
-.card-fade-leave-to {
-  opacity: 0;
-  transform: translate3d(0, -60px, 0);
+/* lazy-load */
+img[lazy='loaded'] {
+  animation: 1s anime-opacity both;
 }
 
-.card-fade-enter-active,
-.card-fade-leave-active {
-  transition: 1s;
+@keyframes anime-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>
