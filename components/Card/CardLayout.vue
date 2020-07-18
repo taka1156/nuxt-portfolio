@@ -8,7 +8,14 @@
       >
         <h2 class="contents__title">{{ cardInfo.title }}</h2>
         <figure>
-          <img :src="cardInfo.img.url" class="contents__img" />
+          <picture>
+            <source
+              type="image/webp"
+              :srcset="fomatImg(cardInfo.img.url, true)"
+              class="contents__img"
+            />
+            <img :src="fomatImg(cardInfo.img.url, false)" class="contents__img" />
+          </picture>
           <figcaption>
             <p class="contents__text">
               {{ cardInfo.content1 }}
@@ -53,6 +60,13 @@ export default {
         this.isVisible = TOP < window.innerHeight;
       }
     },
+    fomatImg(img, isWebp = false) {
+      if (isWebp) {
+        return `${img}?fit=fillmax&fill-color=gray&w=388&h=312&fm=webp`;
+      } else {
+        return `${img}?fit=fillmax&fill-color=gray&w=388&h=312`;
+      }
+    },
     jump(link) {
       if (link !== '') {
         location.href = link;
@@ -75,10 +89,9 @@ export default {
 }
 
 .contents__img {
-  height: 55%;
+  height: 80%;
   width: 98%;
   vertical-align: bottom;
-  transition: opacity 0.3s ease;
 }
 
 .contents__text {
