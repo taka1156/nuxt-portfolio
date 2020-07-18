@@ -44,7 +44,7 @@ export default {
 
 .splash__text {
   color: white;
-  font-family: 'Caveat', cursive;
+  font-family: 'SplashFont';
   opacity: 0;
   animation: anime-opacity 1.8s;
 }

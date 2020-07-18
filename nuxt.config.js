@@ -36,16 +36,7 @@ export default {
       { property: 'og:description', content: 'Takaのポートフォリオです' },
       { name: ' twitter:card', content: 'summary' },
     ],
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Caveat|M+PLUS+Rounded+1c',
-      },
-    ],
+    link: [],
   },
   /*
    ** Customize the progress-bar color
@@ -58,7 +49,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~plugins/InfiniteLoading.js', mode: 'client' }],
+  plugins: [
+    { src: '~assets/css/font.css' },
+    { src: '~plugins/InfiniteLoading.js', mode: 'client' },
+    { src: '~plugins/LazyLoad.js', mode: 'client' },
+  ],
   /*
    ** Nuxt.js dev-modules
    */
