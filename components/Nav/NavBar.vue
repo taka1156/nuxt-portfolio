@@ -5,7 +5,7 @@
         <div class="navbar__box">
           <a class="navbar__brand" href="/">Taka'sPortfolioSite</a>
           <div @click="changeState">
-            <hamburger-icon :is-open="isOpen" />
+            <nav-icon :is-open="isOpen" />
           </div>
         </div>
       </div>
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-import HamburgerIcon from './HamburgerIcon';
+import NavIcon from './NavIcon';
 
 export default {
   name: 'NaviBar',
   components: {
-    'hamburger-icon': HamburgerIcon,
+    'nav-icon': NavIcon,
   },
   data() {
     return {
@@ -100,19 +100,6 @@ export default {
   font-size: 1.3em;
 }
 
-.navbar__icon {
-  height: 100%;
-  width: 100%;
-}
-
-.navbar__icon--open {
-  animation: anime-open 0.2s linear;
-}
-
-.navbar__icon--close {
-  animation: anime-close 0.2s linear;
-}
-
 /* ナビゲーションバー内容 */
 .nav__contents {
   position: fixed;
@@ -137,10 +124,10 @@ export default {
 }
 
 .nav__item {
+  font-size: 50px;
   text-align: left;
 }
 
-.nav__item,
 .material-icons {
   font-size: 50px;
 }
@@ -165,25 +152,5 @@ a {
 .nav-fade-enter-active,
 .nav-fade-leave-active {
   transition: opacity 0.6s ease;
-}
-
-@keyframes anime-open {
-  to {
-    transform: rotate(0deg);
-  }
-
-  from {
-    transform: rotate(-90deg);
-  }
-}
-
-@keyframes anime-close {
-  to {
-    transform: rotate(0deg);
-  }
-
-  from {
-    transform: rotate(90deg);
-  }
 }
 </style>
