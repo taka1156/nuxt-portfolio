@@ -59,8 +59,50 @@
 </template>
 
 <script>
+import meta from 'assets/js/mixin/meta.mixin.js';
+
 export default {
   name: 'Profile',
+  mixins: [meta],
+  head() {
+    // metaタグの設定
+    this.meta.title = 'Profile';
+    this.meta.description = '最近行っていることや保有資格について紹介します。';
+    this.meta.type = 'article';
+    this.meta.url = `${this.baseURL}/profile`;
+    this.meta.image = `${this.baseURL}/img/ogp/profile.png`;
+
+    return {
+      title: this.meta.title,
+      meta: [
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.meta.description,
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.meta.title,
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: this.meta.type,
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: this.meta.url,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.meta.image,
+        },
+      ],
+    };
+  },
 };
 </script>
 
