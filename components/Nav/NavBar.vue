@@ -48,22 +48,22 @@ export default {
         {
           name: 'Home',
           to: '/home',
-          icon: require('assets/img/ui/home.svg'),
+          icon: require('assets/img/ui/home.png'),
         },
         {
-          name: 'Porfile',
+          name: 'Profile',
           to: '/profile',
-          icon: require('assets/img/ui/profile.svg'),
+          icon: require('assets/img/ui/profile.png'),
         },
         {
           name: 'Skill',
           to: '/skill',
-          icon: require('assets/img/ui/skill.svg'),
+          icon: require('assets/img/ui/skill.png'),
         },
         {
           name: 'Portfolio',
           to: '/portfolio',
-          icon: require('assets/img/ui/portfolio.svg'),
+          icon: require('assets/img/ui/portfolio.png'),
         },
       ],
     };
@@ -138,7 +138,8 @@ export default {
 }
 
 .nav__icon {
-  font-size: 50px;
+  height: 50px;
+  width: 50px;
 }
 
 a {
