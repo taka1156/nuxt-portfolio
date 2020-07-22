@@ -1,6 +1,6 @@
 # nuxt-portfolio
 
-taka のポートフォリオサイトです(https://nuxt-takasportfolio.netlify.com)
+taka のポートフォリオサイトです(https://takasportfoliosite.netlify.com)
 
 # 使用したもの
 
@@ -47,3 +47,6 @@ CDN
 - 2020/05/17<br>
   nuxt.js + microCMSの環境に移行<br>
   OGPの設定
+
+- 2020/07/22<br>
+  OGPの設定追加 
