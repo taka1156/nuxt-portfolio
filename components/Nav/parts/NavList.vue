@@ -2,17 +2,14 @@
   <div class="NavList">
     <transition name="nav-fade">
       <div v-show="isOpen" class="nav__list">
-        <ul class="nav__items">
+        <ul>
           <li
             v-for="(item, index) in routers"
             :key="index"
             class="nav__item"
             @click="changeState"
           >
-            <nuxt-link :to="item.to" class="nav__link">
-              <img :src="item.icon" class="nav__icon" />
-              {{ item.name }}
-            </nuxt-link>
+            <nav-item :item="item" />
           </li>
         </ul>
       </div>
@@ -21,8 +18,13 @@
 </template>
 
 <script>
+import NavItem from '@/components/Nav/parts/NavItem';
+
 export default {
   name: 'NavList',
+  components: {
+    'nav-item': NavItem,
+  },
   props: {
     isOpen: {
       type: Boolean,
@@ -58,7 +60,7 @@ export default {
   background-color: rgba(12, 12, 12, 0.9);
 }
 
-.nav__items {
+ul {
   list-style-type: none;
   padding: 0;
 }
@@ -68,17 +70,6 @@ export default {
   font-size: 50px;
   text-align: left;
   color: white;
-}
-
-.nav__link {
-  display: block;
-  color: white;
-  text-decoration: none;
-}
-
-.nav__icon {
-  height: 50px;
-  width: 50px;
 }
 
 /* nav-contentsのアニメーション */
