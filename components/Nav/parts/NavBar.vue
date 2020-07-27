@@ -21,6 +21,13 @@ export default {
   components: {
     'nav-icon': NavIcon,
   },
+  props: {
+    isOpen: {
+      type: Boolean,
+      default: false,
+      required: true,
+    },
+  },
   methods: {
     changeState() {
       // ナビゲーションバーの開閉管理

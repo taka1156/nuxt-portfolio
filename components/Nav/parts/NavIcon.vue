@@ -1,33 +1,19 @@
-<template>
-  <div class="NavIcon">
-    <div class="border__group">
-      <span
-        class="border__top"
-        :class="[isOpen ? 'border__top--open' : 'border__top--close']"
-      ></span>
-      <span
-        class="border__middle"
-        :class="{ 'border__middle--fade': isOpen }"
-      ></span>
-      <span
-        class="border__bottom"
-        :class="[isOpen ? 'border__bottom--open' : 'border__bottom--close']"
-      ></span>
-    </div>
+<template functional>
+  <div class="border__group">
+    <span
+      class="border__top"
+      :class="[props.isOpen ? 'border__top--open' : 'border__top--close']"
+    ></span>
+    <span
+      class="border__middle"
+      :class="{ 'border__middle--fade': props.isOpen }"
+    ></span>
+    <span
+      class="border__bottom"
+      :class="[props.isOpen ? 'border__bottom--open' : 'border__bottom--close']"
+    ></span>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'NavIcon',
-  props: {
-    isOpen: {
-      type: Boolean,
-      default: false,
-    },
-  },
-};
-</script>
 
 <style scoped>
 .border__group {
