@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav v-show="!isSplashRoute">
+    <nav>
       <nav-bar :logo-text="logoText" :is-open="isOpen" @change-state="changeState" />
       <nav-list :is-open="isOpen" :routers="routers" @change-state="changeState" />
     </nav>
@@ -17,39 +17,22 @@ export default {
     'nav-bar': NavBar,
     'nav-list': NavList,
   },
+  props: {
+    logoText: {
+      type: String,
+      default: 'Please Setting Title',
+      required: true,
+    },
+    routers: {
+      type: Array,
+      default: () => [],
+      required: true,
+    },
+  },
   data() {
     return {
-      logoText: "Taka'sPortfolioSite",
       isOpen: false,
-      routers: [
-        {
-          name: 'Home',
-          to: '/home',
-          img: require('assets/img/ui/home.png'),
-        },
-        {
-          name: 'Profile',
-          to: '/profile',
-          img: require('assets/img/ui/profile.png'),
-        },
-        {
-          name: 'Skill',
-          to: '/skill',
-          img: require('assets/img/ui/skill.png'),
-        },
-        {
-          name: 'Portfolio',
-          to: '/portfolio',
-          img: require('assets/img/ui/portfolio.png'),
-        },
-      ],
     };
-  },
-  computed: {
-    isSplashRoute() {
-      // スプラッシュページの時はナビゲーションバー非表示
-      return this.$route.path === '/';
-    },
   },
   methods: {
     changeState() {
