@@ -1,10 +1,6 @@
 <template>
-  <div class="CardLayout">
-    <div class="cards">
-      <div v-for="(cardInfo, index) in posts" :key="index" class="card">
-        <card-layout :card-info="cardInfo" />
-      </div>
-    </div>
+  <div>
+    <card-list :cards="posts" />
     <client-only>
       <infinite-loading spinner="bubbles" @infinite="infiniteHandler">
         <span slot="no-more"></span>
@@ -15,12 +11,12 @@
 
 <script>
 const POSTS_PER_PAGE = 10;
-import CardLayout from './CardLayout';
+import CardList from '../molecules/CardList.vue';
 
 export default {
-  name: 'CardLayout',
+  name: 'BaseCard',
   components: {
-    'card-layout': CardLayout,
+    'card-list': CardList,
   },
   props: {
     apiInfo: {

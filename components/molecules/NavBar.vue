@@ -1,11 +1,9 @@
 <template>
-  <div class="NavBar">
+  <div>
     <div class="navbar">
       <div class="navbar__box">
-        <a class="navbar__brand navbar__brand--nostyle" href="/">
-          Taka'sPortfolioSite
-        </a>
-        <div @click="changeState">
+        <nav-logo :logo-text="logoText" />
+        <div @click="$emit('change-state')">
           <nav-icon :is-open="isOpen" />
         </div>
       </div>
@@ -14,24 +12,25 @@
 </template>
 
 <script>
-import NavIcon from './NavIcon';
+import NavIcon from '../atoms/NavIcon';
+import NavLogo from '../atoms/NavLogo';
 
 export default {
   name: 'NavBar',
   components: {
     'nav-icon': NavIcon,
+    'nav-logo': NavLogo,
   },
   props: {
+    logoText: {
+      type: String,
+      default: 'Please Setting Logo',
+      required: true,
+    },
     isOpen: {
       type: Boolean,
       default: false,
       required: true,
-    },
-  },
-  methods: {
-    changeState() {
-      // ナビゲーションバーの開閉管理
-      this.$emit('change-state');
     },
   },
 };
@@ -54,14 +53,5 @@ export default {
   height: 90%;
   width: 100%;
   margin: 0.5em auto;
-}
-
-.navbar__brand {
-  display: block;
-  height: 30px;
-  margin-top: 10px;
-  font-size: 1.3em;
-  color: white;
-  text-decoration: none;
 }
 </style>
