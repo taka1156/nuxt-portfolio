@@ -17,32 +17,21 @@ export default {
     'nav-bar': NavBar,
     'nav-list': NavList,
   },
+  props: {
+    logoText: {
+      type: String,
+      default: 'Please Setting Title',
+      required: true,
+    },
+    routers: {
+      type: Array,
+      default: () => [],
+      required: true,
+    },
+  },
   data() {
     return {
-      logoText: "Taka'sPortfolioSite",
       isOpen: false,
-      routers: [
-        {
-          name: 'Top',
-          to: '/',
-          img: require('assets/img/ui/home.png'),
-        },
-        {
-          name: 'Profile',
-          to: '/profile',
-          img: require('assets/img/ui/profile.png'),
-        },
-        {
-          name: 'Skill',
-          to: '/skill',
-          img: require('assets/img/ui/skill.png'),
-        },
-        {
-          name: 'Portfolio',
-          to: '/portfolio',
-          img: require('assets/img/ui/portfolio.png'),
-        },
-      ],
     };
   },
   methods: {
