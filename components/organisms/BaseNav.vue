@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav v-show="!isSplashRoute">
+    <nav>
       <nav-bar :logo-text="logoText" :is-open="isOpen" @change-state="changeState" />
       <nav-list :is-open="isOpen" :routers="routers" @change-state="changeState" />
     </nav>
@@ -23,8 +23,8 @@ export default {
       isOpen: false,
       routers: [
         {
-          name: 'Home',
-          to: '/home',
+          name: 'Top',
+          to: '/',
           img: require('assets/img/ui/home.png'),
         },
         {
@@ -44,12 +44,6 @@ export default {
         },
       ],
     };
-  },
-  computed: {
-    isSplashRoute() {
-      // スプラッシュページの時はナビゲーションバー非表示
-      return this.$route.path === '/';
-    },
   },
   methods: {
     changeState() {
