@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav-bar />
+    <nav-bar :logo-text="logoText" :routers="routers" />
     <nuxt />
   </div>
 </template>
@@ -11,6 +11,33 @@ import NavBar from '@/components/organisms/BaseNav';
 export default {
   components: {
     'nav-bar': NavBar,
+  },
+  data() {
+    return {
+      logoText: "Taka'sPortfolioSite",
+      routers: [
+        {
+          name: 'Top',
+          to: '/',
+          img: require('assets/img/ui/home.png'),
+        },
+        {
+          name: 'Profile',
+          to: '/profile',
+          img: require('assets/img/ui/profile.png'),
+        },
+        {
+          name: 'Skill',
+          to: '/skill',
+          img: require('assets/img/ui/skill.png'),
+        },
+        {
+          name: 'Portfolio',
+          to: '/portfolio',
+          img: require('assets/img/ui/portfolio.png'),
+        },
+      ],
+    };
   },
 };
 </script>
