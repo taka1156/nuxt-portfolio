@@ -1,5 +1,5 @@
 <template>
-  <div class="NavList">
+  <div>
     <transition name="nav-fade">
       <div v-show="isOpen" class="nav__list">
         <ul>
@@ -7,7 +7,7 @@
             v-for="(item, index) in routers"
             :key="index"
             class="nav__item"
-            @click="changeState"
+            @click="$emit('change-state')"
           >
             <nav-item :item="item" />
           </li>
@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import NavItem from '@/components/Nav/parts/NavItem';
+import NavListItem from './NavListItem';
 
 export default {
   name: 'NavList',
   components: {
-    'nav-item': NavItem,
+    'nav-item': NavListItem,
   },
   props: {
     isOpen: {
@@ -35,12 +35,6 @@ export default {
       type: Array,
       default: () => [],
       required: true,
-    },
-  },
-  methods: {
-    changeState() {
-      // ナビゲーションバーの開閉管理
-      this.$emit('change-state');
     },
   },
 };
