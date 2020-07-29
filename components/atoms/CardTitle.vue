@@ -6,5 +6,6 @@
 .card__title {
   font-size: 1.75em;
   line-height: 0em;
+  text-align: center;
 }
 </style>

@@ -1,5 +1,5 @@
 <template functional>
-  <img :src="props.img" class="nav__icon" />
+  <img :src="props.navImg" class="nav__icon" />
 </template>
 
 <style scoped>
