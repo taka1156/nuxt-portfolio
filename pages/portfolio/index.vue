@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import CardList from '@/components/Card/CardList';
+import CardList from '@/components/organisms/BaseCard';
 import meta from 'assets/js/mixin/meta.mixin.js';
 
 export default {

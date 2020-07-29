@@ -1,24 +1,30 @@
 # nuxt-portfolio
 
+<<<<<<< HEAD
 taka のポートフォリオサイトです(https://takasportfoliosite.netlify.com)
+=======
+taka1156のポートフォリオサイトです(https://www.taka1156.site)
+
+## Build Status
+|項目|状態(リンク)|
+|:-----:|:-----:|
+|Site|[![Netlify Status](https://api.netlify.com/api/v1/badges/9d754261-1ee7-4f92-b004-400bc2b9d701/deploy-status)](https://www.taka1156.site)|
+|StoryBook|[![Netlify Status](https://api.netlify.com/api/v1/badges/29be9457-a11f-45f8-8ab3-a6c2a56f1b33/deploy-status)](https://takaportfolio-storybook.netlify.app)|
+>>>>>>> 968bb82985ddd65213b085f6905e884c825531a7
 
 # 使用したもの
 
 - Nuxt.js
+- StoryBook
 - HTML
 - CSS
 - JavaScript
 
-CDN
-
-- google font
-- google Material Icon
-- ~~BootStrap4~~
-
 素材
 
-- SVG PORN (https://svgporn.com/)
-- EC design (http://design-ec.com)
+- [SVG PORN](https://svgporn.com/)
+- [EC design](http://design-ec.com)
+- [Google Material Icon](https://material.io/resources/icons/?style=baseline)
 
 # 変更点など
 
@@ -48,5 +54,13 @@ CDN
   nuxt.js + microCMSの環境に移行<br>
   OGPの設定
 
+<<<<<<< HEAD
 - 2020/07/22<br>
   OGPの設定追加 
+=======
+- 2020/07/29<br>
+ アトミックデザインを一部模倣
+
+- 2020/07/29<br>
+ StoryBook追加
+>>>>>>> 968bb82985ddd65213b085f6905e884c825531a7

@@ -1,74 +1,57 @@
 <template>
-  <div class="Splash">
-    <div class="splash__bg">
-      <div class="splash__logo">
-        <div class="splash__text splash__text--title">
-          Taka's&nbsp;Portfolio&nbsp;Site
-        </div>
-        <p class="splash__text splash__text--author">
-          created&nbsp;by&nbsp;Taka
-        </p>
+  <div class="Home">
+    <div class="logo">
+      <h1 class="logo__title">Welcome to Taka's Portfolio</h1>
+      <div class="logo__line" />
+      <div class="other">
+        <a href="https://github.com/taka1156" class="other__link">
+          <img src="@/assets/img/github.png" value="github" class="other__icon" />
+        </a>
+        <a href="https://qiita.com/taka_1156" class="other__link">
+          <img src="@/assets/img/qiita.png" value="Qiita" class="other__icon" />
+        </a>
+        <a href="https://mobile.twitter.com/taka_Program" class="other__link">
+          <img src="@/assets/img/twitter.png" value="Twitter" class="other__icon" />
+        </a>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Splash',
-  mounted() {
-    const JUMP = setTimeout(() => {
-      this.$router.push('/home');
-      clearTimeout(JUMP);
-    }, 1800);
-  },
-};
-</script>
-
 <style scoped>
-.splash__bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  opacity: 0;
+.logo {
+  text-align: center;
+  margin-top: 30vh;
+}
+
+.logo__title {
+  font-size: 40px;
+}
+
+.logo__line {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   background-color: black;
-  animation: anime-opacity 1.8s;
+  height: 2px;
+  width: 100%;
 }
 
-.splash__logo {
-  padding-top: 40vh;
-  position: 0 auto;
+.other {
+  width: 85%;
+  display: flex;
+  margin: 10vh auto;
+  justify-content: space-around;
 }
 
-.splash__text {
-  color: white;
-  font-family: 'SplashFont';
-  opacity: 0;
-  animation: anime-opacity 1.8s;
+.other__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  border: solid 1px gray;
+  background-color: gray;
 }
 
-.splash__text--title {
-  font-size: 50px;
-}
-
-.splash__text--author {
-  font-size: 2.5em;
-}
-
-@media (min-width: 790px) {
-  .splash__text--title {
-    font-size: 80px;
-  }
-}
-
-@keyframes anime-opacity {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.other__link {
+  border-radius: 60px;
 }
 </style>
