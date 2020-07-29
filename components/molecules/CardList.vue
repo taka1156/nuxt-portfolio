@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="cards.length !== 0" class="cards">
+    <div v-if="cards.length !== 0" class="cardlist">
       <div v-for="(cardInfo, index) in cards" :key="index" class="card">
         <card-item :card-info="cardInfo" />
       </div>
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-.cards {
+.cardlist {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,7 +38,6 @@ export default {
 
 .card {
   width: 27rem;
-  cursor: pointer;
   margin: 2em auto;
   border: solid 0.6px lightgray;
   border-radius: 1%;

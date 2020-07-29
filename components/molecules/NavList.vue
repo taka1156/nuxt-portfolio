@@ -9,7 +9,7 @@
             class="nav__item"
             @click="$emit('change-state')"
           >
-            <nav-item :item="item" />
+            <nav-item :nav-item="item" />
           </li>
         </ul>
       </div>
