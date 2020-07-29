@@ -44,6 +44,9 @@ storiesOf('molecules/Nav/NavBar', module).add(
         default: boolean('isOpen', false),
       },
     },
+    methods: {
+      changeState: action('change-state'),
+    },
   }),
   {
     info: {
