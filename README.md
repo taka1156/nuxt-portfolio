@@ -5,6 +5,7 @@ taka のポートフォリオサイトです(https://nuxt-takasportfolio.netlify
 # 使用したもの
 
 - Nuxt.js
+- StoryBook
 - HTML
 - CSS
 - JavaScript

@@ -1,6 +1,10 @@
 <template>
   <div>
-    <article class="contents" @click="jump(cardInfo.link ? cardInfo.link : '')">
+    <article
+      class="card__contents"
+      :class="{ 'card__contents--clickable': cardInfo.link }"
+      @click="jump(cardInfo)"
+    >
       <card-title :card-title="cardInfo.title" />
       <figure>
         <card-img :card-img="fomatImg(cardInfo.img.url)" />
@@ -34,10 +38,13 @@ export default {
   },
   methods: {
     fomatImg(img) {
+      if (img.indexOf('placehold') !== -1) {
+        return img;
+      }
       return `${img}?fit=fillmax&fill-color=gray&w=388&h=312`;
     },
-    jump(link) {
-      if (link !== '') {
+    jump({ link }) {
+      if (link != null) {
         location.href = link;
       }
     },
@@ -46,9 +53,14 @@ export default {
 </script>
 
 <style scoped>
-.contents {
+.card__contents {
+  display: block;
   width: 100%;
   height: 100%;
   margin: 2vh auto;
+}
+
+.card__contents--clickable {
+  cursor: pointer;
 }
 </style>

@@ -1,6 +1,6 @@
 <template functional>
   <a class="nav__logo" href="/">
-    {{ props.logoText }}
+    {{ props.navLogo }}
   </a>
 </template>
 

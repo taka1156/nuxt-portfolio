@@ -1,8 +1,8 @@
 <template>
   <div>
-    <nuxt-link :to="item.to" class="nav__link">
-      <nav-img :img="item.img" />
-      <nav-text :name="item.name" />
+    <nuxt-link :to="navItem.to" class="nav__link">
+      <nav-img :nav-img="navItem.img" />
+      <nav-text :nav-text="navItem.name" />
     </nuxt-link>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
     'nav-text': NavText,
   },
   props: {
-    item: {
+    navItem: {
       type: Object,
       default: () => {},
       required: true,
@@ -30,7 +30,6 @@ export default {
 <style scoped>
 .nav__link {
   display: block;
-  color: white;
   text-decoration: none;
 }
 </style>
