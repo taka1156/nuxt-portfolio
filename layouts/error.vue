@@ -16,7 +16,7 @@
       <div class="title">{{ error.message }}</div>
       <div v-if="error.statusCode === 404" class="description">
         <p>ページがありません(URLを確認してください。)</p>
-        <NuxtLink class="error-link" to="/home">ホームに戻る</NuxtLink>
+        <NuxtLink class="error-link" to="/">Topに戻る</NuxtLink>
       </div>
 
       <p v-else class="description">
