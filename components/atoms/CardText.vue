@@ -6,10 +6,14 @@
 
 <style scoped>
 .card__text {
+  display: block;
+  height: 140px;
   width: 100%;
   margin: 0 auto;
+  padding: 5px;
   text-align: left;
   word-wrap: break-word;
-  border: solid 0.5px lightgray;
+  box-sizing: border-box;
+  border: 1px solid gray;
 }
 </style>

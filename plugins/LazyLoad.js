@@ -13,7 +13,7 @@ Vue.use(VueLazyload, {
       if (!options.supportWebp || !listener.src) {
         return;
       }
-      listener.src += '&fm=webp';
+      listener.src += '?fm=webp';
     },
   },
 });
