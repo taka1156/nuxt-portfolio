@@ -1,18 +1,16 @@
 <template>
   <div>
-    <article
-      class="card__contents"
-      :class="{ 'card__contents--clickable': cardInfo.link }"
-      @click="jump(cardInfo)"
-    >
+    <article class="card__item">
       <card-title :card-title="cardInfo.title" />
       <figure>
-        <card-img :card-img="fomatImg(cardInfo.img.url)" />
+        <card-img :card-img="cardInfo.img.url" />
         <figcaption>
-          <card-text :card-text="cardInfo.content1" />
           <card-text :card-text="cardInfo.content2" />
         </figcaption>
       </figure>
+      <card-button v-if="cardInfo.link != null" @click="jump(cardInfo)">
+        {{ cardInfo.title }}を見る
+      </card-button>
     </article>
   </div>
 </template>
@@ -21,6 +19,7 @@
 import CardTitle from '../atoms/CardTitle';
 import CardImg from '../atoms/CardImg';
 import CardText from '../atoms/CardText';
+import CardButton from '../atoms/CardButton';
 
 export default {
   name: 'CardListItem',
@@ -28,6 +27,7 @@ export default {
     'card-title': CardTitle,
     'card-img': CardImg,
     'card-text': CardText,
+    'card-button': CardButton,
   },
   props: {
     cardInfo: {
@@ -37,12 +37,6 @@ export default {
     },
   },
   methods: {
-    fomatImg(img) {
-      if (img.indexOf('placehold') !== -1) {
-        return img;
-      }
-      return `${img}?fit=fillmax&fill-color=gray&w=388&h=312`;
-    },
     jump({ link }) {
       if (link != null) {
         location.href = link;
@@ -53,14 +47,23 @@ export default {
 </script>
 
 <style scoped>
-.card__contents {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 2vh auto;
+/* css reset */
+figure {
+  margin: 0;
+  padding: 0;
 }
 
-.card__contents--clickable {
-  cursor: pointer;
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+/* css reset */
+
+.card__item {
+  height: 100%;
+  width: 100%;
+  border: solid 0.6px lightgray;
+  border-radius: 1%;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
 }
 </style>

@@ -1,9 +1,12 @@
 <template>
   <div>
-    <div v-if="cards.length !== 0" class="cardlist">
-      <div v-for="(cardInfo, index) in cards" :key="index" class="card">
-        <card-item :card-info="cardInfo" />
-      </div>
+    <div v-if="cards.length !== 0" class="card-list">
+      <card-item
+        v-for="(cardInfo, index) in cards"
+        :key="index"
+        :card-info="cardInfo"
+        class="card-list__card"
+      ></card-item>
     </div>
   </div>
 </template>
@@ -27,7 +30,7 @@ export default {
 </script>
 
 <style scoped>
-.cardlist {
+.card-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,11 +39,8 @@ export default {
   margin: 0 auto;
 }
 
-.card {
-  width: 27rem;
-  margin: 2em auto;
-  border: solid 0.6px lightgray;
-  border-radius: 1%;
-  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+.card-list__card {
+  width: 27em;
+  margin: 2.6em auto;
 }
 </style>
