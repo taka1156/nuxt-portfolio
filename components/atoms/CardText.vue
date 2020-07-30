@@ -7,7 +7,7 @@
 <style scoped>
 .card__text {
   display: block;
-  height: 160px;
+  height: 140px;
   width: 100%;
   margin: 0 auto;
   padding: 5px;

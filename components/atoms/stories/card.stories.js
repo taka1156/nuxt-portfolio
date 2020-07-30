@@ -3,6 +3,7 @@ import { text } from '@storybook/addon-knobs/vue';
 import CardTitle from '../CardTitle.vue';
 import CardImg from '../CardImg.vue';
 import CardText from '../CardText.vue';
+import CardButton from '../CardButton.vue';
 
 storiesOf('Atoms/Card/CardTitle', module).add(
   'default',
@@ -57,6 +58,19 @@ storiesOf('Atoms/Card/CardText', module).add(
   {
     info: {
       summary: '画像の説明',
+    },
+  }
+);
+
+storiesOf('Atoms/Card/CardButton', module).add(
+  'default',
+  () => ({
+    components: { CardButton },
+    template: '<card-button>Button</card-button>',
+  }),
+  {
+    info: {
+      summary: 'ボタン',
     },
   }
 );
