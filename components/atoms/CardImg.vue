@@ -4,9 +4,13 @@
 
 <style scoped>
 .card__img {
-  height: 80%;
+  height: 50%;
   width: 100%;
+  margin: 0 auto;
+  padding: 10px;
   vertical-align: bottom;
+  box-sizing: border-box;
+  border: 5px double lightgray;
 }
 
 /* lazy-load */

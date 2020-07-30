@@ -1,26 +1,19 @@
 <template functional>
-  <p
-    :class="`card__text--${['sm', 'lg'].includes(props.size) ? props.size : 'sm'}`"
-    class="card__text"
-  >
+  <p class="card__text">
     {{ props.cardText }}
   </p>
 </template>
 
 <style scoped>
 .card__text {
+  display: block;
+  height: 160px;
   width: 100%;
   margin: 0 auto;
+  padding: 5px;
   text-align: left;
   word-wrap: break-word;
-  border: solid 0.5px lightgray;
-}
-
-.card__text--sm {
-  height: 50px;
-}
-
-.card__text--lg {
-  height: 150px;
+  box-sizing: border-box;
+  border: 1px solid gray;
 }
 </style>

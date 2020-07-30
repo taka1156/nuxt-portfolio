@@ -1,16 +1,15 @@
 <template>
   <div>
     <article
-      class="card__contents"
-      :class="{ 'card__contents--clickable': cardInfo.link }"
+      class="card__item"
+      :class="{ 'card__item--clickable': cardInfo.link }"
       @click="jump(cardInfo)"
     >
       <card-title :card-title="cardInfo.title" />
       <figure>
-        <card-img :card-img="fomatImg(cardInfo.img.url)" />
+        <card-img :card-img="cardInfo.img.url" />
         <figcaption>
-          <card-text :card-text="cardInfo.content1" :size="'sm'" />
-          <card-text :card-text="cardInfo.content2" :size="'lg'" />
+          <card-text :card-text="cardInfo.content2" />
         </figcaption>
       </figure>
     </article>
@@ -37,12 +36,6 @@ export default {
     },
   },
   methods: {
-    fomatImg(img) {
-      if (img.indexOf('placehold') !== -1) {
-        return img;
-      }
-      return `${img}?fit=fillmax&fill-color=gray&w=388&h=312`;
-    },
     jump({ link }) {
       if (link != null) {
         location.href = link;
@@ -53,14 +46,15 @@ export default {
 </script>
 
 <style scoped>
-.card__contents {
-  display: block;
-  width: 100%;
+.card__item {
   height: 100%;
-  margin: 2vh auto;
+  width: 100%;
+  border: solid 0.6px lightgray;
+  border-radius: 1%;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-.card__contents--clickable {
+.card__item--clickable {
   cursor: pointer;
 }
 </style>
