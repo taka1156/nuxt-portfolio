@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { text } from '@storybook/addon-knobs/vue';
+import { text, select } from '@storybook/addon-knobs/vue';
 import CardTitle from '../CardTitle.vue';
 import CardImg from '../CardImg.vue';
 import CardText from '../CardText.vue';
@@ -46,11 +46,15 @@ storiesOf('Atoms/Card/CardText', module).add(
   'default',
   () => ({
     components: { CardText },
-    template: '<card-text :card-text="text" />',
+    template: '<card-text :card-text="text" :size="size"/>',
     props: {
       text: {
         type: String,
         default: text('text', 'text'),
+      },
+      size: {
+        type: String,
+        default: select('size', { default: 'sm', lg: 'lg' }, 'sm'),
       },
     },
   }),

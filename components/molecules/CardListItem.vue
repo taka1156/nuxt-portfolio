@@ -9,8 +9,8 @@
       <figure>
         <card-img :card-img="fomatImg(cardInfo.img.url)" />
         <figcaption>
-          <card-text :card-text="cardInfo.content1" />
-          <card-text :card-text="cardInfo.content2" />
+          <card-text :card-text="cardInfo.content1" :size="'sm'" />
+          <card-text :card-text="cardInfo.content2" :size="'lg'" />
         </figcaption>
       </figure>
     </article>

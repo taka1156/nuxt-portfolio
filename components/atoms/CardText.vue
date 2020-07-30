@@ -1,5 +1,8 @@
 <template functional>
-  <p class="card__text">
+  <p
+    :class="`card__text--${['sm', 'lg'].includes(props.size) ? props.size : 'sm'}`"
+    class="card__text"
+  >
     {{ props.cardText }}
   </p>
 </template>
@@ -11,5 +14,13 @@
   text-align: left;
   word-wrap: break-word;
   border: solid 0.5px lightgray;
+}
+
+.card__text--sm {
+  height: 50px;
+}
+
+.card__text--lg {
+  height: 150px;
 }
 </style>
