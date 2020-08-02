@@ -3,10 +3,19 @@
 </template>
 
 <style scoped>
+/* css reset */
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* css reset */
+
 .card__img {
-  height: 80%;
+  display: block;
+  height: 100%;
   width: 100%;
-  vertical-align: bottom;
+  margin: 0 auto;
 }
 
 /* lazy-load */

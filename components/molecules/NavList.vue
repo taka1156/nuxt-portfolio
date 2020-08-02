@@ -41,6 +41,13 @@ export default {
 </script>
 
 <style scoped>
+/* css reset */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+/* css reset */
+
 .nav__list {
   display: flex;
   justify-content: center;
@@ -52,11 +59,6 @@ export default {
   width: 100vw;
   z-index: 2;
   background-color: rgba(12, 12, 12, 0.9);
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
 }
 
 .nav__item {
