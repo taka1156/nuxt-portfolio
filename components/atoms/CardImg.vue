@@ -3,14 +3,19 @@
 </template>
 
 <style scoped>
+/* css reset */
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* css reset */
+
 .card__img {
   display: block;
-  height: 50%;
+  height: 100%;
   width: 100%;
   margin: 0 auto;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 5px double lightgray;
 }
 
 /* lazy-load */
