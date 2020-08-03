@@ -92,7 +92,7 @@ storiesOf('molecules/Card/CardListItem', module).add(
   'default',
   () => ({
     components: { CardListItem },
-    template: '<card-item :card-info="card" />',
+    template: '<card-list-item :card-info="card" />',
     props: {
       card: {
         type: Object,

@@ -86,7 +86,7 @@ storiesOf('molecules/Nav/NavListItem', module).add(
   'default',
   () => ({
     components: { NavListItem },
-    template: '<nav-item :nav-item="item" />',
+    template: '<nav-list-item :nav-item="item" />',
     props: {
       item: {
         type: Object,
