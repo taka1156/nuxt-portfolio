@@ -41,10 +41,12 @@ export default {
 </script>
 
 <style scoped>
+/* css reset */
 ul {
   margin: 0px;
   padding: 0px;
 }
+/* css reset */
 
 .nav__list {
   display: flex;

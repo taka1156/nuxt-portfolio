@@ -55,11 +55,22 @@ export default {
 </script>
 
 <style scoped>
+/* css reset */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+/* css reset */
+
 .card__item {
   height: 100%;
   width: 100%;
   border: solid 0.6px lightgray;
-  border-radius: 1%;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
