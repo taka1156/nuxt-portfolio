@@ -1,5 +1,5 @@
 <template functional>
-  <button class="btn" :class="data.class || ''" v-on="listeners">
+  <button class="btn" v-on="listeners">
     <slot />
   </button>
 </template>
