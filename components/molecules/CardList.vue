@@ -40,7 +40,7 @@ export default {
 }
 
 .card-list__card {
-  width: 27em;
+  width: 28em;
   margin: 2.6em auto;
 }
 </style>
