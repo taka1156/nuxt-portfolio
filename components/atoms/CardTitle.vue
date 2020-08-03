@@ -4,7 +4,7 @@
 
 <style scoped>
 .card__title {
-  font-size: 1.75em;
+  font-size: 1.3em;
   line-height: 0em;
   text-align: center;
 }
