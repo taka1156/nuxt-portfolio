@@ -5,23 +5,13 @@
 </template>
 
 <style scoped>
-/* css reset */
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  appearance: none;
-}
-/* css reset */
-
 .btn {
   display: block;
   font-size: 1em;
-  width: 80%;
+  width: 75%;
   margin: 10px auto;
   padding: 10px;
-  background-color: none;
+  background-color: white;
   color: gray;
   border: 1px solid gray;
   border-radius: 5px;

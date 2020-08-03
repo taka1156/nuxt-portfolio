@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueLazyload from 'vue-lazyload';
+import 'normalize.css';
 
 import { configure, addDecorator, addParameters } from '@storybook/vue';
 import { withKnobs } from '@storybook/addon-knobs/vue';

@@ -9,7 +9,7 @@
         </figcaption>
       </figure>
       <card-button v-if="cardInfo.link != null" @click="jump(cardInfo)">
-        {{ cardInfo.title }}を見る
+        {{ judgeText(cardInfo) }}
       </card-button>
     </article>
   </div>
@@ -42,23 +42,19 @@ export default {
         location.href = link;
       }
     },
+    judgeText({ link }) {
+      // githubがリンクに含まれていたらリポジトリなので表示変更
+      if (`${link}`.indexOf('github') !== -1) {
+        return 'GitHub';
+      } else {
+        return 'Demo';
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
-/* css reset */
-figure {
-  margin: 0;
-  padding: 0;
-}
-
-figcaption {
-  margin: 0;
-  padding: 0;
-}
-/* css reset */
-
 .card__item {
   height: 100%;
   width: 100%;
@@ -68,7 +64,6 @@ figcaption {
 }
 
 .card__explain {
-  border-top: 2px solid dimgray;
-  border-bottom: 2px solid dimgray;
+  border: 2px solid dimgray;
 }
 </style>
