@@ -5,6 +5,7 @@
 <style scoped>
 .nav__text {
   display: inline;
+  padding: 5px;
   color: white;
 }
 </style>
