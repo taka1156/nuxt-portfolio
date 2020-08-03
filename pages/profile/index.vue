@@ -4,54 +4,26 @@
       <h1>Profile</h1>
 
       <div class="jumbotron">
-        <img class="profile-icon contents" src="@/assets/img/prof.png" />
+        <img class="profile__icon" src="@/assets/img/prof.png" />
 
         <section class="contents">
           <h2 class="contents__title">最近やっていること</h2>
-          <div class="contents__box">
-            <ul class="contents__list">
-              <li>JS(ES6)について学習。</li>
-              <li>FireBaseを利用した開発</li>
-              <li>Laravelの学習</li>
-            </ul>
-          </div>
+          <proflie-list :list="experiences" />
         </section>
 
         <section class="contents">
           <h2 class="contents__title">これからやりたいこと</h2>
-          <div class="contents__box">
-            <ul class="contents__list">
-              <li>TypeScriptの学習</li>
-              <li>Vue + Ionicでアプリ作成</li>
-              <li>SASSの学習</li>
-            </ul>
-          </div>
+          <proflie-list :list="wants" />
         </section>
 
         <section class="contents">
           <h2 class="contents__title">よく使うツール</h2>
-          <div class="contents__box">
-            <ul class="contents__list">
-              <li>Homebrew</li>
-              <li>Git</li>
-              <li>VScode</li>
-              <li>Docker</li>
-              <li>LaraDock</li>
-              <li>phpMyAdmin</li>
-            </ul>
-          </div>
+          <proflie-list :list="tools" />
         </section>
 
         <section class="contents">
           <h2 class="contents__title">資格</h2>
-          <div class="contents__box">
-            <ul class="contents__list">
-              <li>ITパスポート</li>
-              <li>情報セキュリティマネジメント</li>
-              <li>基本情報技術者</li>
-              <li>応用情報技術者</li>
-            </ul>
-          </div>
+          <proflie-list :list="exams" />
         </section>
       </div>
     </div>
@@ -60,10 +32,36 @@
 
 <script>
 import meta from 'assets/js/mixin/meta.mixin.js';
+import ProfileList from '@/components/molecules/ProflieList';
 
 export default {
   name: 'Profile',
+  components: {
+    'proflie-list': ProfileList,
+  },
   mixins: [meta],
+  data() {
+    return {
+      experiences: [
+        'JS(ES6)について学習。',
+        'FireBaseを利用した開発',
+        'Laravelの学習',
+      ],
+      wants: [
+        'TypeScriptの学習',
+        'Laravel+Vueでサービスを作る',
+        'AWSなどインフラ周りの学習',
+        'CSS/SASSの学習',
+      ],
+      tools: ['Homebrew', 'Git', 'VScode', 'Docker', 'LaraDock', 'phpMyAdmin'],
+      exams: [
+        'ITパスポート',
+        '情報セキュリティマネジメント',
+        '基本情報技術者',
+        '応用情報技術者',
+      ],
+    };
+  },
   head() {
     // metaタグの設定
     this.meta.title = 'Profile';
@@ -107,6 +105,14 @@ export default {
 </script>
 
 <style scoped>
+/* css reset */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* css rest */
+
 .jumbotron {
   margin: 3rem auto;
   width: 90%;
@@ -116,69 +122,23 @@ export default {
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-.profile-icon {
-  height: 25%;
-  width: 25%;
-}
-
-.contents {
+.profile__icon {
+  height: 20%;
+  width: 20%;
   margin: 1.25em auto 1.25em;
 }
 
+.contents {
+  margin: 0.5em auto 4em;
+}
+
 .contents__title {
-  font-size: 1.75rem;
-}
-
-.contents__box {
-  margin: 0 auto;
-  width: 90%;
-}
-
-.contents__list {
-  width: 85%;
-  margin: 0 auto;
-  text-align: left;
-  list-style-type: none;
-  padding: 0;
-}
-
-.contents__list li {
-  border: solid 1px dimgray;
-  position: relative;
-  margin: 7px auto;
-  font-size: 14px;
-  font-weight: bold;
-  padding-left: 40px;
-  line-height: 30px;
-  color: dimgray;
-}
-
-.contents__list li:before {
-  content: ' ';
-  position: absolute;
-  left: 0px;
-  width: 30px;
-  height: 30px;
-  background: dimgray;
-  top: 0%;
+  font-size: 1.5em;
 }
 
 @media (min-width: 790px) {
-  .profile-icon {
-    height: 20%;
-    width: 20%;
-  }
-
-  .contents__box {
-    width: 60%;
-  }
-
   .jumbotron {
     width: 80%;
-  }
-
-  .contents__list li {
-    font-size: 16px;
   }
 }
 </style>
