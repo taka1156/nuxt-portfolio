@@ -9,7 +9,7 @@
         </figcaption>
       </figure>
       <card-button v-if="cardInfo.link != null" @click="jump(cardInfo)">
-        {{ cardInfo.title }}を見る
+        {{ isGihubLink(cardInfo) ? 'WebSite' : 'GitHub' }}
       </card-button>
     </article>
   </div>
@@ -42,6 +42,10 @@ export default {
         location.href = link;
       }
     },
+    isGihubLink({ link }) {
+      // githubがリンクに含まれていたらリポジトリなので表示変更
+      return `${link}`.indexOf('github') === -1;
+    },
   },
 };
 </script>
@@ -63,12 +67,6 @@ figcaption {
   height: 100%;
   width: 100%;
   border: solid 0.6px lightgray;
-  border-radius: 1%;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
-}
-
-.card__explain {
-  border-top: 2px solid dimgray;
-  border-bottom: 2px solid dimgray;
 }
 </style>

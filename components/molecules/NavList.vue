@@ -3,14 +3,14 @@
     <transition name="nav-fade">
       <div v-show="isOpen" class="nav__list">
         <ul>
-          <li
+          <nav-item
             v-for="(item, index) in routers"
             :key="index"
             class="nav__item"
-            @click="$emit('change-state')"
+            :nav-item="item"
+            @change-state="$emit('change-state')"
           >
-            <nav-item :nav-item="item" />
-          </li>
+          </nav-item>
         </ul>
       </div>
     </transition>
@@ -43,8 +43,8 @@ export default {
 <style scoped>
 /* css reset */
 ul {
-  list-style-type: none;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 /* css reset */
 
@@ -59,13 +59,6 @@ ul {
   width: 100vw;
   z-index: 2;
   background-color: rgba(12, 12, 12, 0.9);
-}
-
-.nav__item {
-  display: block;
-  font-size: 50px;
-  text-align: left;
-  color: white;
 }
 
 /* nav-contentsのアニメーション */
