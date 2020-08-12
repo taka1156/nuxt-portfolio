@@ -33,8 +33,9 @@ jobs:
         MICRO_CMS: ${{ secrets.MICRO_CMS }}
       run: yarn generate:static
 
-    - name: deploy
-      uses: peaceiris/actions-gh-pages@v3
+    - name: deploy to Firebase Hosting
+      uses: w9jds/firebase-action@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+        args: deploy
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
