@@ -7,48 +7,51 @@ const { BASE_URL, MICRO_CMS } = process.env;
 export default {
   mode: 'universal',
   target: 'static',
+  router: {
+    base: '/nuxt_portfolio/',
+  },
   /*
    ** Headers of the page
    */
   head: {
     title: 'TakasPortfolio',
     htmlAttrs: {
-      prefix: 'og: http://ogp.me/ns#'
+      prefix: 'og: http://ogp.me/ns#',
     },
     titleTemplate: '%s - TakasPortfolio',
     meta: [
-      { 
-        charset: 'utf-8' 
+      {
+        charset: 'utf-8',
       },
-      { 
-        name: 'viewport', 
-        content: 'width=device-width, initial-scale=1' 
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1',
       },
       // OGP
-      { 
+      {
         hid: 'og:site_name',
-        property: 'og:site_name', 
-        content: "Taka's Portfolio" 
+        property: 'og:site_name',
+        content: "Taka's Portfolio",
       },
-      { 
+      {
         hid: 'og:type',
-        property: 'og:type', 
-        content: 'website' 
+        property: 'og:type',
+        content: 'website',
       },
       {
         hid: 'og:url',
         property: 'og:url',
         content: 'https://taka1156.github.io/TakasPortfolioSite',
       },
-      { 
+      {
         hid: 'og:title',
-        property: 'og:title', 
-        content: "Taka's Portfolio" 
+        property: 'og:title',
+        content: "Taka's Portfolio",
       },
-      { 
+      {
         hid: 'og:description',
-        property: 'og:description', 
-        content: 'Takaのポートフォリオです' 
+        property: 'og:description',
+        content: 'Takaのポートフォリオです',
       },
       {
         hid: 'og:image',
@@ -56,14 +59,14 @@ export default {
         content: 'https://github.com/identicons/tomotaka.png',
       },
       // Twitter Card
-      { 
-        name: ' twitter:card', 
-        content: 'summary' 
+      {
+        name: ' twitter:card',
+        content: 'summary',
       },
-      { 
-        name: 'twitter:site', 
-        content: '@taka_Program' 
-      }
+      {
+        name: 'twitter:site',
+        content: '@taka_Program',
+      },
     ],
     link: [],
   },
