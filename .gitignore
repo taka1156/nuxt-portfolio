@@ -91,3 +91,6 @@ sw.*
 
 # storybook
 storybook-static
+
+# firebase
+.firebase
