@@ -9,7 +9,7 @@
         </figcaption>
       </figure>
       <card-button v-if="cardInfo.link != null" @click="jump(cardInfo)">
-        {{ isGihubLink(cardInfo) ? 'WebSite' : 'GitHub' }}
+        {{ isGithubRepo(cardInfo) ? 'GitHub' : 'WebSite' }}
       </card-button>
     </article>
   </div>
@@ -42,9 +42,18 @@ export default {
         location.href = link;
       }
     },
-    isGihubLink({ link }) {
+    isGithubRepo({ link }) {
       // githubがリンクに含まれていたらリポジトリなので表示変更
-      return `${link}`.indexOf('github') === -1;
+      if (`${link}`.indexOf('github.io') !== -1) {
+        // github pagesを利用したサイト
+        return false;
+      } else if (`${link}`.indexOf('github') !== -1) {
+        // github リポジトリ
+        return true;
+      } else {
+        // webサイト
+        return false;
+      }
     },
   },
 };
