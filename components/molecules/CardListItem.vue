@@ -43,17 +43,8 @@ export default {
       }
     },
     isGithubRepo({ link }) {
-      // githubがリンクに含まれていたらリポジトリなので表示変更
-      if (`${link}`.indexOf('github.io') !== -1) {
-        // github pagesを利用したサイト
-        return false;
-      } else if (`${link}`.indexOf('github') !== -1) {
-        // github リポジトリ
-        return true;
-      } else {
-        // webサイト
-        return false;
-      }
+      // githubがリンクに含まれてる、かつgithub.ioではないならリポジトリなので表示変更
+      return `${link}`.includes('github') && !`${link}`.includes('github.io');
     },
   },
 };
