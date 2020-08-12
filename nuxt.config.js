@@ -7,9 +7,6 @@ const { BASE_URL, MICRO_CMS } = process.env;
 export default {
   mode: 'universal',
   target: 'static',
-  router: {
-    base: '/nuxt_portfolio/',
-  },
   /*
    ** Headers of the page
    */
