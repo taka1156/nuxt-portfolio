@@ -3,15 +3,15 @@
     <div class="logo">
       <h1 class="logo__title">Welcome to Taka's Portfolio</h1>
       <div class="logo__line" />
-      <div class="other">
-        <a href="https://github.com/taka1156" class="other__link">
-          <img src="@/assets/img/github.png" value="github" class="other__icon" />
+      <div class="sns">
+        <a href="https://github.com/taka1156" class="sns__link">
+          <img src="@/assets/img/github.png" alt="GithubLogo" class="sns__icon" />
         </a>
-        <a href="https://qiita.com/taka_1156" class="other__link">
-          <img src="@/assets/img/qiita.png" value="Qiita" class="other__icon" />
+        <a href="https://qiita.com/taka_1156" class="sns__link">
+          <img src="@/assets/img/qiita.png" alt="QiitaLogo" class="sns__icon" />
         </a>
-        <a href="https://mobile.twitter.com/taka_Program" class="other__link">
-          <img src="@/assets/img/twitter.png" value="Twitter" class="other__icon" />
+        <a href="https://twitter.com/taka_Program" class="sns__link">
+          <img src="@/assets/img/twitter.png" alt="TwitterLogo" class="sns__icon" />
         </a>
       </div>
     </div>
@@ -36,14 +36,14 @@
   width: 100%;
 }
 
-.other {
+.sns {
   width: 85%;
   display: flex;
   margin: 10vh auto;
   justify-content: space-around;
 }
 
-.other__icon {
+.sns__icon {
   width: 60px;
   height: 60px;
   border-radius: 60px;
@@ -51,7 +51,7 @@
   background-color: gray;
 }
 
-.other__link {
+.sns__link {
   border-radius: 60px;
 }
 </style>
