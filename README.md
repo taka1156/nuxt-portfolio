@@ -2,12 +2,6 @@
 
 taka1156のポートフォリオサイトです(https://www.taka1156.site)
 
-## Build Status
-|項目|状態(リンク)|
-|:-----:|:-----:|
-|Site|[![Netlify Status](https://api.netlify.com/api/v1/badges/9d754261-1ee7-4f92-b004-400bc2b9d701/deploy-status)](https://www.taka1156.site)|
-|StoryBook|[![Netlify Status](https://api.netlify.com/api/v1/badges/29be9457-a11f-45f8-8ab3-a6c2a56f1b33/deploy-status)](https://takaportfolio-storybook.netlify.app)|
-
 # 使用したもの
 
 - Nuxt.js
@@ -55,3 +49,6 @@ taka1156のポートフォリオサイトです(https://www.taka1156.site)
 
 - 2020/07/29<br>
  StoryBook追加
+
+- 2020/08/14<br>
+  lighthouseで出たaltとlang要素が設定されてない警告を修正

@@ -1,5 +1,5 @@
 <template functional>
-  <img v-lazy="props.cardImg" class="card__img" />
+  <img v-lazy="props.cardImg" :alt="`${props.imgAlt}`" class="card__img" />
 </template>
 
 <style scoped>
