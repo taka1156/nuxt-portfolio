@@ -4,7 +4,11 @@
       <h1>Profile</h1>
 
       <div class="jumbotron">
-        <img class="profile__icon" src="@/assets/img/prof.png" />
+        <img
+          src="@/assets/img/prof.png"
+          alt="プロフィール画像"
+          class="profile__icon"
+        />
 
         <section class="contents">
           <h2 class="contents__title">最近やっていること</h2>
@@ -74,16 +78,6 @@ export default {
       title: this.meta.title,
       meta: [
         {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.meta.description,
-        },
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: this.meta.title,
-        },
-        {
           hid: 'og:type',
           property: 'og:type',
           content: this.meta.type,
@@ -92,6 +86,16 @@ export default {
           hid: 'og:url',
           property: 'og:url',
           content: this.meta.url,
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.meta.title,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.meta.description,
         },
         {
           hid: 'og:image',
