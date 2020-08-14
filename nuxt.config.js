@@ -21,6 +21,9 @@ export default {
         charset: 'utf-8',
       },
       {
+        lang: 'ja'
+      },
+      {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1',
       },

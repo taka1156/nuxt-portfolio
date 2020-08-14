@@ -2,7 +2,10 @@
   <div>
     <article class="card__item">
       <figure>
-        <card-img :card-img="cardInfo.img.url" />
+        <card-img
+          :card-img="cardInfo.img.url"
+          :img-alt="`${cardInfo.title}の画像`"
+        />
         <figcaption class="card__explain">
           <card-title :card-title="cardInfo.title" />
           <card-text :card-text="cardInfo.content2" />
