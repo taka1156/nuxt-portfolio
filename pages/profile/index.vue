@@ -4,7 +4,11 @@
       <h1>Profile</h1>
 
       <div class="jumbotron">
-        <img class="profile__icon" src="@/assets/img/prof.png" />
+        <img
+          src="@/assets/img/prof.png"
+          alt="プロフィール画像"
+          class="profile__icon"
+        />
 
         <section class="contents">
           <h2 class="contents__title">最近やっていること</h2>
