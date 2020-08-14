@@ -13,15 +13,13 @@ export default {
   head: {
     title: 'TakasPortfolio',
     htmlAttrs: {
+      lang: 'ja',
       prefix: 'og: http://ogp.me/ns#',
     },
     titleTemplate: '%s - TakasPortfolio',
     meta: [
       {
         charset: 'utf-8',
-      },
-      {
-        lang: 'ja'
       },
       {
         name: 'viewport',
