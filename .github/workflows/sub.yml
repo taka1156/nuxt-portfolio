@@ -3,7 +3,8 @@ name: test
 on:
   pull_request:
     branches:
-      - 'develop'
+      - master
+      - develop
 
 jobs:
   build-test:
@@ -27,11 +28,15 @@ jobs:
     - name: install
       run: yarn install
 
-    # - name: lint
+    #- name: lint
     #  run: yarn lint
 
-    # - name: test
-    #  run: yarn test
+    - name: test
+      run: yarn test:cov
+
+    - uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: build
       env:
