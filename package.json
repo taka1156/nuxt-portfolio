@@ -8,9 +8,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "export": "nuxt export",
     "generate": "nuxt generate",
-    "generate:static": "yarn build && yarn export",
+    "generate:static": "yarn build && yarn generate",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

@@ -52,3 +52,7 @@ taka1156のポートフォリオサイトです(https://www.taka1156.site)
 
 - 2020/08/14<br>
   lighthouseで出たaltとlang要素が設定されてない警告を修正
+
+- 2020/08/15<br>
+  yarn.lockでコンフリクトが発生したためnode_modulesを消して再インストール。<br>
+  ビルドコマンド修正
