@@ -5,6 +5,13 @@
 </template>
 
 <style scoped>
+/* css reset */
+button {
+  cursor: pointer;
+  outline: none;
+}
+/* css reset */
+
 .btn {
   display: block;
   font-size: 1em;
@@ -18,7 +25,8 @@
 }
 
 .btn:active,
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: gray;
   color: white;
 }
