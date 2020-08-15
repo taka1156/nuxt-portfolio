@@ -1,6 +1,6 @@
 <template functional>
   <p class="card__text">
-    {{ props.cardText }}
+    <slot />
   </p>
 </template>
 
