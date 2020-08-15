@@ -1,6 +1,6 @@
 <template functional>
   <div class="nav__text">
-    <slot />
+    {{ props.navText }}
   </div>
 </template>
 
