@@ -1,5 +1,9 @@
 # nuxt-portfolio
 
+![test](https://github.com/taka1156/nuxt-portoflio/workflows/test/badge.svg?branch=add%2Fgithub-actions)
+
+[![Coverage Status](https://coveralls.io/repos/github/taka1156/nuxt-portoflio/badge.svg)](https://coveralls.io/github/taka1156/nuxt-portoflio)
+
 taka1156のポートフォリオサイトです(https://www.taka1156.site)
 
 # 使用したもの
