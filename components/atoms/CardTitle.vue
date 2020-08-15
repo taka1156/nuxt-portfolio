@@ -1,5 +1,7 @@
 <template functional>
-  <h2 class="card__title">{{ props.cardTitle }}</h2>
+  <h2 class="card__title">
+    <slot />
+  </h2>
 </template>
 
 <style scoped>

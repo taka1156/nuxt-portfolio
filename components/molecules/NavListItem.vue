@@ -3,7 +3,7 @@
     <li class="nav__item" @click="$emit('change-state')">
       <nuxt-link :to="navItem.to" class="nav__link">
         <nav-img :nav-img="navItem.img" :img-alt="`${navItem.name}の画像`" />
-        <nav-text :nav-text="navItem.name" />
+        <nav-text>{{ navItem.name }}</nav-text>
       </nuxt-link>
     </li>
   </div>
