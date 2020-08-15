@@ -1,9 +1,11 @@
 <template>
   <div>
-    <nuxt-link :to="navItem.to" class="nav__link">
-      <nav-img :nav-img="navItem.img" />
-      <nav-text :nav-text="navItem.name" />
-    </nuxt-link>
+    <li class="nav__item" @click="$emit('change-state')">
+      <nuxt-link :to="navItem.to" class="nav__link">
+        <nav-img :nav-img="navItem.img" :img-alt="`${navItem.name}の画像`" />
+        <nav-text>{{ navItem.name }}</nav-text>
+      </nuxt-link>
+    </li>
   </div>
 </template>
 
@@ -28,8 +30,16 @@ export default {
 </script>
 
 <style scoped>
-.nav__link {
+.nav__item {
   display: block;
+  font-size: 50px;
+  text-align: left;
+  color: white;
+}
+
+.nav__link {
+  display: flex;
+  width: 100%;
   text-decoration: none;
 }
 </style>

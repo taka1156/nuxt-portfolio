@@ -1,21 +1,13 @@
 <template functional>
-  <img v-lazy="props.cardImg" class="card__img" />
+  <img v-lazy="props.cardImg" :alt="`${props.imgAlt}`" class="card__img" />
 </template>
 
 <style scoped>
-/* css reset */
-img {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* css reset */
-
 .card__img {
-  display: block;
+  margin: 0 auto;
   height: 100%;
   width: 100%;
-  margin: 0 auto;
+  border-bottom: 1px dashed black;
 }
 
 /* lazy-load */
