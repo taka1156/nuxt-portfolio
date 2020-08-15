@@ -27,6 +27,13 @@ jobs:
     - name: install
       run: yarn install
 
+    - name: test
+      run: yarn test:cov
+
+    - uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
     - name: build
       env:
         BASE_URL: ${{ secrets.BASE_URL }}

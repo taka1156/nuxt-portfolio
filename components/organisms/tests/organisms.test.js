@@ -4,17 +4,20 @@ import BaseNav from '../BaseNav.vue';
 // NavIcon
 describe('BaseNav', () => {
   const dummyLogo = 'ダミー';
+  const dummyRouters = [
+    { name: 'Top', to: '/home', img: 'http://placehold.jp/150x150.png' },
+  ];
   const baseNav = mount(BaseNav, {
     stubs: {
       NuxtLink: RouterLinkStub,
     },
     propsData: {
-      isOpen: true,
+      routers: dummyRouters,
       logoText: dummyLogo,
     },
   });
 
-  it('開いた時のスナップショット', () => {
+  it('閉じた時のスナップショット', () => {
     expect(baseNav.html()).toMatchSnapshot();
   });
 
@@ -24,7 +27,7 @@ describe('BaseNav', () => {
     expect(baseNav.vm.$data.isOpen).toBe(true);
   });
 
-  it('閉じた時のスナップショット', () => {
+  it('開いた時のスナップショット', () => {
     expect(baseNav.html()).toMatchSnapshot();
   });
 });
