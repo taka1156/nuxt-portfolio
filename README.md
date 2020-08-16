@@ -1,6 +1,6 @@
 # nuxt-portfolio
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/taka1156/nuxt-portoflio/firebase%20deploy) ![test](https://github.com/taka1156/nuxt-portoflio/workflows/test/badge.svg?branch=add%2Fgithub-actions) [![Coverage Status](https://coveralls.io/repos/github/taka1156/nuxt-portoflio/badge.svg)](https://coveralls.io/github/taka1156/nuxt-portoflio) ![GitHub last commit](https://img.shields.io/github/last-commit/taka1156/nuxt-portoflio)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/taka1156/nuxt-portoflio/firebase%20deploy) ![test](https://github.com/taka1156/nuxt-portoflio/workflows/test/badge.svg?branch=add%2Fgithub-actions) [![Coverage Status](https://coveralls.io/repos/github/taka1156/nuxt-portoflio/badge.svg?branch=master)](https://coveralls.io/github/taka1156/nuxt-portoflio) ![GitHub last commit](https://img.shields.io/github/last-commit/taka1156/nuxt-portoflio)
 
 taka1156のポートフォリオサイトです(https://www.taka1156.site)
 
