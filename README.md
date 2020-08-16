@@ -1,5 +1,7 @@
 # nuxt-portfolio
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/taka1156/nuxt-portoflio/firebase%20deploy) ![test](https://github.com/taka1156/nuxt-portoflio/workflows/test/badge.svg?branch=add%2Fgithub-actions) [![Coverage Status](https://coveralls.io/repos/github/taka1156/nuxt-portoflio/badge.svg?branch=master)](https://coveralls.io/github/taka1156/nuxt-portoflio) ![GitHub last commit](https://img.shields.io/github/last-commit/taka1156/nuxt-portoflio)
+
 taka1156のポートフォリオサイトです(https://www.taka1156.site)
 
 # 使用したもの
@@ -54,3 +56,8 @@ taka1156のポートフォリオサイトです(https://www.taka1156.site)
 
 - 2020/08/14<br>
   lighthouseで出たaltとlang要素が設定されてない警告を修正
+
+- 2020/08/15<br>
+  yarn.lockでコンフリクトが発生したためnode_modulesを消して再インストール。<br>
+  ビルドコマンド修正<br>
+  最終的に[Create New App using Yarn create nuxt-app works in dev mode but fail after being published to firebase hosting #7892](https://github.com/nuxt/nuxt.js/issues/7892#issuecomment-671956507)を参考に修正
