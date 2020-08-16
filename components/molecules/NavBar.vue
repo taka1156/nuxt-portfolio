@@ -2,7 +2,7 @@
   <div>
     <div class="navbar">
       <div class="navbar__box">
-        <nav-logo :nav-logo="logoText" />
+        <nav-logo>{{ logoText }}</nav-logo>
         <div @click="$emit('change-state')">
           <nav-icon :is-open="isOpen" />
         </div>

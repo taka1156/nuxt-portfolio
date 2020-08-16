@@ -3,39 +3,43 @@ import NavIcon from '../NavIcon.vue';
 import NavImg from '../NavImg.vue';
 import NavLogo from '../NavLogo.vue';
 import NavText from '../NavText.vue';
+import CardTitle from '../CardTitle.vue';
+import CardImg from '../CardImg.vue';
+import CardText from '../CardText.vue';
+import CardButton from '../CardButton.vue';
 
 // 備考: 全て関数型コンポーネント
 
 // NavIcon
 describe('NavIcon', () => {
-  it('開いた時(閉じるアイコン表示)', () => {
-    const navIcon = shallowMount(NavIcon, {
+  const navIcon = propsData => {
+    return shallowMount(NavIcon, {
       propsData: {
-        isOpen: true,
+        ...propsData,
       },
     });
-    const TOP = navIcon.find('.border__top');
-    const MIDDLE = navIcon.find('.border__middle');
-    const BOTTOM = navIcon.find('.border__bottom');
+  };
+
+  it('開いた時(閉じるアイコン表示)', () => {
+    const wrapper = navIcon({ isOpen: true });
+    const TOP = wrapper.find('.border__top');
+    const MIDDLE = wrapper.find('.border__middle');
+    const BOTTOM = wrapper.find('.border__bottom');
     expect(TOP.classes()).toContain('border__top--open');
     expect(MIDDLE.classes()).toContain('border__middle--fade');
     expect(BOTTOM.classes()).toContain('border__bottom--open');
-    expect(navIcon.html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
   });
 
   it('閉じる時(開くアイコン表示)', () => {
-    const navIcon = shallowMount(NavIcon, {
-      propsData: {
-        isOpen: false,
-      },
-    });
-    const TOP = navIcon.find('.border__top');
-    const MIDDLE = navIcon.find('.border__middle');
-    const BOTTOM = navIcon.find('.border__bottom');
+    const wrapper = navIcon({ isOpen: false });
+    const TOP = wrapper.find('.border__top');
+    const MIDDLE = wrapper.find('.border__middle');
+    const BOTTOM = wrapper.find('.border__bottom');
     expect(TOP.classes()).toContain('border__top--close');
     expect(MIDDLE.classes()).not.toContain('border__middle--fade');
     expect(BOTTOM.classes()).toContain('border__bottom--close');
-    expect(navIcon.html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });
 
@@ -62,10 +66,10 @@ describe('NavImg', () => {
 // NavLogo
 describe('NavLogo', () => {
   it('値がDOMに反映されているか', () => {
-    const dummyLogo = 'ダミー';
+    const dummyLogo = 'ダミーロゴ';
     const navLogo = shallowMount(NavLogo, {
-      propsData: {
-        navLogo: dummyLogo,
+      slots: {
+        default: dummyLogo,
       },
     });
     expect(navLogo.text() === dummyLogo).toBe(true);
@@ -78,11 +82,73 @@ describe('NavText', () => {
   it('値がDOMに反映されているか', () => {
     const dummyText = 'ダミーテキスト';
     const navText = shallowMount(NavText, {
-      propsData: {
-        navText: dummyText,
+      slots: {
+        default: dummyText,
       },
     });
     expect(navText.text() === dummyText).toBe(true);
     expect(navText.html()).toMatchSnapshot();
+  });
+});
+
+describe('CardButton', () => {
+  it('slotがDOMに反映されているか', () => {
+    const dummyButtonText = 'ダミーボタンテキスト';
+    const cardButton = shallowMount(CardButton, {
+      slots: {
+        default: dummyButtonText,
+      },
+    });
+    const btnTag = cardButton.find('button');
+    expect(btnTag.text() === dummyButtonText).toBe(true);
+    expect(btnTag.html()).toMatchSnapshot();
+  });
+});
+
+describe('CardImg', () => {
+  it('値がDOMに反映されているか', () => {
+    const dummyImg = {
+      img: 'http://placehold.jp/150x150.png',
+      alt: 'ダミー画像',
+    };
+    const navImg = shallowMount(CardImg, {
+      propsData: {
+        cardImg: dummyImg.img,
+        imgAlt: dummyImg.alt,
+      },
+    });
+    const imgTag = navImg.find('img');
+    // v-lazyからsrcを取り出せない
+    // expect(imgTag.attributes().src === dummyImg.img).toBe(true);
+    expect(imgTag.attributes().alt === dummyImg.alt).toBe(true);
+    expect(navImg.html()).toMatchSnapshot();
+  });
+});
+
+describe('CardText', () => {
+  it('値がDOMに反映されているか', () => {
+    const dummyText = 'ダミーテキスト';
+    const cardText = shallowMount(CardText, {
+      slots: {
+        default: dummyText,
+      },
+    });
+    const pTag = cardText.find('p');
+    expect(pTag.text() === dummyText).toBe(true);
+    expect(pTag.html()).toMatchSnapshot();
+  });
+});
+
+describe('CardTitle', () => {
+  it('値がDOMに反映されているか', () => {
+    const dummyTitle = 'ダミータイトル';
+    const cardTitle = shallowMount(CardTitle, {
+      slots: {
+        default: dummyTitle,
+      },
+    });
+    const hTag = cardTitle.find('h2');
+    expect(hTag.text() === dummyTitle).toBe(true);
+    expect(cardTitle.html()).toMatchSnapshot();
   });
 });

@@ -9,8 +9,7 @@
             class="nav__item"
             :nav-item="item"
             @change-state="$emit('change-state')"
-          >
-          </nav-item>
+          />
         </ul>
       </div>
     </transition>
