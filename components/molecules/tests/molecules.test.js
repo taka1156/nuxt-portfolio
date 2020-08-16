@@ -2,50 +2,85 @@ import { mount, RouterLinkStub } from '@vue/test-utils';
 import NavBar from '../NavBar.vue';
 import NavList from '../NavList.vue';
 import NavListItem from '../NavListItem.vue';
+import CardList from '../CardList.vue';
+import CardListItem from '../CardListItem.vue';
 
 const dummyRouters = [
   { name: 'Top', to: '/home', img: 'http://placehold.jp/150x150.png' },
 ];
 
+const dummyCards = [
+  {
+    title: 'ダミータイトル',
+    img: { url: 'http://placehold.jp/150x150.png' },
+    content2: '詳細',
+  },
+  {
+    title: 'ダミータイトル',
+    img: { url: 'http://placehold.jp/150x150.png' },
+    content2: '詳細',
+  },
+];
+
+const dummyCardsLink = [
+  {
+    title: 'ダミータイトル',
+    img: { url: 'http://placehold.jp/150x150.png' },
+    content2: '詳細',
+    link: 'https://taka1156.site',
+  },
+  {
+    title: 'ダミータイトル',
+    img: { url: 'http://placehold.jp/150x150.png' },
+    content2: '詳細',
+    link: 'https://github.com/taka1156/nuxt-portoflio',
+  },
+];
+
 // NavBar
 describe('NavBar', () => {
   const dummyText = 'ダミーテキスト';
-  const navBar = mount(NavBar, {
-    propsData: {
-      isOpen: false,
-      logoText: dummyText,
-    },
-  });
+  const navBar = propsData => {
+    return mount(NavBar, {
+      propsData: {
+        logoText: dummyText,
+        ...propsData,
+      },
+    });
+  };
 
   it('NavBar初期値: isOpen, logoText', () => {
+    const wrapper = navBar({ isOpen: false });
     // logoText
-    expect(navBar.vm.$options.props.logoText.required).toBe(true);
-    expect(navBar.vm.logoText).toBe(dummyText);
+    expect(wrapper.vm.$options.props.logoText.required).toBe(true);
+    expect(wrapper.vm.logoText).toBe(dummyText);
     // isOpen
-    expect(navBar.vm.$options.props.isOpen.required).toBe(true);
-    expect(navBar.vm.isOpen).toBe(false);
+    expect(wrapper.vm.$options.props.isOpen.required).toBe(true);
+    expect(wrapper.vm.isOpen).toBe(false);
   });
 
   it('logoTextが反映されているか', () => {
-    const navLogo = navBar.find('.nav__logo');
+    const wrapper = navBar({ isOpen: false });
+    const navLogo = wrapper.find('.nav__logo');
     expect(navLogo.text() === dummyText).toBe(true);
   });
 
   it('ナビゲーションバーを開く', () => {
-    navBar.setProps({ isOpen: true });
-    expect(navBar.vm.isOpen).toBe(true);
-    expect(navBar.html()).toMatchSnapshot();
+    const wrapper = navBar({ isOpen: true });
+    expect(wrapper.vm.isOpen).toBe(true);
+    expect(wrapper.html()).toMatchSnapshot();
   });
 
   it('ナビゲーションバーを閉じる', () => {
-    navBar.setProps({ isOpen: false });
-    expect(navBar.vm.isOpen).toBe(false);
-    expect(navBar.html()).toMatchSnapshot();
+    const wrapper = navBar({ isOpen: false });
+    expect(wrapper.vm.isOpen).toBe(false);
+    expect(wrapper.html()).toMatchSnapshot();
   });
 
   it('$emitでメソッド`change-state`が呼ばれた', () => {
-    navBar.vm.$emit('change-state');
-    expect(navBar.emitted('change-state')).toBeTruthy();
+    const wrapper = navBar({ isOpen: false });
+    wrapper.vm.$emit('change-state');
+    expect(wrapper.emitted('change-state')).toBeTruthy();
   });
 });
 
@@ -138,5 +173,87 @@ describe('NavList', () => {
     const wrapper = navList({ isOpen: true });
     wrapper.vm.$emit('change-state');
     expect(wrapper.emitted('change-state')).toBeTruthy();
+  });
+});
+
+// CardListItem
+describe('CardListItem', () => {
+  const cardListItem = propsData => {
+    return mount(CardListItem, {
+      propsData: {
+        ...propsData,
+      },
+    });
+  };
+
+  it('CardListItemの初期値(linkなし): dummyCards', () => {
+    const wrapper = cardListItem({ cardInfo: dummyCards[0] });
+    // default
+    console.log(wrapper.vm.$options.props.cardInfo.default());
+    // const btnTag = wrapper.find('button');
+    expect(wrapper.vm.$options.props.cardInfo.required).toBe(true);
+    // expect(btnTag == null).toBe(true);
+    expect(wrapper.vm.cardInfo).toBe(dummyCards[0]);
+    // スナップショット
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it('CardListItemの初期値(linkあり): dummyCardsLink', () => {
+    const wrapper = cardListItem({ cardInfo: dummyCardsLink[0] });
+    const btnTag = wrapper.find('button');
+    expect(wrapper.vm.$options.props.cardInfo.required).toBe(true);
+    expect(btnTag.text() === 'WebSite').toBe(true);
+    expect(wrapper.vm.cardInfo).toBe(dummyCardsLink[0]);
+    // スナップショット
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it('isGithubRepoメソッド: dummyCardsLink', () => {
+    // 空だとエラーを吐くのでデータを入れる
+    const wrapper = cardListItem({ cardInfo: dummyCardsLink[0] });
+    // githubのリポジトリとでもサイトの時の比較
+    expect(wrapper.vm.isGithubRepo(dummyCardsLink[0]) === false).toBe(true);
+    expect(wrapper.vm.isGithubRepo(dummyCardsLink[1]) === true).toBe(true);
+  });
+
+  it('jumpメソッド', () => {
+    // https://remarkablemark.org/blog/2018/11/17/mock-window-location/#update-for-jsdom-14
+    delete window.location;
+    window.location = { assign: jest.fn() };
+    const wrapper = cardListItem({ cardInfo: dummyCardsLink[0] });
+    wrapper.vm.jump(dummyCardsLink[0]);
+    expect(window.location.assign).toBeCalledWith(dummyCardsLink[0].link);
+  });
+});
+
+// CardList
+describe('CardList', () => {
+  const cardList = propsData => {
+    return mount(CardList, {
+      propsData: {
+        ...propsData,
+      },
+    });
+  };
+
+  it('CardListの初期値(linkなし): dummyCards', () => {
+    const wrapper = cardList({ cards: dummyCards });
+    // default
+    console.log(wrapper.vm.$options.props.cards.default());
+    expect(wrapper.vm.$options.props.cards.required).toBe(true);
+    expect(wrapper.vm.cards).toBe(dummyCards);
+    // スナップショット
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it('CardListの初期値(linkあり): dummyCardsLink', () => {
+    const wrapper = cardList({ cards: dummyCardsLink });
+    const btnTag = wrapper.findAll('button');
+    expect(wrapper.vm.$options.props.cards.required).toBe(true);
+    expect(btnTag.at(0).text() === 'WebSite').toBe(true);
+    expect(btnTag.at(1).text() === 'GitHub').toBe(true);
+    expect(wrapper.vm.cards).toBe(dummyCardsLink);
+    // スナップショット
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });

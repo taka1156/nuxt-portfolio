@@ -42,7 +42,7 @@ export default {
   methods: {
     jump({ link }) {
       if (link != null) {
-        location.href = link;
+        location.assign(link);
       }
     },
     isGithubRepo({ link }) {
