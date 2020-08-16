@@ -30,33 +30,37 @@ exports[`NavBar ナビゲーションバーを開く 1`] = `
 
 exports[`NavList isOpenがfalseの時に\`.nav__list\`が非表示 1`] = `
 "<div>
-  <div class=\\"nav__list\\" style=\\"display: none;\\">
-    <ul>
-      <div class=\\"nav__item\\">
-        <li class=\\"nav__item\\"><a class=\\"nav__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav__icon\\">
-            <div class=\\"nav__text\\">
-              Top
-            </div>
-          </a></li>
-      </div>
-    </ul>
-  </div>
+  <transition-stub name=\\"nav-fade\\">
+    <div class=\\"nav__list\\" style=\\"display: none;\\">
+      <ul>
+        <div class=\\"nav__item\\">
+          <li class=\\"nav__item\\"><a class=\\"nav__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav__icon\\">
+              <div class=\\"nav__text\\">
+                Top
+              </div>
+            </a></li>
+        </div>
+      </ul>
+    </div>
+  </transition-stub>
 </div>"
 `;
 
 exports[`NavList isOpenがtrueの時に\`.nav__list\`が表示 1`] = `
 "<div>
-  <div class=\\"nav__list\\" style=\\"display: none;\\">
-    <ul>
-      <div class=\\"nav__item\\">
-        <li class=\\"nav__item\\"><a class=\\"nav__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav__icon\\">
-            <div class=\\"nav__text\\">
-              Top
-            </div>
-          </a></li>
-      </div>
-    </ul>
-  </div>
+  <transition-stub name=\\"nav-fade\\">
+    <div class=\\"nav__list\\">
+      <ul>
+        <div class=\\"nav__item\\">
+          <li class=\\"nav__item\\"><a class=\\"nav__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav__icon\\">
+              <div class=\\"nav__text\\">
+                Top
+              </div>
+            </a></li>
+        </div>
+      </ul>
+    </div>
+  </transition-stub>
 </div>"
 `;
 

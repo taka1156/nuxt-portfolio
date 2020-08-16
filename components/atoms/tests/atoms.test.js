@@ -8,34 +8,34 @@ import NavText from '../NavText.vue';
 
 // NavIcon
 describe('NavIcon', () => {
-  it('開いた時(閉じるアイコン表示)', () => {
-    const navIcon = shallowMount(NavIcon, {
+  const navIcon = propsData => {
+    return shallowMount(NavIcon, {
       propsData: {
-        isOpen: true,
+        ...propsData,
       },
     });
-    const TOP = navIcon.find('.border__top');
-    const MIDDLE = navIcon.find('.border__middle');
-    const BOTTOM = navIcon.find('.border__bottom');
+  };
+
+  it('開いた時(閉じるアイコン表示)', () => {
+    const wrapper = navIcon({ isOpen: true });
+    const TOP = wrapper.find('.border__top');
+    const MIDDLE = wrapper.find('.border__middle');
+    const BOTTOM = wrapper.find('.border__bottom');
     expect(TOP.classes()).toContain('border__top--open');
     expect(MIDDLE.classes()).toContain('border__middle--fade');
     expect(BOTTOM.classes()).toContain('border__bottom--open');
-    expect(navIcon.html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
   });
 
   it('閉じる時(開くアイコン表示)', () => {
-    const navIcon = shallowMount(NavIcon, {
-      propsData: {
-        isOpen: false,
-      },
-    });
-    const TOP = navIcon.find('.border__top');
-    const MIDDLE = navIcon.find('.border__middle');
-    const BOTTOM = navIcon.find('.border__bottom');
+    const wrapper = navIcon({ isOpen: false });
+    const TOP = wrapper.find('.border__top');
+    const MIDDLE = wrapper.find('.border__middle');
+    const BOTTOM = wrapper.find('.border__bottom');
     expect(TOP.classes()).toContain('border__top--close');
     expect(MIDDLE.classes()).not.toContain('border__middle--fade');
     expect(BOTTOM.classes()).toContain('border__bottom--close');
-    expect(navIcon.html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });
 
@@ -62,7 +62,7 @@ describe('NavImg', () => {
 // NavLogo
 describe('NavLogo', () => {
   it('値がDOMに反映されているか', () => {
-    const dummyLogo = 'ダミー';
+    const dummyLogo = 'ダミーロゴ';
     const navLogo = shallowMount(NavLogo, {
       propsData: {
         navLogo: dummyLogo,

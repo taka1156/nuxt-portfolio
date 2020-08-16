@@ -8,7 +8,7 @@ exports[`NavImg 値がDOMに反映されているか 1`] = `"<img src=\\"http://
 
 exports[`NavLogo 値がDOMに反映されているか 1`] = `
 "<a href=\\"/\\" class=\\"nav__logo\\">
-  ダミー
+  ダミーロゴ
 </a>"
 `;
 
