@@ -7,11 +7,17 @@
   "scripts": {
     "test": "jest",
     "test:cov": "jest --coverage",
+    "lint-js": "eslint --ext .js,.vue .",
+    "lint-style": "stylelint \"**/*.vue\" \"**/*.css\"",
+    "lint-js:fix": "eslint --ext .js,.vue . --fix",
+    "lint-style:fix": "stylelint \"**/*.vue\" \"**/*.css\" --fix",
+    "lint:check": "yarn lint-js & yarn lint-style",
+    "lint:fix": "yarn lint-js && yarn lint-style",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "generate:static": "yarn build && yarn generate",
+    "generate:static": "yarn build & yarn generate",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -51,6 +57,10 @@
     "jest": "^26.4.0",
     "prettier": "^2.0.5",
     "storybook-addon-vue-info": "^1.4.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2",
     "vue-jest": "^3.0.6"
   }
 }

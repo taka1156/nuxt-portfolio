@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="profilelist">
+    <ul class="profile-list">
       <profile-list-item
         v-for="(item, index) in list"
         :key="index"
@@ -35,15 +35,16 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 /* css rest */
 
-.profilelist {
+.profile-list {
   margin: 1.25em auto 1.25em;
   width: 80%;
 }
 
 @media (min-width: 790px) {
-  .profilelist {
+  .profile-list {
     width: 60%;
   }
 }

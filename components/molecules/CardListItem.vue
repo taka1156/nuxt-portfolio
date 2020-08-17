@@ -6,7 +6,7 @@
           :card-img="cardInfo.img.url"
           :img-alt="`${cardInfo.title}の画像`"
         />
-        <figcaption class="card__explain">
+        <figcaption>
           <card-title>{{ cardInfo.title }}</card-title>
           <card-text>{{ cardInfo.content2 }}</card-text>
         </figcaption>
@@ -64,12 +64,13 @@ figcaption {
   margin: 0;
   padding: 0;
 }
+
 /* css reset */
 
 .card__item {
   height: 100%;
   width: 100%;
-  border: solid 0.6px lightgray;
+  border: solid 0.6px rgb(211, 211, 211);
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
 }
 </style>
