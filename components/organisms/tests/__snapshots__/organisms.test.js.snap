@@ -7,7 +7,7 @@ exports[`BaseCads CardListの初期値(linkあり): dummyCardsLink 1`] = `
       <div class=\\"card-list__card\\">
         <article class=\\"card__item\\">
           <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
-            <figcaption class=\\"card__explain\\">
+            <figcaption>
               <h2 class=\\"card__title\\">ダミータイトル</h2>
               <p class=\\"card__text\\">詳細</p>
             </figcaption>
@@ -19,7 +19,7 @@ exports[`BaseCads CardListの初期値(linkあり): dummyCardsLink 1`] = `
       <div class=\\"card-list__card\\">
         <article class=\\"card__item\\">
           <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
-            <figcaption class=\\"card__explain\\">
+            <figcaption>
               <h2 class=\\"card__title\\">ダミータイトル</h2>
               <p class=\\"card__text\\">詳細</p>
             </figcaption>
@@ -40,7 +40,7 @@ exports[`BaseCads CardListの初期値(linkなし): dummyCards 1`] = `
       <div class=\\"card-list__card\\">
         <article class=\\"card__item\\">
           <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
-            <figcaption class=\\"card__explain\\">
+            <figcaption>
               <h2 class=\\"card__title\\">ダミータイトル</h2>
               <p class=\\"card__text\\">詳細</p>
             </figcaption>
@@ -51,7 +51,7 @@ exports[`BaseCads CardListの初期値(linkなし): dummyCards 1`] = `
       <div class=\\"card-list__card\\">
         <article class=\\"card__item\\">
           <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
-            <figcaption class=\\"card__explain\\">
+            <figcaption>
               <h2 class=\\"card__title\\">ダミータイトル</h2>
               <p class=\\"card__text\\">詳細</p>
             </figcaption>
@@ -68,8 +68,8 @@ exports[`BaseNav 閉じた時のスナップショット 1`] = `
 "<div>
   <nav>
     <div>
-      <div class=\\"navbar\\">
-        <div class=\\"navbar__box\\"><a href=\\"/\\" class=\\"nav__logo\\">ダミー</a>
+      <div class=\\"nav-bar\\">
+        <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav__logo\\">ダミー</a>
           <div>
             <div class=\\"border__group\\"><span class=\\"border__top border__top--close\\"></span> <span class=\\"border__middle\\"></span> <span class=\\"border__bottom border__bottom--close\\"></span></div>
           </div>
@@ -78,9 +78,9 @@ exports[`BaseNav 閉じた時のスナップショット 1`] = `
     </div>
     <div>
       <transition-stub name=\\"nav-fade\\">
-        <div class=\\"nav__list\\" style=\\"display: none;\\">
+        <div class=\\"nav-list\\" style=\\"display: none;\\">
           <ul>
-            <div class=\\"nav__item\\">
+            <div>
               <li class=\\"nav__item\\"><a class=\\"nav__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav__icon\\">
                   <div class=\\"nav__text\\">Top</div>
                 </a></li>
@@ -97,8 +97,8 @@ exports[`BaseNav 開いた時のスナップショット 1`] = `
 "<div>
   <nav>
     <div>
-      <div class=\\"navbar\\">
-        <div class=\\"navbar__box\\"><a href=\\"/\\" class=\\"nav__logo\\">ダミー</a>
+      <div class=\\"nav-bar\\">
+        <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav__logo\\">ダミー</a>
           <div>
             <div class=\\"border__group\\"><span class=\\"border__top border__top--open\\"></span> <span class=\\"border__middle border__middle--fade\\"></span> <span class=\\"border__bottom border__bottom--open\\"></span></div>
           </div>
@@ -107,9 +107,9 @@ exports[`BaseNav 開いた時のスナップショット 1`] = `
     </div>
     <div>
       <transition-stub name=\\"nav-fade\\">
-        <div class=\\"nav__list\\" style=\\"\\">
+        <div class=\\"nav-list\\" style=\\"\\">
           <ul>
-            <div class=\\"nav__item\\">
+            <div>
               <li class=\\"nav__item\\"><a class=\\"nav__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav__icon\\">
                   <div class=\\"nav__text\\">Top</div>
                 </a></li>

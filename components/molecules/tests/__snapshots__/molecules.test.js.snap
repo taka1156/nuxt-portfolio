@@ -6,7 +6,7 @@ exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
     <div class=\\"card-list__card\\">
       <article class=\\"card__item\\">
         <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
-          <figcaption class=\\"card__explain\\">
+          <figcaption>
             <h2 class=\\"card__title\\">ダミータイトル</h2>
             <p class=\\"card__text\\">詳細</p>
           </figcaption>
@@ -18,7 +18,7 @@ exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
     <div class=\\"card-list__card\\">
       <article class=\\"card__item\\">
         <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
-          <figcaption class=\\"card__explain\\">
+          <figcaption>
             <h2 class=\\"card__title\\">ダミータイトル</h2>
             <p class=\\"card__text\\">詳細</p>
           </figcaption>
@@ -37,7 +37,7 @@ exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
     <div class=\\"card-list__card\\">
       <article class=\\"card__item\\">
         <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
-          <figcaption class=\\"card__explain\\">
+          <figcaption>
             <h2 class=\\"card__title\\">ダミータイトル</h2>
             <p class=\\"card__text\\">詳細</p>
           </figcaption>
@@ -48,7 +48,7 @@ exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
     <div class=\\"card-list__card\\">
       <article class=\\"card__item\\">
         <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
-          <figcaption class=\\"card__explain\\">
+          <figcaption>
             <h2 class=\\"card__title\\">ダミータイトル</h2>
             <p class=\\"card__text\\">詳細</p>
           </figcaption>
@@ -64,7 +64,7 @@ exports[`CardListItem CardListItemの初期値(linkあり): dummyCardsLink 1`] =
 "<div>
   <article class=\\"card__item\\">
     <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
-      <figcaption class=\\"card__explain\\">
+      <figcaption>
         <h2 class=\\"card__title\\">ダミータイトル</h2>
         <p class=\\"card__text\\">詳細</p>
       </figcaption>
@@ -79,7 +79,7 @@ exports[`CardListItem CardListItemの初期値(linkなし): dummyCards 1`] = `
 "<div>
   <article class=\\"card__item\\">
     <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
-      <figcaption class=\\"card__explain\\">
+      <figcaption>
         <h2 class=\\"card__title\\">ダミータイトル</h2>
         <p class=\\"card__text\\">詳細</p>
       </figcaption>
@@ -91,8 +91,8 @@ exports[`CardListItem CardListItemの初期値(linkなし): dummyCards 1`] = `
 
 exports[`NavBar ナビゲーションバーを閉じる 1`] = `
 "<div>
-  <div class=\\"navbar\\">
-    <div class=\\"navbar__box\\"><a href=\\"/\\" class=\\"nav__logo\\">ダミーテキスト</a>
+  <div class=\\"nav-bar\\">
+    <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav__logo\\">ダミーテキスト</a>
       <div>
         <div class=\\"border__group\\"><span class=\\"border__top border__top--close\\"></span> <span class=\\"border__middle\\"></span> <span class=\\"border__bottom border__bottom--close\\"></span></div>
       </div>
@@ -103,8 +103,8 @@ exports[`NavBar ナビゲーションバーを閉じる 1`] = `
 
 exports[`NavBar ナビゲーションバーを開く 1`] = `
 "<div>
-  <div class=\\"navbar\\">
-    <div class=\\"navbar__box\\"><a href=\\"/\\" class=\\"nav__logo\\">ダミーテキスト</a>
+  <div class=\\"nav-bar\\">
+    <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav__logo\\">ダミーテキスト</a>
       <div>
         <div class=\\"border__group\\"><span class=\\"border__top border__top--open\\"></span> <span class=\\"border__middle border__middle--fade\\"></span> <span class=\\"border__bottom border__bottom--open\\"></span></div>
       </div>
@@ -113,12 +113,12 @@ exports[`NavBar ナビゲーションバーを開く 1`] = `
 </div>"
 `;
 
-exports[`NavList isOpenがfalseの時に\`.nav__list\`が非表示 1`] = `
+exports[`NavList isOpenがfalseの時に\`.nav-list\`が非表示 1`] = `
 "<div>
   <transition-stub name=\\"nav-fade\\">
-    <div class=\\"nav__list\\" style=\\"display: none;\\">
+    <div class=\\"nav-list\\" style=\\"display: none;\\">
       <ul>
-        <div class=\\"nav__item\\">
+        <div>
           <li class=\\"nav__item\\"><a class=\\"nav__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav__icon\\">
               <div class=\\"nav__text\\">Top</div>
             </a></li>
@@ -129,12 +129,12 @@ exports[`NavList isOpenがfalseの時に\`.nav__list\`が非表示 1`] = `
 </div>"
 `;
 
-exports[`NavList isOpenがtrueの時に\`.nav__list\`が表示 1`] = `
+exports[`NavList isOpenがtrueの時に\`.nav-list\`が表示 1`] = `
 "<div>
   <transition-stub name=\\"nav-fade\\">
-    <div class=\\"nav__list\\">
+    <div class=\\"nav-list\\">
       <ul>
-        <div class=\\"nav__item\\">
+        <div>
           <li class=\\"nav__item\\"><a class=\\"nav__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav__icon\\">
               <div class=\\"nav__text\\">Top</div>
             </a></li>
