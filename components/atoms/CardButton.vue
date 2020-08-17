@@ -10,6 +10,7 @@ button {
   cursor: pointer;
   outline: none;
 }
+
 /* css reset */
 
 .btn {

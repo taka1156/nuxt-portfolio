@@ -109,14 +109,6 @@ export default {
 </script>
 
 <style scoped>
-/* css reset */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-/* css rest */
-
 .jumbotron {
   margin: 3rem auto;
   width: 90%;

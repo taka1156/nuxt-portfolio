@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable prettier/prettier */
-/* eslint-disable quotes */
 require('dotenv').config();
 const { BASE_URL, MICRO_CMS } = process.env;
 
@@ -117,6 +114,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
+    // extend(config, ctx) {},
   },
 };
