@@ -155,16 +155,16 @@ describe('NavList', () => {
     expect(imgTag.attributes().src === dummyRouters[0].img).toBe(true);
   });
 
-  it('isOpenがtrueの時に`.nav__list`が表示', () => {
+  it('isOpenがtrueの時に`.nav-list`が表示', () => {
     const wrapper = navList({ isOpen: true });
-    expect(wrapper.find('.nav__list').element.style.display !== 'none').toBe(true);
+    expect(wrapper.find('.nav-list').element.style.display !== 'none').toBe(true);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('isOpenがfalseの時に`.nav__list`が非表示', () => {
+  it('isOpenがfalseの時に`.nav-list`が非表示', () => {
     const wrapper = navList({ isOpen: false });
-    expect(wrapper.find('.nav__list').element.style.display === 'none').toBe(true);
+    expect(wrapper.find('.nav-list').element.style.display === 'none').toBe(true);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
   });

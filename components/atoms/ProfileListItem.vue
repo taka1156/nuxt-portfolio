@@ -15,10 +15,10 @@
   border: solid 1px dimgray;
 }
 
-.profilelist__item:before {
+.profilelist__item::before {
   content: ' ';
   position: absolute;
-  left: 0px;
+  left: 0;
   width: 30px;
   height: 30px;
   background: dimgray;

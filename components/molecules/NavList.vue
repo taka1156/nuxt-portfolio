@@ -1,12 +1,11 @@
 <template>
   <div>
     <transition name="nav-fade">
-      <div v-show="isOpen" class="nav__list">
+      <div v-show="isOpen" class="nav-list">
         <ul>
           <nav-item
             v-for="(item, index) in routers"
             :key="index"
-            class="nav__item"
             :nav-item="item"
             @change-state="$emit('change-state')"
           />
@@ -41,13 +40,14 @@ export default {
 
 <style scoped>
 /* css reset */
-ul {
-  margin: 0px;
-  padding: 0px;
+.ul {
+  margin: 0;
+  padding: 0;
 }
+
 /* css reset */
 
-.nav__list {
+.nav-list {
   display: flex;
   justify-content: center;
   position: fixed;

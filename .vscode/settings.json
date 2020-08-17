@@ -1,7 +1,8 @@
 {
-    "comments": "eslintの自動保存",
+    "comments": "eslint、stylelintの自動保存",
     "eslint.alwaysShowStatus": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
     },
 }
