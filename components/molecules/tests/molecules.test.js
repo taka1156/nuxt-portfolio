@@ -62,7 +62,7 @@ describe('NavBar', () => {
   it('logoTextが反映されているか', () => {
     const wrapper = navBar({ isOpen: false });
     const navLogo = wrapper.find('.nav__logo');
-    expect(navLogo.text() === dummyText).toBe(true);
+    expect(navLogo.text()).toBe(dummyText);
   });
 
   it('ナビゲーションバーを開く', () => {
@@ -97,7 +97,7 @@ describe('NavListItem', () => {
   });
 
   it('NavList初期値: navItem', () => {
-    // logoText
+    // NavItme
     expect(navListItem.vm.$options.props.navItem.required).toBe(true);
     console.log(navListItem.vm.$options.props.navItem.default());
     expect(navListItem.vm.navItem).toBe(dummyRouters[0]);
@@ -107,9 +107,9 @@ describe('NavListItem', () => {
     const aTag = navListItem.findComponent(RouterLinkStub);
     const imgTag = navListItem.find('img');
 
-    expect(aTag.props().to === dummyRouters[0].to).toBe(true);
-    expect(aTag.text() === dummyRouters[0].name).toBe(true);
-    expect(imgTag.attributes().src === dummyRouters[0].img).toBe(true);
+    expect(aTag.props().to).toBe(dummyRouters[0].to);
+    expect(aTag.text()).toBe(dummyRouters[0].name);
+    expect(imgTag.attributes().src).toBe(dummyRouters[0].img);
     // スナップショット
     expect(navListItem.html()).toMatchSnapshot();
   });
@@ -150,21 +150,21 @@ describe('NavList', () => {
     const aTag = wrapper.findComponent(RouterLinkStub);
     const imgTag = wrapper.find('img');
 
-    expect(aTag.props().to === dummyRouters[0].to).toBe(true);
-    expect(aTag.text() === dummyRouters[0].name).toBe(true);
-    expect(imgTag.attributes().src === dummyRouters[0].img).toBe(true);
+    expect(aTag.props().to).toBe(dummyRouters[0].to);
+    expect(aTag.text()).toBe(dummyRouters[0].name);
+    expect(imgTag.attributes().src).toBe(dummyRouters[0].img);
   });
 
   it('isOpenがtrueの時に`.nav-list`が表示', () => {
     const wrapper = navList({ isOpen: true });
-    expect(wrapper.find('.nav-list').element.style.display !== 'none').toBe(true);
+    expect(wrapper.find('.nav-list').element.style.display).not.toBe('none');
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
   });
 
   it('isOpenがfalseの時に`.nav-list`が非表示', () => {
     const wrapper = navList({ isOpen: false });
-    expect(wrapper.find('.nav-list').element.style.display === 'none').toBe(true);
+    expect(wrapper.find('.nav-list').element.style.display).toBe('none');
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
   });
@@ -188,11 +188,11 @@ describe('CardListItem', () => {
 
   it('CardListItemの初期値(linkなし): dummyCards', () => {
     const wrapper = cardListItem({ cardInfo: dummyCards[0] });
-    // default
     console.log(wrapper.vm.$options.props.cardInfo.default());
-    // const btnTag = wrapper.find('button');
     expect(wrapper.vm.$options.props.cardInfo.required).toBe(true);
-    // expect(btnTag == null).toBe(true);
+    // linkがない時はボタンがないことを確認
+    const btnTag = wrapper.find('button');
+    expect(btnTag.exists()).toBe(false);
     expect(wrapper.vm.cardInfo).toBe(dummyCards[0]);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
@@ -200,9 +200,10 @@ describe('CardListItem', () => {
 
   it('CardListItemの初期値(linkあり): dummyCardsLink', () => {
     const wrapper = cardListItem({ cardInfo: dummyCardsLink[0] });
-    const btnTag = wrapper.find('button');
     expect(wrapper.vm.$options.props.cardInfo.required).toBe(true);
-    expect(btnTag.text() === 'WebSite').toBe(true);
+    // linkがある時はボタンがあることを確認
+    const btnTag = wrapper.find('button');
+    expect(btnTag.text()).toBe('WebSite');
     expect(wrapper.vm.cardInfo).toBe(dummyCardsLink[0]);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
@@ -211,9 +212,9 @@ describe('CardListItem', () => {
   it('isGithubRepoメソッド: dummyCardsLink', () => {
     // 空だとエラーを吐くのでデータを入れる
     const wrapper = cardListItem({ cardInfo: dummyCardsLink[0] });
-    // githubのリポジトリとでもサイトの時の比較
-    expect(wrapper.vm.isGithubRepo(dummyCardsLink[0]) === false).toBe(true);
-    expect(wrapper.vm.isGithubRepo(dummyCardsLink[1]) === true).toBe(true);
+    // githubのリポジトリとデモサイトの時の比較
+    expect(wrapper.vm.isGithubRepo(dummyCardsLink[0])).toBe(false);
+    expect(wrapper.vm.isGithubRepo(dummyCardsLink[1])).toBe(true);
   });
 
   it('jumpメソッド', () => {
@@ -238,7 +239,6 @@ describe('CardList', () => {
 
   it('CardListの初期値(linkなし): dummyCards', () => {
     const wrapper = cardList({ cards: dummyCards });
-    // default
     console.log(wrapper.vm.$options.props.cards.default());
     expect(wrapper.vm.$options.props.cards.required).toBe(true);
     expect(wrapper.vm.cards).toBe(dummyCards);
@@ -250,8 +250,8 @@ describe('CardList', () => {
     const wrapper = cardList({ cards: dummyCardsLink });
     const btnTag = wrapper.findAll('button');
     expect(wrapper.vm.$options.props.cards.required).toBe(true);
-    expect(btnTag.at(0).text() === 'WebSite').toBe(true);
-    expect(btnTag.at(1).text() === 'GitHub').toBe(true);
+    expect(btnTag.at(0).text()).toBe('WebSite');
+    expect(btnTag.at(1).text()).toBe('GitHub');
     expect(wrapper.vm.cards).toBe(dummyCardsLink);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();

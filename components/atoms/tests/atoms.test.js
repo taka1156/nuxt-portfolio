@@ -57,8 +57,8 @@ describe('NavImg', () => {
       },
     });
     const imgTag = navImg.find('img');
-    expect(imgTag.attributes().src === dummyImg.img).toBe(true);
-    expect(imgTag.attributes().alt === dummyImg.alt).toBe(true);
+    expect(imgTag.attributes().src).toBe(dummyImg.img);
+    expect(imgTag.attributes().alt).toBe(dummyImg.alt);
     expect(navImg.html()).toMatchSnapshot();
   });
 });
@@ -72,7 +72,7 @@ describe('NavLogo', () => {
         default: dummyLogo,
       },
     });
-    expect(navLogo.text() === dummyLogo).toBe(true);
+    expect(navLogo.text()).toBe(dummyLogo);
     expect(navLogo.html()).toMatchSnapshot();
   });
 });
@@ -86,7 +86,7 @@ describe('NavText', () => {
         default: dummyText,
       },
     });
-    expect(navText.text() === dummyText).toBe(true);
+    expect(navText.text()).toBe(dummyText);
     expect(navText.html()).toMatchSnapshot();
   });
 });
@@ -100,7 +100,7 @@ describe('CardButton', () => {
       },
     });
     const btnTag = cardButton.find('button');
-    expect(btnTag.text() === dummyButtonText).toBe(true);
+    expect(btnTag.text()).toBe(dummyButtonText);
     expect(btnTag.html()).toMatchSnapshot();
   });
 });
@@ -119,8 +119,8 @@ describe('CardImg', () => {
     });
     const imgTag = navImg.find('img');
     // v-lazyからsrcを取り出せない
-    // expect(imgTag.attributes().src === dummyImg.img).toBe(true);
-    expect(imgTag.attributes().alt === dummyImg.alt).toBe(true);
+    // expect(imgTag.attributes().src).toBe(dummyImg.img);
+    expect(imgTag.attributes().alt).toBe(dummyImg.alt);
     expect(navImg.html()).toMatchSnapshot();
   });
 });
@@ -134,7 +134,7 @@ describe('CardText', () => {
       },
     });
     const pTag = cardText.find('p');
-    expect(pTag.text() === dummyText).toBe(true);
+    expect(pTag.text()).toBe(dummyText);
     expect(pTag.html()).toMatchSnapshot();
   });
 });
@@ -148,7 +148,7 @@ describe('CardTitle', () => {
       },
     });
     const hTag = cardTitle.find('h2');
-    expect(hTag.text() === dummyTitle).toBe(true);
+    expect(hTag.text()).toBe(dummyTitle);
     expect(cardTitle.html()).toMatchSnapshot();
   });
 });

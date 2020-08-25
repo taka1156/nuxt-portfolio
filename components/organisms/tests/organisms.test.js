@@ -83,7 +83,6 @@ describe('BaseCads', () => {
 
   it('CardListの初期値(linkなし): dummyCards', () => {
     const wrapper = baseCard({ posts: dummyCards });
-    // default
     console.log(wrapper.vm.$options.props.posts.default());
     expect(wrapper.vm.$options.props.posts.required).toBe(true);
     expect(wrapper.vm.posts).toBe(dummyCards);
@@ -95,8 +94,8 @@ describe('BaseCads', () => {
     const wrapper = baseCard({ posts: dummyCardsLink });
     const btnTag = wrapper.findAll('button');
     expect(wrapper.vm.$options.props.posts.required).toBe(true);
-    expect(btnTag.at(0).text() === 'WebSite').toBe(true);
-    expect(btnTag.at(1).text() === 'GitHub').toBe(true);
+    expect(btnTag.at(0).text()).toBe('WebSite');
+    expect(btnTag.at(1).text()).toBe('GitHub');
     expect(wrapper.vm.posts).toBe(dummyCardsLink);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
