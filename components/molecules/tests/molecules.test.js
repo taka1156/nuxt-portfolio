@@ -5,7 +5,7 @@ import NavListItem from '../NavListItem.vue';
 import CardList from '../CardList.vue';
 import CardListItem from '../CardListItem.vue';
 
-const dummyRouters = [
+const dummyRoutes = [
   { name: 'Top', to: '/home', img: 'http://placehold.jp/150x150.png' },
 ];
 
@@ -92,7 +92,7 @@ describe('NavListItem', () => {
       NuxtLink: RouterLinkStub,
     },
     propsData: {
-      navItem: dummyRouters[0],
+      navItem: dummyRoutes[0],
     },
   });
 
@@ -100,16 +100,16 @@ describe('NavListItem', () => {
     // NavItme
     expect(navListItem.vm.$options.props.navItem.required).toBe(true);
     console.log(navListItem.vm.$options.props.navItem.default());
-    expect(navListItem.vm.navItem).toBe(dummyRouters[0]);
+    expect(navListItem.vm.navItem).toBe(dummyRoutes[0]);
   });
 
   it('値がDOMに反映されているか', () => {
     const aTag = navListItem.findComponent(RouterLinkStub);
     const imgTag = navListItem.find('img');
 
-    expect(aTag.props().to).toBe(dummyRouters[0].to);
-    expect(aTag.text()).toBe(dummyRouters[0].name);
-    expect(imgTag.attributes().src).toBe(dummyRouters[0].img);
+    expect(aTag.props().to).toBe(dummyRoutes[0].to);
+    expect(aTag.text()).toBe(dummyRoutes[0].name);
+    expect(imgTag.attributes().src).toBe(dummyRoutes[0].img);
     // スナップショット
     expect(navListItem.html()).toMatchSnapshot();
   });
@@ -128,21 +128,21 @@ describe('NavList', () => {
         NuxtLink: RouterLinkStub,
       },
       propsData: {
-        routers: dummyRouters,
+        routes: dummyRoutes,
         ...propsData,
       },
     });
   };
 
-  it('NavList初期値: isOpen, routers', () => {
+  it('NavList初期値: isOpen, routes', () => {
     const wrapper = navList({ isOpen: false });
     // isOpen
     expect(wrapper.vm.$options.props.isOpen.required).toBe(true);
     expect(wrapper.vm.isOpen).toBe(false);
-    // routers
-    expect(wrapper.vm.$options.props.routers.required).toBe(true);
-    console.log(wrapper.vm.$options.props.routers.default());
-    expect(wrapper.vm.routers).toBe(dummyRouters);
+    // routes
+    expect(wrapper.vm.$options.props.routes.required).toBe(true);
+    console.log(wrapper.vm.$options.props.routes.default());
+    expect(wrapper.vm.routes).toBe(dummyRoutes);
   });
 
   it('値がDOMに反映されているか', () => {
@@ -150,9 +150,9 @@ describe('NavList', () => {
     const aTag = wrapper.findComponent(RouterLinkStub);
     const imgTag = wrapper.find('img');
 
-    expect(aTag.props().to).toBe(dummyRouters[0].to);
-    expect(aTag.text()).toBe(dummyRouters[0].name);
-    expect(imgTag.attributes().src).toBe(dummyRouters[0].img);
+    expect(aTag.props().to).toBe(dummyRoutes[0].to);
+    expect(aTag.text()).toBe(dummyRoutes[0].name);
+    expect(imgTag.attributes().src).toBe(dummyRoutes[0].img);
   });
 
   it('isOpenがtrueの時に`.nav-list`が表示', () => {

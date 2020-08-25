@@ -5,7 +5,7 @@ import BaseCard from '../BaseCard.vue';
 // BaseNav
 describe('BaseNav', () => {
   const dummyLogo = 'ダミー';
-  const dummyRouters = [
+  const dummyRoutes = [
     { name: 'Top', to: '/home', img: 'http://placehold.jp/150x150.png' },
   ];
   const baseNav = mount(BaseNav, {
@@ -14,18 +14,18 @@ describe('BaseNav', () => {
     },
     propsData: {
       logoText: dummyLogo,
-      routers: dummyRouters,
+      routes: dummyRoutes,
     },
   });
 
-  it('NavBar初期値: logoText, routers', () => {
+  it('NavBar初期値: logoText, routes', () => {
     // logoText
     expect(baseNav.vm.$options.props.logoText.required).toBe(true);
     expect(baseNav.vm.logoText).toBe(dummyLogo);
-    // routers
-    expect(baseNav.vm.$options.props.routers.required).toBe(true);
-    console.log(baseNav.vm.$options.props.routers.default());
-    expect(baseNav.vm.routers).toBe(dummyRouters);
+    // routes
+    expect(baseNav.vm.$options.props.routes.required).toBe(true);
+    console.log(baseNav.vm.$options.props.routes.default());
+    expect(baseNav.vm.routes).toBe(dummyRoutes);
   });
 
   it('閉じた時のスナップショット', () => {
