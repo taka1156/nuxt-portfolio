@@ -2,7 +2,7 @@
   <div>
     <nav>
       <nav-bar :logo-text="logoText" :is-open="isOpen" @change-state="changeState" />
-      <nav-list :is-open="isOpen" :routers="routers" @change-state="changeState" />
+      <nav-list :is-open="isOpen" :routes="routes" @change-state="changeState" />
     </nav>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
       default: 'Please Setting Title',
       required: true,
     },
-    routers: {
+    routes: {
       type: Array,
       default: () => [],
       required: true,

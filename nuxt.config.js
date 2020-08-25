@@ -112,10 +112,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    { src: '~plugins/InfiniteLoading.js', mode: 'client' },
-    { src: '~plugins/LazyLoad.js', mode: 'client' },
-  ],
+  plugins: [{ src: '~plugins/LazyLoad.js', mode: 'client' }],
   /*
    ** Nuxt.js dev-modules
    */

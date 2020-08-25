@@ -5,7 +5,7 @@ import BaseCard from '../BaseCard.vue';
 // BaseNav
 describe('BaseNav', () => {
   const dummyLogo = 'ダミー';
-  const dummyRouters = [
+  const dummyRoutes = [
     { name: 'Top', to: '/home', img: 'http://placehold.jp/150x150.png' },
   ];
   const baseNav = mount(BaseNav, {
@@ -14,18 +14,18 @@ describe('BaseNav', () => {
     },
     propsData: {
       logoText: dummyLogo,
-      routers: dummyRouters,
+      routes: dummyRoutes,
     },
   });
 
-  it('NavBar初期値: logoText, routers', () => {
+  it('NavBar初期値: logoText, routes', () => {
     // logoText
     expect(baseNav.vm.$options.props.logoText.required).toBe(true);
     expect(baseNav.vm.logoText).toBe(dummyLogo);
-    // routers
-    expect(baseNav.vm.$options.props.routers.required).toBe(true);
-    console.log(baseNav.vm.$options.props.routers.default());
-    expect(baseNav.vm.routers).toBe(dummyRouters);
+    // routes
+    expect(baseNav.vm.$options.props.routes.required).toBe(true);
+    console.log(baseNav.vm.$options.props.routes.default());
+    expect(baseNav.vm.routes).toBe(dummyRoutes);
   });
 
   it('閉じた時のスナップショット', () => {
@@ -83,7 +83,6 @@ describe('BaseCads', () => {
 
   it('CardListの初期値(linkなし): dummyCards', () => {
     const wrapper = baseCard({ posts: dummyCards });
-    // default
     console.log(wrapper.vm.$options.props.posts.default());
     expect(wrapper.vm.$options.props.posts.required).toBe(true);
     expect(wrapper.vm.posts).toBe(dummyCards);
@@ -95,8 +94,8 @@ describe('BaseCads', () => {
     const wrapper = baseCard({ posts: dummyCardsLink });
     const btnTag = wrapper.findAll('button');
     expect(wrapper.vm.$options.props.posts.required).toBe(true);
-    expect(btnTag.at(0).text() === 'WebSite').toBe(true);
-    expect(btnTag.at(1).text() === 'GitHub').toBe(true);
+    expect(btnTag.at(0).text()).toBe('WebSite');
+    expect(btnTag.at(1).text()).toBe('GitHub');
     expect(wrapper.vm.posts).toBe(dummyCardsLink);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
