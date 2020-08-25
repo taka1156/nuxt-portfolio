@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav-bar :logo-text="logoText" :routers="routers" />
+    <nav-bar :logo-text="logoText" :routes="routes" />
     <nuxt />
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       logoText: "Taka'sPortfolioSite",
-      routers: [
+      routes: [
         {
           name: 'Top',
           to: '/',
