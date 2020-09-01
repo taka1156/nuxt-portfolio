@@ -34,8 +34,8 @@ export default {
 
       return Promise.all([skills, portfolios]).then(values => {
         return [
-          { route: 'skill', payload: values[0] },
-          { route: 'portfolio', payload: values[1] },
+          { route: '/skill', payload: values[0] },
+          { route: '/portfolio', payload: values[1] },
         ];
       });
     },
