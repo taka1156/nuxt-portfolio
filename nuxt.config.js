@@ -72,7 +72,7 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://taka1156.github.io/TakasPortfolioSite',
+        content: 'https://www.taka1156.site',
       },
       {
         hid: 'og:title',
@@ -87,7 +87,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://github.com/identicons/tomotaka.png',
+        content: `${BASE_URL}/img/ogp/logo.jpg`,
       },
       // Twitter Card
       {
