@@ -6,6 +6,9 @@ on:
       - master
       - develop
 
+env:
+  cache-version: v1
+
 jobs:
   build-test:
     runs-on: ubuntu-18.04
@@ -18,19 +21,19 @@ jobs:
         node-version: '12.x'
 
     - name: Cache dependencies
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       with:
         path: ~/.cache/yarn
-        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+        key: ${{ env.cache-version }}-${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
-          ${{ runner.os }}-node-
+          ${{ env.cache-version }}-${{ runner.os }}-node-
 
     - name: install
       if: steps.cache.outputs.cache-hit != 'true'
       run: yarn install
 
-    #- name: lint
-    #  run: yarn lint
+    - name: lint
+      run: yarn lint:check
 
     - name: test
       run: yarn test

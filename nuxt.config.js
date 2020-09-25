@@ -1,12 +1,45 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable prettier/prettier */
-/* eslint-disable quotes */
+import axios from 'axios';
 require('dotenv').config();
 const { BASE_URL, MICRO_CMS } = process.env;
+const CONTENT_MAX = 20;
+const api = 'https://taka_portfolio.microcms.io/api/v1';
 
 export default {
   mode: 'universal',
   target: 'static',
+  generate: {
+    fallback: true,
+    routes() {
+      const skills = axios
+        .get(`${api}/skill`, {
+          params: { fields: 'title,img,content2', limit: CONTENT_MAX },
+          headers: { 'X-API-KEY': MICRO_CMS },
+        })
+        .then(({ data }) => {
+          return data.contents.map(skill => {
+            return skill;
+          });
+        });
+
+      const portfolios = axios
+        .get(`${api}/portfolio`, {
+          params: { fields: 'title,img,content2,link', limit: CONTENT_MAX },
+          headers: { 'X-API-KEY': MICRO_CMS },
+        })
+        .then(({ data }) => {
+          return data.contents.map(portfolio => {
+            return portfolio;
+          });
+        });
+
+      return Promise.all([skills, portfolios]).then(values => {
+        return [
+          { route: '/skill', payload: values[0] },
+          { route: '/portfolio', payload: values[1] },
+        ];
+      });
+    },
+  },
   /*
    ** Headers of the page
    */
@@ -39,7 +72,7 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://taka1156.github.io/TakasPortfolioSite',
+        content: 'https://www.taka1156.site',
       },
       {
         hid: 'og:title',
@@ -54,7 +87,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://github.com/identicons/tomotaka.png',
+        content: `${BASE_URL}/img/ogp/logo.jpg`,
       },
       // Twitter Card
       {
@@ -79,10 +112,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    { src: '~plugins/InfiniteLoading.js', mode: 'client' },
-    { src: '~plugins/LazyLoad.js', mode: 'client' },
-  ],
+  plugins: [{ src: '~plugins/LazyLoad.js', mode: 'client' }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -117,6 +147,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
+    // extend(config, ctx) {},
   },
 };

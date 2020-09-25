@@ -1,12 +1,11 @@
 <template>
   <div>
     <transition name="nav-fade">
-      <div v-show="isOpen" class="nav__list">
+      <div v-show="isOpen" class="nav-list">
         <ul>
           <nav-item
-            v-for="(item, index) in routers"
+            v-for="(item, index) in routes"
             :key="index"
-            class="nav__item"
             :nav-item="item"
             @change-state="$emit('change-state')"
           />
@@ -30,7 +29,7 @@ export default {
       default: false,
       required: true,
     },
-    routers: {
+    routes: {
       type: Array,
       default: () => [],
       required: true,
@@ -40,14 +39,7 @@ export default {
 </script>
 
 <style scoped>
-/* css reset */
-ul {
-  margin: 0px;
-  padding: 0px;
-}
-/* css reset */
-
-.nav__list {
+.nav-list {
   display: flex;
   justify-content: center;
   position: fixed;

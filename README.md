@@ -61,3 +61,6 @@ taka1156のポートフォリオサイトです(https://www.taka1156.site)
   yarn.lockでコンフリクトが発生したためnode_modulesを消して再インストール。<br>
   ビルドコマンド修正<br>
   最終的に[Create New App using Yarn create nuxt-app works in dev mode but fail after being published to firebase hosting #7892](https://github.com/nuxt/nuxt.js/issues/7892#issuecomment-671956507)を参考に修正
+
+- 2020/08/17<br>
+  [Support for linting BEM selectors without component definition](https://github.com/postcss/postcss-bem-linter/issues/82#issuecomment-292464488)を参考にbemのstylelintを設定

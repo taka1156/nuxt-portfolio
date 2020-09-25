@@ -3,19 +3,14 @@
     <div class="container">
       <h1>Portfolio</h1>
       <card-list :posts="posts" />
-      <client-only>
-        <infinite-loading spinner="bubbles" @infinite="infiniteHandler">
-          <span slot="no-more"></span>
-        </infinite-loading>
-      </client-only>
     </div>
   </div>
 </template>
 
 <script>
-const POSTS_PER_PAGE = 10;
 import CardList from '@/components/organisms/BaseCard';
 import meta from 'assets/js/mixin/meta.mixin.js';
+const CONTENT_MAX = 20;
 
 export default {
   name: 'Skill',
@@ -23,46 +18,21 @@ export default {
     'card-list': CardList,
   },
   mixins: [meta],
+  async asyncData({ $axios, payload }) {
+    if (payload != null) {
+      return { posts: payload };
+    }
+    const api = 'https://taka_portfolio.microcms.io/api/v1';
+    const { contents } = await $axios.$get(`${api}/portfolio`, {
+      params: { fields: 'title,img,content2,link', limit: CONTENT_MAX },
+      headers: { 'X-API-KEY': process.env.MICRO_CMS },
+    });
+    return { posts: contents };
+  },
   data() {
     return {
-      apiInfo: {
-        url: 'https://taka_portfolio.microcms.io/api/v1/portfolio',
-        fields: 'title,img,content2,link',
-      },
-      page: 0,
       posts: [],
-      isLoaded: false,
     };
-  },
-  computed: {
-    pageIndex() {
-      return this.page * POSTS_PER_PAGE;
-    },
-  },
-  methods: {
-    async infiniteHandler($state) {
-      if (!this.isLoaded) {
-        const OPTIONS = {
-          fields: this.apiInfo.fields,
-          limit: POSTS_PER_PAGE,
-          offset: this.pageIndex,
-        };
-        // コンテンツの取得
-        const { contents } = await this.$axios.$get(this.apiInfo.url, {
-          params: { ...OPTIONS },
-          headers: { 'X-API-KEY': process.env.MICRO_CMS },
-        });
-        // ページング
-        if (contents.length > 0) {
-          this.page++;
-          this.posts.push(...contents);
-          $state.loaded();
-        } else {
-          $state.complete();
-          this.isLoaded = true;
-        }
-      }
-    },
   },
   head() {
     // metaタグの設定
@@ -105,5 +75,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

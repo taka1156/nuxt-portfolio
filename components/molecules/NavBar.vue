@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="navbar">
-      <div class="navbar__box">
+    <div class="nav-bar">
+      <div class="nav-bar__box">
         <nav-logo>{{ logoText }}</nav-logo>
         <div @click="$emit('change-state')">
           <nav-icon :is-open="isOpen" />
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style scoped>
-.navbar {
+.nav-bar {
   position: fixed;
   top: 0;
   left: 0;
@@ -47,7 +47,7 @@ export default {
   z-index: 2;
 }
 
-.navbar__box {
+.nav-bar__box {
   display: flex;
   justify-content: space-between;
   height: 90%;

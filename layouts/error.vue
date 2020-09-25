@@ -15,7 +15,7 @@
 
       <div class="title">{{ error.message }}</div>
       <div v-if="error.statusCode === 404" class="description">
-        <p>ページがありません(URLを確認してください。)</p>
+        <p>ページがありません。<br />(URLを確認してください。)</p>
         <NuxtLink class="error-link" to="/">Topに戻る</NuxtLink>
       </div>
 
@@ -42,7 +42,7 @@ export default {
 .error {
   padding: 1rem;
   background: #f7f8fb;
-  color: #47494e;
+  color: gray;
   text-align: center;
   display: flex;
   justify-content: center;

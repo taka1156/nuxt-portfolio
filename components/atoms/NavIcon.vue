@@ -1,22 +1,22 @@
 <template functional>
-  <div class="border__group">
+  <div class="nav-icon">
     <span
-      class="border__top"
-      :class="[props.isOpen ? 'border__top--open' : 'border__top--close']"
+      class="nav-icon__top"
+      :class="[props.isOpen ? 'nav-icon__top--open' : 'nav-icon__top--close']"
     ></span>
     <span
-      class="border__middle"
-      :class="{ 'border__middle--fade': props.isOpen }"
+      class="nav-icon__middle"
+      :class="{ 'nav-icon__middle--fade': props.isOpen }"
     ></span>
     <span
-      class="border__bottom"
-      :class="[props.isOpen ? 'border__bottom--open' : 'border__bottom--close']"
+      class="nav-icon__bottom"
+      :class="[props.isOpen ? 'nav-icon__bottom--open' : 'nav-icon__bottom--close']"
     ></span>
   </div>
 </template>
 
 <style scoped>
-.border__group {
+.nav-icon {
   position: relative;
   top: 0;
   right: 0;
@@ -38,25 +38,25 @@ span {
   border-radius: 1px;
 }
 
-.border__top--close {
+.nav-icon__top--close {
   transform: translateY(-10px);
 }
 
-.border__bottom--close {
+.nav-icon__bottom--close {
   transform: translateY(10px);
 }
 
-.border__top--open {
+.nav-icon__top--open {
   animation: top 0.6s ease;
   transform: rotate(-45deg);
 }
 
-.border__middle--fade {
+.nav-icon__middle--fade {
   animation: middle 0.6s ease;
   opacity: 0;
 }
 
-.border__bottom--open {
+.nav-icon__bottom--open {
   animation: bottom 0.6s ease;
   transform: rotate(45deg);
 }
