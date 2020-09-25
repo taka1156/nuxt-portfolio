@@ -1,11 +1,13 @@
 <template>
   <div>
-    <article class="card__item">
+    <article class="card-list-item">
       <figure>
         <card-img
           :card-img="cardInfo.img.url"
           :img-alt="`${cardInfo.title}の画像`"
+          :is-portfolio="cardInfo.link != null"
         />
+        <div class="card-list-item__border" />
         <figcaption>
           <card-title>{{ cardInfo.title }}</card-title>
           <card-text>{{ cardInfo.content2 }}</card-text>
@@ -67,10 +69,15 @@ figcaption {
 
 /* css reset */
 
-.card__item {
+.card-list-item {
   height: 100%;
   width: 100%;
+  margin: 0 auto;
   border: solid 0.6px rgb(211, 211, 211);
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-list-item__border {
+  border-bottom: 1px dashed black;
 }
 </style>

@@ -1,11 +1,11 @@
 <template functional>
-  <a class="nav__logo" href="/">
+  <a class="nav-logo" href="/">
     <slot />
   </a>
 </template>
 
 <style scoped>
-.nav__logo {
+.nav-logo {
   display: block;
   height: 30px;
   margin-top: 10px;

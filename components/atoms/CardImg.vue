@@ -1,17 +1,26 @@
 <template functional>
-  <img v-lazy="props.cardImg" :alt="`${props.imgAlt}`" class="card__img" />
+  <img
+    v-lazy="props.cardImg"
+    :alt="`${props.imgAlt}`"
+    class="card-img"
+    :class="[props.isPortfolio ? 'card-img--lg' : 'card-img--sm']"
+  />
 </template>
 
 <style scoped>
-.card__img {
+.card-img {
   margin: 0 auto;
-  height: 100%;
-  width: 100%;
-  border-bottom: 1px dashed black;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
-/* lazy-load */
-img[lazy='loaded'] {
-  animation: 1s anime-opacity both;
+.card-img--sm {
+  height: 50%;
+  width: 50%;
+}
+
+.card-img--lg {
+  height: 100%;
+  width: 100%;
 }
 </style>

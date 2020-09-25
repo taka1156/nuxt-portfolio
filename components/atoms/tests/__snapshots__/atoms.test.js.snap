@@ -2,18 +2,18 @@
 
 exports[`CardButton slotがDOMに反映されているか 1`] = `"<button class=\\"btn\\">ダミーボタンテキスト</button>"`;
 
-exports[`CardImg 値がDOMに反映されているか 1`] = `"<img alt=\\"ダミー画像\\" class=\\"card__img\\">"`;
+exports[`CardImg 値がDOMに反映されているか 1`] = `"<img alt=\\"ダミー画像\\" class=\\"card-img card-img--sm\\">"`;
 
-exports[`CardText 値がDOMに反映されているか 1`] = `"<p class=\\"card__text\\">ダミーテキスト</p>"`;
+exports[`CardText 値がDOMに反映されているか 1`] = `"<p class=\\"card-text\\">ダミーテキスト</p>"`;
 
-exports[`CardTitle 値がDOMに反映されているか 1`] = `"<h2 class=\\"card__title\\">ダミータイトル</h2>"`;
+exports[`CardTitle 値がDOMに反映されているか 1`] = `"<h2 class=\\"card-title\\">ダミータイトル</h2>"`;
 
-exports[`NavIcon 閉じる時(開くアイコン表示) 1`] = `"<div class=\\"border__group\\"><span class=\\"border__top border__top--close\\"></span> <span class=\\"border__middle\\"></span> <span class=\\"border__bottom border__bottom--close\\"></span></div>"`;
+exports[`NavIcon 閉じる時(開くアイコン表示) 1`] = `"<div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__middle\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--close\\"></span></div>"`;
 
-exports[`NavIcon 開いた時(閉じるアイコン表示) 1`] = `"<div class=\\"border__group\\"><span class=\\"border__top border__top--open\\"></span> <span class=\\"border__middle border__middle--fade\\"></span> <span class=\\"border__bottom border__bottom--open\\"></span></div>"`;
+exports[`NavIcon 開いた時(閉じるアイコン表示) 1`] = `"<div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--open\\"></span></div>"`;
 
-exports[`NavImg 値がDOMに反映されているか 1`] = `"<img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミー画像\\" class=\\"nav__icon\\">"`;
+exports[`NavImg 値がDOMに反映されているか 1`] = `"<img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミー画像\\" class=\\"nav-img\\">"`;
 
-exports[`NavLogo 値がDOMに反映されているか 1`] = `"<a href=\\"/\\" class=\\"nav__logo\\">ダミーロゴ</a>"`;
+exports[`NavLogo 値がDOMに反映されているか 1`] = `"<a href=\\"/\\" class=\\"nav-logo\\">ダミーロゴ</a>"`;
 
-exports[`NavText 値がDOMに反映されているか 1`] = `"<div class=\\"nav__text\\">ダミーテキスト</div>"`;
+exports[`NavText 値がDOMに反映されているか 1`] = `"<div class=\\"nav-text\\">ダミーテキスト</div>"`;
