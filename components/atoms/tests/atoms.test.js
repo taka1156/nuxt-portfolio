@@ -22,23 +22,23 @@ describe('NavIcon', () => {
 
   it('開いた時(閉じるアイコン表示)', () => {
     const wrapper = navIcon({ isOpen: true });
-    const TOP = wrapper.find('.border__top');
-    const MIDDLE = wrapper.find('.border__middle');
-    const BOTTOM = wrapper.find('.border__bottom');
-    expect(TOP.classes()).toContain('border__top--open');
-    expect(MIDDLE.classes()).toContain('border__middle--fade');
-    expect(BOTTOM.classes()).toContain('border__bottom--open');
+    const TOP = wrapper.find('.nav-icon__top');
+    const MIDDLE = wrapper.find('.nav-icon__middle');
+    const BOTTOM = wrapper.find('.nav-icon__bottom');
+    expect(TOP.classes()).toContain('nav-icon__top--open');
+    expect(MIDDLE.classes()).toContain('nav-icon__middle--fade');
+    expect(BOTTOM.classes()).toContain('nav-icon__bottom--open');
     expect(wrapper.html()).toMatchSnapshot();
   });
 
   it('閉じる時(開くアイコン表示)', () => {
     const wrapper = navIcon({ isOpen: false });
-    const TOP = wrapper.find('.border__top');
-    const MIDDLE = wrapper.find('.border__middle');
-    const BOTTOM = wrapper.find('.border__bottom');
-    expect(TOP.classes()).toContain('border__top--close');
-    expect(MIDDLE.classes()).not.toContain('border__middle--fade');
-    expect(BOTTOM.classes()).toContain('border__bottom--close');
+    const TOP = wrapper.find('.nav-icon__top');
+    const MIDDLE = wrapper.find('.nav-icon__middle');
+    const BOTTOM = wrapper.find('.nav-icon__bottom');
+    expect(TOP.classes()).toContain('nav-icon__top--close');
+    expect(MIDDLE.classes()).not.toContain('nav-icon__middle--fade');
+    expect(BOTTOM.classes()).toContain('nav-icon__bottom--close');
     expect(wrapper.html()).toMatchSnapshot();
   });
 });

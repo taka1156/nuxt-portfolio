@@ -1,11 +1,11 @@
 <template functional>
-  <p class="card__text">
+  <p class="card-text">
     <slot />
   </p>
 </template>
 
 <style scoped>
-.card__text {
+.card-text {
   display: block;
   height: 100px;
   width: 100%;

@@ -1,9 +1,9 @@
 <template functional>
-  <li class="profilelist__item">{{ props.profileText }}</li>
+  <li class="profile-list-item">{{ props.profileText }}</li>
 </template>
 
 <style scoped>
-.profilelist__item {
+.profile-list-item {
   position: relative;
   margin: 7px auto;
   font-size: 14px;
@@ -15,7 +15,7 @@
   border: solid 1px dimgray;
 }
 
-.profilelist__item::before {
+.profile-list-item::before {
   content: ' ';
   position: absolute;
   left: 0;
@@ -26,7 +26,7 @@
 }
 
 @media (min-width: 790px) {
-  .profilelist__item {
+  .profile-list-item {
     font-size: 25px;
   }
 }

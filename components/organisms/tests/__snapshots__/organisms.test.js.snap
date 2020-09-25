@@ -5,11 +5,12 @@ exports[`BaseCads CardListの初期値(linkあり): dummyCardsLink 1`] = `
   <div>
     <div class=\\"card-list\\">
       <div class=\\"card-list__card\\">
-        <article class=\\"card__item\\">
-          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
+        <article class=\\"card-list-item\\">
+          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--lg\\">
+            <div class=\\"card-list-item__border\\"></div>
             <figcaption>
-              <h2 class=\\"card__title\\">ダミータイトル</h2>
-              <p class=\\"card__text\\">詳細</p>
+              <h2 class=\\"card-title\\">ダミータイトル</h2>
+              <p class=\\"card-text\\">詳細</p>
             </figcaption>
           </figure> <button class=\\"btn\\">
             WebSite
@@ -17,11 +18,12 @@ exports[`BaseCads CardListの初期値(linkあり): dummyCardsLink 1`] = `
         </article>
       </div>
       <div class=\\"card-list__card\\">
-        <article class=\\"card__item\\">
-          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
+        <article class=\\"card-list-item\\">
+          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--lg\\">
+            <div class=\\"card-list-item__border\\"></div>
             <figcaption>
-              <h2 class=\\"card__title\\">ダミータイトル</h2>
-              <p class=\\"card__text\\">詳細</p>
+              <h2 class=\\"card-title\\">ダミータイトル</h2>
+              <p class=\\"card-text\\">詳細</p>
             </figcaption>
           </figure> <button class=\\"btn\\">
             GitHub
@@ -38,22 +40,24 @@ exports[`BaseCads CardListの初期値(linkなし): dummyCards 1`] = `
   <div>
     <div class=\\"card-list\\">
       <div class=\\"card-list__card\\">
-        <article class=\\"card__item\\">
-          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
+        <article class=\\"card-list-item\\">
+          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--sm\\">
+            <div class=\\"card-list-item__border\\"></div>
             <figcaption>
-              <h2 class=\\"card__title\\">ダミータイトル</h2>
-              <p class=\\"card__text\\">詳細</p>
+              <h2 class=\\"card-title\\">ダミータイトル</h2>
+              <p class=\\"card-text\\">詳細</p>
             </figcaption>
           </figure>
           <!---->
         </article>
       </div>
       <div class=\\"card-list__card\\">
-        <article class=\\"card__item\\">
-          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card__img\\">
+        <article class=\\"card-list-item\\">
+          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--sm\\">
+            <div class=\\"card-list-item__border\\"></div>
             <figcaption>
-              <h2 class=\\"card__title\\">ダミータイトル</h2>
-              <p class=\\"card__text\\">詳細</p>
+              <h2 class=\\"card-title\\">ダミータイトル</h2>
+              <p class=\\"card-text\\">詳細</p>
             </figcaption>
           </figure>
           <!---->
@@ -69,9 +73,9 @@ exports[`BaseNav 閉じた時のスナップショット 1`] = `
   <nav>
     <div>
       <div class=\\"nav-bar\\">
-        <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav__logo\\">ダミー</a>
+        <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav-logo\\">ダミー</a>
           <div>
-            <div class=\\"border__group\\"><span class=\\"border__top border__top--close\\"></span> <span class=\\"border__middle\\"></span> <span class=\\"border__bottom border__bottom--close\\"></span></div>
+            <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__middle\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--close\\"></span></div>
           </div>
         </div>
       </div>
@@ -81,8 +85,8 @@ exports[`BaseNav 閉じた時のスナップショット 1`] = `
         <div class=\\"nav-list\\" style=\\"display: none;\\">
           <ul>
             <div>
-              <li class=\\"nav__item\\"><a class=\\"nav__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav__icon\\">
-                  <div class=\\"nav__text\\">Top</div>
+              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav-img\\">
+                  <div class=\\"nav-text\\">Top</div>
                 </a></li>
             </div>
           </ul>
@@ -98,9 +102,9 @@ exports[`BaseNav 開いた時のスナップショット 1`] = `
   <nav>
     <div>
       <div class=\\"nav-bar\\">
-        <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav__logo\\">ダミー</a>
+        <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav-logo\\">ダミー</a>
           <div>
-            <div class=\\"border__group\\"><span class=\\"border__top border__top--open\\"></span> <span class=\\"border__middle border__middle--fade\\"></span> <span class=\\"border__bottom border__bottom--open\\"></span></div>
+            <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--open\\"></span></div>
           </div>
         </div>
       </div>
@@ -110,8 +114,8 @@ exports[`BaseNav 開いた時のスナップショット 1`] = `
         <div class=\\"nav-list\\" style=\\"\\">
           <ul>
             <div>
-              <li class=\\"nav__item\\"><a class=\\"nav__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav__icon\\">
-                  <div class=\\"nav__text\\">Top</div>
+              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav-img\\">
+                  <div class=\\"nav-text\\">Top</div>
                 </a></li>
             </div>
           </ul>

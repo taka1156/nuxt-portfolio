@@ -1,11 +1,11 @@
 <template functional>
-  <div class="nav__text">
+  <div class="nav-text">
     <slot />
   </div>
 </template>
 
 <style scoped>
-.nav__text {
+.nav-text {
   display: inline;
   padding: 5px;
   color: white;
