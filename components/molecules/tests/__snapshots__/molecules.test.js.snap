@@ -1,69 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
-"<div>
-  <div class=\\"card-list\\">
-    <div class=\\"card-list__card\\">
-      <article class=\\"card-list-item\\">
-        <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--lg\\">
-          <div class=\\"card-list-item__border\\"></div>
-          <figcaption>
-            <h2 class=\\"card-title\\">ダミータイトル</h2>
-            <p class=\\"card-text\\">詳細</p>
-          </figcaption>
-        </figure> <button class=\\"btn\\">
-          WebSite
-        </button>
-      </article>
-    </div>
-    <div class=\\"card-list__card\\">
-      <article class=\\"card-list-item\\">
-        <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--lg\\">
-          <div class=\\"card-list-item__border\\"></div>
-          <figcaption>
-            <h2 class=\\"card-title\\">ダミータイトル</h2>
-            <p class=\\"card-text\\">詳細</p>
-          </figcaption>
-        </figure> <button class=\\"btn\\">
-          GitHub
-        </button>
-      </article>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
-"<div>
-  <div class=\\"card-list\\">
-    <div class=\\"card-list__card\\">
-      <article class=\\"card-list-item\\">
-        <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--sm\\">
-          <div class=\\"card-list-item__border\\"></div>
-          <figcaption>
-            <h2 class=\\"card-title\\">ダミータイトル</h2>
-            <p class=\\"card-text\\">詳細</p>
-          </figcaption>
-        </figure>
-        <!---->
-      </article>
-    </div>
-    <div class=\\"card-list__card\\">
-      <article class=\\"card-list-item\\">
-        <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--sm\\">
-          <div class=\\"card-list-item__border\\"></div>
-          <figcaption>
-            <h2 class=\\"card-title\\">ダミータイトル</h2>
-            <p class=\\"card-text\\">詳細</p>
-          </figcaption>
-        </figure>
-        <!---->
-      </article>
-    </div>
-  </div>
-</div>"
-`;
-
 exports[`CardListItem CardListItemの初期値(linkあり): dummyCardsLink 1`] = `
 "<div>
   <article class=\\"card-list-item\\">
@@ -71,7 +7,7 @@ exports[`CardListItem CardListItemの初期値(linkあり): dummyCardsLink 1`] =
       <div class=\\"card-list-item__border\\"></div>
       <figcaption>
         <h2 class=\\"card-title\\">ダミータイトル</h2>
-        <p class=\\"card-text\\">詳細</p>
+        <p class=\\"base-text base-text--card\\">詳細</p>
       </figcaption>
     </figure> <button class=\\"btn\\">
       WebSite
@@ -87,7 +23,7 @@ exports[`CardListItem CardListItemの初期値(linkなし): dummyCards 1`] = `
       <div class=\\"card-list-item__border\\"></div>
       <figcaption>
         <h2 class=\\"card-title\\">ダミータイトル</h2>
-        <p class=\\"card-text\\">詳細</p>
+        <p class=\\"base-text base-text--card\\">詳細</p>
       </figcaption>
     </figure>
     <!---->
@@ -126,7 +62,7 @@ exports[`NavList isOpenがfalseの時に\`.nav-list\`が非表示 1`] = `
       <ul>
         <div>
           <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav-img\\">
-              <div class=\\"nav-text\\">Top</div>
+              <p class=\\"base-text base-text--nav\\">Top</p>
             </a></li>
         </div>
       </ul>
@@ -142,7 +78,7 @@ exports[`NavList isOpenがtrueの時に\`.nav-list\`が表示 1`] = `
       <ul>
         <div>
           <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav-img\\">
-              <div class=\\"nav-text\\">Top</div>
+              <p class=\\"base-text base-text--nav\\">Top</p>
             </a></li>
         </div>
       </ul>
@@ -154,7 +90,7 @@ exports[`NavList isOpenがtrueの時に\`.nav-list\`が表示 1`] = `
 exports[`NavListItem 値がDOMに反映されているか 1`] = `
 "<div>
   <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav-img\\">
-      <div class=\\"nav-text\\">Top</div>
+      <p class=\\"base-text base-text--nav\\">Top</p>
     </a></li>
 </div>"
 `;

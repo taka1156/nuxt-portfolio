@@ -2,13 +2,13 @@
   <div class="Portfolio">
     <div class="container">
       <h1>Portfolio</h1>
-      <card-list :posts="posts" />
+      <card-list :cards="posts" />
     </div>
   </div>
 </template>
 
 <script>
-import CardList from '@/components/organisms/BaseCard';
+import CardList from '@/components/organisms/CardList';
 import meta from 'assets/js/mixin/meta.mixin.js';
 const CONTENT_MAX = 20;
 

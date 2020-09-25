@@ -2,7 +2,6 @@ import { mount, RouterLinkStub } from '@vue/test-utils';
 import NavBar from '../NavBar.vue';
 import NavList from '../NavList.vue';
 import NavListItem from '../NavListItem.vue';
-import CardList from '../CardList.vue';
 import CardListItem from '../CardListItem.vue';
 
 const dummyRoutes = [
@@ -224,36 +223,5 @@ describe('CardListItem', () => {
     const wrapper = cardListItem({ cardInfo: dummyCardsLink[0] });
     wrapper.vm.jump(dummyCardsLink[0]);
     expect(window.location.assign).toBeCalledWith(dummyCardsLink[0].link);
-  });
-});
-
-// CardList
-describe('CardList', () => {
-  const cardList = propsData => {
-    return mount(CardList, {
-      propsData: {
-        ...propsData,
-      },
-    });
-  };
-
-  it('CardListの初期値(linkなし): dummyCards', () => {
-    const wrapper = cardList({ cards: dummyCards });
-    console.log(wrapper.vm.$options.props.cards.default());
-    expect(wrapper.vm.$options.props.cards.required).toBe(true);
-    expect(wrapper.vm.cards).toBe(dummyCards);
-    // スナップショット
-    expect(wrapper.html()).toMatchSnapshot();
-  });
-
-  it('CardListの初期値(linkあり): dummyCardsLink', () => {
-    const wrapper = cardList({ cards: dummyCardsLink });
-    const btnTag = wrapper.findAll('button');
-    expect(wrapper.vm.$options.props.cards.required).toBe(true);
-    expect(btnTag.at(0).text()).toBe('WebSite');
-    expect(btnTag.at(1).text()).toBe('GitHub');
-    expect(wrapper.vm.cards).toBe(dummyCardsLink);
-    // スナップショット
-    expect(wrapper.html()).toMatchSnapshot();
   });
 });
