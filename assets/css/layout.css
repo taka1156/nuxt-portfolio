@@ -5,13 +5,11 @@ h1 {
   margin: 70px auto;
 }
 
-p,
 li {
   font-size: 17px;
 }
 
 @media (min-width: 790px) {
-  p,
   li {
     font-size: 20px;
   }

@@ -10,7 +10,7 @@
         <div class="card-list-item__border" />
         <figcaption>
           <card-title>{{ cardInfo.title }}</card-title>
-          <card-text>{{ cardInfo.content2 }}</card-text>
+          <base-text class="base-text--card">{{ cardInfo.content2 }}</base-text>
         </figcaption>
       </figure>
       <card-button v-if="cardInfo.link != null" @click="jump(cardInfo)">
@@ -23,7 +23,7 @@
 <script>
 import CardTitle from '../atoms/CardTitle';
 import CardImg from '../atoms/CardImg';
-import CardText from '../atoms/CardText';
+import BaseText from '../atoms/BaseText';
 import CardButton from '../atoms/CardButton';
 
 export default {
@@ -31,7 +31,7 @@ export default {
   components: {
     'card-title': CardTitle,
     'card-img': CardImg,
-    'card-text': CardText,
+    'base-text': BaseText,
     'card-button': CardButton,
   },
   props: {

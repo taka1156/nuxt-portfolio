@@ -1,6 +1,6 @@
 import { mount, RouterLinkStub } from '@vue/test-utils';
-import BaseNav from '../BaseNav.vue';
-import BaseCard from '../BaseCard.vue';
+import PortfolioNavigation from '../PortfolioNavigation.vue';
+import CardList from '../CardList.vue';
 
 // BaseNav
 describe('BaseNav', () => {
@@ -8,7 +8,7 @@ describe('BaseNav', () => {
   const dummyRoutes = [
     { name: 'Top', to: '/home', img: 'http://placehold.jp/150x150.png' },
   ];
-  const baseNav = mount(BaseNav, {
+  const baseNav = mount(PortfolioNavigation, {
     stubs: {
       NuxtLink: RouterLinkStub,
     },
@@ -45,6 +45,14 @@ describe('BaseNav', () => {
 
 // BaseCard
 describe('BaseCads', () => {
+  const cardList = propsData => {
+    return mount(CardList, {
+      propsData: {
+        ...propsData,
+      },
+    });
+  };
+
   const dummyCards = [
     {
       title: 'ダミータイトル',
@@ -73,30 +81,22 @@ describe('BaseCads', () => {
     },
   ];
 
-  const baseCard = propsData => {
-    return mount(BaseCard, {
-      propsData: {
-        ...propsData,
-      },
-    });
-  };
-
   it('CardListの初期値(linkなし): dummyCards', () => {
-    const wrapper = baseCard({ posts: dummyCards });
-    console.log(wrapper.vm.$options.props.posts.default());
-    expect(wrapper.vm.$options.props.posts.required).toBe(true);
-    expect(wrapper.vm.posts).toBe(dummyCards);
+    const wrapper = cardList({ cards: dummyCards });
+    console.log(wrapper.vm.$options.props.cards.default());
+    expect(wrapper.vm.$options.props.cards.required).toBe(true);
+    expect(wrapper.vm.cards).toBe(dummyCards);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
   });
 
   it('CardListの初期値(linkあり): dummyCardsLink', () => {
-    const wrapper = baseCard({ posts: dummyCardsLink });
+    const wrapper = cardList({ cards: dummyCardsLink });
     const btnTag = wrapper.findAll('button');
-    expect(wrapper.vm.$options.props.posts.required).toBe(true);
+    expect(wrapper.vm.$options.props.cards.required).toBe(true);
     expect(btnTag.at(0).text()).toBe('WebSite');
     expect(btnTag.at(1).text()).toBe('GitHub');
-    expect(wrapper.vm.posts).toBe(dummyCardsLink);
+    expect(wrapper.vm.cards).toBe(dummyCardsLink);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
   });
