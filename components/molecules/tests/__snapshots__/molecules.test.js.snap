@@ -9,7 +9,7 @@ exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
           <div class=\\"card-list-item__border\\"></div>
           <figcaption>
             <h2 class=\\"card-title\\">ダミータイトル</h2>
-            <p class=\\"card-text\\">詳細</p>
+            <p class=\\"base-text base-text--card\\">詳細</p>
           </figcaption>
         </figure> <button class=\\"btn\\">
           WebSite
@@ -22,7 +22,7 @@ exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
           <div class=\\"card-list-item__border\\"></div>
           <figcaption>
             <h2 class=\\"card-title\\">ダミータイトル</h2>
-            <p class=\\"card-text\\">詳細</p>
+            <p class=\\"base-text base-text--card\\">詳細</p>
           </figcaption>
         </figure> <button class=\\"btn\\">
           GitHub
@@ -42,7 +42,7 @@ exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
           <div class=\\"card-list-item__border\\"></div>
           <figcaption>
             <h2 class=\\"card-title\\">ダミータイトル</h2>
-            <p class=\\"card-text\\">詳細</p>
+            <p class=\\"base-text base-text--card\\">詳細</p>
           </figcaption>
         </figure>
         <!---->
@@ -54,7 +54,7 @@ exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
           <div class=\\"card-list-item__border\\"></div>
           <figcaption>
             <h2 class=\\"card-title\\">ダミータイトル</h2>
-            <p class=\\"card-text\\">詳細</p>
+            <p class=\\"base-text base-text--card\\">詳細</p>
           </figcaption>
         </figure>
         <!---->
@@ -71,7 +71,7 @@ exports[`CardListItem CardListItemの初期値(linkあり): dummyCardsLink 1`] =
       <div class=\\"card-list-item__border\\"></div>
       <figcaption>
         <h2 class=\\"card-title\\">ダミータイトル</h2>
-        <p class=\\"card-text\\">詳細</p>
+        <p class=\\"base-text base-text--card\\">詳細</p>
       </figcaption>
     </figure> <button class=\\"btn\\">
       WebSite
@@ -87,7 +87,7 @@ exports[`CardListItem CardListItemの初期値(linkなし): dummyCards 1`] = `
       <div class=\\"card-list-item__border\\"></div>
       <figcaption>
         <h2 class=\\"card-title\\">ダミータイトル</h2>
-        <p class=\\"card-text\\">詳細</p>
+        <p class=\\"base-text base-text--card\\">詳細</p>
       </figcaption>
     </figure>
     <!---->
@@ -126,7 +126,7 @@ exports[`NavList isOpenがfalseの時に\`.nav-list\`が非表示 1`] = `
       <ul>
         <div>
           <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav-img\\">
-              <div class=\\"nav-text\\">Top</div>
+              <p class=\\"base-text base-text--nav\\">Top</p>
             </a></li>
         </div>
       </ul>
@@ -142,7 +142,7 @@ exports[`NavList isOpenがtrueの時に\`.nav-list\`が表示 1`] = `
       <ul>
         <div>
           <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav-img\\">
-              <div class=\\"nav-text\\">Top</div>
+              <p class=\\"base-text base-text--nav\\">Top</p>
             </a></li>
         </div>
       </ul>
@@ -154,7 +154,7 @@ exports[`NavList isOpenがtrueの時に\`.nav-list\`が表示 1`] = `
 exports[`NavListItem 値がDOMに反映されているか 1`] = `
 "<div>
   <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav-img\\">
-      <div class=\\"nav-text\\">Top</div>
+      <p class=\\"base-text base-text--nav\\">Top</p>
     </a></li>
 </div>"
 `;

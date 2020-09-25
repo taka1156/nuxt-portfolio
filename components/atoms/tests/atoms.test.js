@@ -2,10 +2,9 @@ import { shallowMount } from '@vue/test-utils';
 import NavIcon from '../NavIcon.vue';
 import NavImg from '../NavImg.vue';
 import NavLogo from '../NavLogo.vue';
-import NavText from '../NavText.vue';
+import BaseText from '../BaseText.vue';
 import CardTitle from '../CardTitle.vue';
 import CardImg from '../CardImg.vue';
-import CardText from '../CardText.vue';
 import CardButton from '../CardButton.vue';
 
 // 備考: 全て関数型コンポーネント
@@ -77,17 +76,17 @@ describe('NavLogo', () => {
   });
 });
 
-// NavText
-describe('NavText', () => {
+// BaseText
+describe('BaseText', () => {
   it('値がDOMに反映されているか', () => {
     const dummyText = 'ダミーテキスト';
-    const navText = shallowMount(NavText, {
+    const baseText = shallowMount(BaseText, {
       slots: {
         default: dummyText,
       },
     });
-    expect(navText.text()).toBe(dummyText);
-    expect(navText.html()).toMatchSnapshot();
+    expect(baseText.text()).toBe(dummyText);
+    expect(baseText.html()).toMatchSnapshot();
   });
 });
 
@@ -122,20 +121,6 @@ describe('CardImg', () => {
     // expect(imgTag.attributes().src).toBe(dummyImg.img);
     expect(imgTag.attributes().alt).toBe(dummyImg.alt);
     expect(navImg.html()).toMatchSnapshot();
-  });
-});
-
-describe('CardText', () => {
-  it('値がDOMに反映されているか', () => {
-    const dummyText = 'ダミーテキスト';
-    const cardText = shallowMount(CardText, {
-      slots: {
-        default: dummyText,
-      },
-    });
-    const pTag = cardText.find('p');
-    expect(pTag.text()).toBe(dummyText);
-    expect(pTag.html()).toMatchSnapshot();
   });
 });
 

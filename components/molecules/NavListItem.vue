@@ -3,7 +3,7 @@
     <li class="nav-list-item" @click="$emit('change-state')">
       <nuxt-link :to="navItem.to" class="nav-list-item__link">
         <nav-img :nav-img="navItem.img" :img-alt="`${navItem.name}の画像`" />
-        <nav-text>{{ navItem.name }}</nav-text>
+        <base-text class="base-text--nav">{{ navItem.name }}</base-text>
       </nuxt-link>
     </li>
   </div>
@@ -11,13 +11,13 @@
 
 <script>
 import NavImg from '../atoms/NavImg';
-import NavText from '../atoms/NavText';
+import BaseText from '../atoms/BaseText';
 
 export default {
   name: 'NavListItem',
   components: {
     'nav-img': NavImg,
-    'nav-text': NavText,
+    'base-text': BaseText,
   },
   props: {
     navItem: {
