@@ -2,34 +2,32 @@
 
 exports[`BaseCads CardListの初期値(linkあり): dummyCardsLink 1`] = `
 "<div>
-  <div>
-    <div class=\\"card-list\\">
-      <div class=\\"card-list__card\\">
-        <article class=\\"card-list-item\\">
-          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--lg\\">
-            <div class=\\"card-list-item__border\\"></div>
-            <figcaption>
-              <h2 class=\\"card-title\\">ダミータイトル</h2>
-              <p class=\\"base-text base-text--card\\">詳細</p>
-            </figcaption>
-          </figure> <button class=\\"btn\\">
-            WebSite
-          </button>
-        </article>
-      </div>
-      <div class=\\"card-list__card\\">
-        <article class=\\"card-list-item\\">
-          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--lg\\">
-            <div class=\\"card-list-item__border\\"></div>
-            <figcaption>
-              <h2 class=\\"card-title\\">ダミータイトル</h2>
-              <p class=\\"base-text base-text--card\\">詳細</p>
-            </figcaption>
-          </figure> <button class=\\"btn\\">
-            GitHub
-          </button>
-        </article>
-      </div>
+  <div class=\\"card-list\\">
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--lg\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption>
+            <h2 class=\\"card-title\\">ダミータイトル</h2>
+            <p class=\\"base-text base-text--card\\">詳細</p>
+          </figcaption>
+        </figure> <button class=\\"btn\\">
+          WebSite
+        </button>
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--lg\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption>
+            <h2 class=\\"card-title\\">ダミータイトル</h2>
+            <p class=\\"base-text base-text--card\\">詳細</p>
+          </figcaption>
+        </figure> <button class=\\"btn\\">
+          GitHub
+        </button>
+      </article>
     </div>
   </div>
 </div>"
@@ -37,32 +35,30 @@ exports[`BaseCads CardListの初期値(linkあり): dummyCardsLink 1`] = `
 
 exports[`BaseCads CardListの初期値(linkなし): dummyCards 1`] = `
 "<div>
-  <div>
-    <div class=\\"card-list\\">
-      <div class=\\"card-list__card\\">
-        <article class=\\"card-list-item\\">
-          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--sm\\">
-            <div class=\\"card-list-item__border\\"></div>
-            <figcaption>
-              <h2 class=\\"card-title\\">ダミータイトル</h2>
-              <p class=\\"base-text base-text--card\\">詳細</p>
-            </figcaption>
-          </figure>
-          <!---->
-        </article>
-      </div>
-      <div class=\\"card-list__card\\">
-        <article class=\\"card-list-item\\">
-          <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--sm\\">
-            <div class=\\"card-list-item__border\\"></div>
-            <figcaption>
-              <h2 class=\\"card-title\\">ダミータイトル</h2>
-              <p class=\\"base-text base-text--card\\">詳細</p>
-            </figcaption>
-          </figure>
-          <!---->
-        </article>
-      </div>
+  <div class=\\"card-list\\">
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--sm\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption>
+            <h2 class=\\"card-title\\">ダミータイトル</h2>
+            <p class=\\"base-text base-text--card\\">詳細</p>
+          </figcaption>
+        </figure>
+        <!---->
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--sm\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption>
+            <h2 class=\\"card-title\\">ダミータイトル</h2>
+            <p class=\\"base-text base-text--card\\">詳細</p>
+          </figcaption>
+        </figure>
+        <!---->
+      </article>
     </div>
   </div>
 </div>"
