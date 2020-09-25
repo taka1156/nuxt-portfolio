@@ -41,6 +41,6 @@ export default {
 
 .card-list__card {
   width: 28em;
-  margin: 2.6em auto;
+  margin: 0 auto 2em;
 }
 </style>

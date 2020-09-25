@@ -39,14 +39,6 @@ export default {
 </script>
 
 <style scoped>
-/* css reset */
-.ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* css reset */
-
 .nav-list {
   display: flex;
   justify-content: center;
