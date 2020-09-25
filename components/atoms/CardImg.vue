@@ -1,7 +1,7 @@
 <template functional>
   <img
     v-lazy="props.cardImg"
-    :alt="`${props.imgAlt}`"
+    :alt="props.imgAlt"
     class="card-img"
     :class="[props.isPortfolio ? 'card-img--lg' : 'card-img--sm']"
   />
