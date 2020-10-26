@@ -5,7 +5,6 @@
 taka1156のポートフォリオサイトです(https://www.taka1156.site)
 
 # 使用したもの
-
 - Nuxt.js
 - StoryBook
 - HTML
@@ -45,6 +44,9 @@ taka1156のポートフォリオサイトです(https://www.taka1156.site)
 - 2020/05/17<br>
   nuxt.js + microCMSの環境に移行<br>
   OGPの設定
+
+- 2020/07/22<br>
+  OGPの設定追加 
 
 - 2020/07/29<br>
  アトミックデザインを一部模倣

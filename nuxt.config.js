@@ -112,7 +112,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~plugins/LazyLoad.js', mode: 'client' }],
+  plugins: [
+    { src: '~plugins/GoogleAnalytics.js', mode: 'client' },
+    { src: '~plugins/LazyLoad.js', mode: 'client' },
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -147,6 +150,10 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    // extend(config, ctx) {},
+    extend: function (config) {
+      config.node = {
+        fs: 'empty',
+      };
+    },
   },
 };
