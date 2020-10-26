@@ -37,14 +37,12 @@ jobs:
 
     - name: test
       run: yarn test
+    
+    - name: create .env file
+      run: echo "${{ secrets.ENV_FIREBASE }}" > .env
 
     - name: build
       env:
         BASE_URL: ${{ secrets.BASE_URL }}
         MICRO_CMS: ${{ secrets.MICRO_CMS }}
-        FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-        FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
-        FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-        FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
-        FIREBASE_MEASUREMENT_ID: ${{ secrets.FIREBASE_MEASUREMENT_ID }}
       run: yarn generate:static

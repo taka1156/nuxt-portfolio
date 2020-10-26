@@ -38,20 +38,16 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: create .env file
+      run: echo "${{ secrets.ENV_FIREBASE }}" > .env
+
     - name: build
       env:
         BASE_URL: ${{ secrets.BASE_URL }}
         MICRO_CMS: ${{ secrets.MICRO_CMS }}
-        FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-        FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
-        FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-        FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
-        FIREBASE_MEASUREMENT_ID: ${{ secrets.FIREBASE_MEASUREMENT_ID }}
       run: yarn generate:static
 
     - name: deploy to Firebase Hosting
-      uses: w9jds/firebase-action@master
-      with:
-        args: deploy
+      run: yarn firebase deploy --token $FIREBASE_TOKEN
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
