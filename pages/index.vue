@@ -10,7 +10,7 @@
         <a href="https://qiita.com/taka_1156" class="sns__link">
           <img src="@/assets/img/qiita.png" alt="QiitaLogo" class="sns__icon" />
         </a>
-        <a href="https://twitter.com/taka_Program" class="sns__link">
+        <a href="https://twitter.com/taka_1156" class="sns__link">
           <img src="@/assets/img/twitter.png" alt="TwitterLogo" class="sns__icon" />
         </a>
       </div>
