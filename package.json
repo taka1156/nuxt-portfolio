@@ -12,7 +12,7 @@
     "lint-js:fix": "eslint --ext .js,.vue . --fix",
     "lint-style:fix": "stylelint \"**/*.vue\" \"**/*.css\" --fix",
     "lint:check": "yarn lint-js & yarn lint-style",
-    "lint:fix": "yarn lint-js && yarn lint-style",
+    "lint:fix": "yarn lint-js:fix && yarn lint-style:fix",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
