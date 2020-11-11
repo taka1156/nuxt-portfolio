@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import CardListItem from '../molecules/CardListItem';
+import CardListItem from '../molecules/card/CardListItem';
 
 export default {
   name: 'CardList',

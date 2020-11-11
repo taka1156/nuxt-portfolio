@@ -60,13 +60,13 @@ storiesOf('molecules/Nav/NavList', module).add(
   () => ({
     components: { NavList },
     template:
-      '<nav-list :is-open="isOpen" :routers="routers" @change-state="changeState" />',
+      '<nav-list :is-open="isOpen" :routes="routes" @change-state="changeState" />',
     props: {
       isOpen: {
         type: Boolean,
         default: boolean('isOpen', false),
       },
-      routers: {
+      routes: {
         type: Array,
         default: array('routers', ROUTERS),
       },

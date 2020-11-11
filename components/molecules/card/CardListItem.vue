@@ -13,18 +13,18 @@
           <base-text class="base-text--card">{{ cardInfo.content2 }}</base-text>
         </figcaption>
       </figure>
-      <card-button v-if="cardInfo.link != null" @click="jump(cardInfo)">
+      <base-btn v-if="cardInfo.link != null" @click="jump(cardInfo)">
         {{ isGithubRepo(cardInfo) ? 'GitHub' : 'WebSite' }}
-      </card-button>
+      </base-btn>
     </article>
   </div>
 </template>
 
 <script>
-import CardTitle from '../atoms/CardTitle';
-import CardImg from '../atoms/CardImg';
-import BaseText from '../atoms/BaseText';
-import CardButton from '../atoms/CardButton';
+import BaseText from '../../atoms/base/BaseText';
+import BaseBtn from '../../atoms/base/BaseBtn';
+import CardTitle from '../../atoms/card/CardTitle';
+import CardImg from '../../atoms/card/CardImg';
 
 export default {
   name: 'CardListItem',
@@ -32,7 +32,7 @@ export default {
     'card-title': CardTitle,
     'card-img': CardImg,
     'base-text': BaseText,
-    'card-button': CardButton,
+    'base-btn': BaseBtn,
   },
   props: {
     cardInfo: {

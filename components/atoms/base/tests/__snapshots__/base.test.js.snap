@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseBtn slotがDOMに反映されているか 1`] = `"<button class=\\"btn\\">ダミーボタンテキスト</button>"`;
+
+exports[`BaseText 値がDOMに反映されているか 1`] = `"<p class=\\"base-text\\">ダミーテキスト</p>"`;
