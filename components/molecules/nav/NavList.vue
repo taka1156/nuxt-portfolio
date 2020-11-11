@@ -3,7 +3,7 @@
     <transition name="nav-fade">
       <div v-show="isOpen" class="nav-list">
         <ul>
-          <nav-item
+          <nav-list-item
             v-for="(item, index) in routes"
             :key="index"
             :nav-item="item"
@@ -21,7 +21,7 @@ import NavListItem from './NavListItem';
 export default {
   name: 'NavList',
   components: {
-    'nav-item': NavListItem,
+    'nav-list-item': NavListItem,
   },
   props: {
     isOpen: {

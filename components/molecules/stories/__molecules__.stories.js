@@ -1,2 +1,3 @@
-import './nav.stories.js';
-import './card.stories.js';
+import '../card/stories/card.stories.js';
+import '../nav/stories/nav.stories.js';
+import '../profile/stories/profile.stories.js';

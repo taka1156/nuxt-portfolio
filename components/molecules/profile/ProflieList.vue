@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ProfileListItem from '../atoms/ProfileListItem.vue';
+import ProfileListItem from '../../atoms/profile/ProfileListItem';
 
 export default {
   name: 'ProfileList',
