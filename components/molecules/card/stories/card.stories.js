@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/vue';
 import { select } from '@storybook/addon-knobs/vue';
-import CardList from '../CardList.vue';
 import CardListItem from '../CardListItem.vue';
 
 const POSTS1 = [
@@ -68,25 +67,6 @@ const POSTS2 = [
     link: 'https://github.com/taka1156/audio-player',
   },
 ];
-
-storiesOf('molecules/Card/CardList', module).add(
-  'default',
-  () => ({
-    components: { CardList },
-    template: '<card-list :cards="posts" />',
-    props: {
-      posts: {
-        type: Array,
-        default: select('posts', { default: POSTS1, clickable: POSTS2 }, POSTS1),
-      },
-    },
-  }),
-  {
-    info: {
-      summary: 'カードの一覧表示',
-    },
-  }
-);
 
 storiesOf('molecules/Card/CardListItem', module).add(
   'default',

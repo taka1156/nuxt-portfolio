@@ -2,12 +2,6 @@ import { shallowMount } from '@vue/test-utils';
 import NavIcon from '../NavIcon.vue';
 import NavImg from '../NavImg.vue';
 import NavLogo from '../NavLogo.vue';
-import BaseText from '../BaseText.vue';
-import CardTitle from '../CardTitle.vue';
-import CardImg from '../CardImg.vue';
-import CardButton from '../CardButton.vue';
-
-// 備考: 全て関数型コンポーネント
 
 // NavIcon
 describe('NavIcon', () => {
@@ -73,67 +67,5 @@ describe('NavLogo', () => {
     });
     expect(navLogo.text()).toBe(dummyLogo);
     expect(navLogo.html()).toMatchSnapshot();
-  });
-});
-
-// BaseText
-describe('BaseText', () => {
-  it('値がDOMに反映されているか', () => {
-    const dummyText = 'ダミーテキスト';
-    const baseText = shallowMount(BaseText, {
-      slots: {
-        default: dummyText,
-      },
-    });
-    expect(baseText.text()).toBe(dummyText);
-    expect(baseText.html()).toMatchSnapshot();
-  });
-});
-
-describe('CardButton', () => {
-  it('slotがDOMに反映されているか', () => {
-    const dummyButtonText = 'ダミーボタンテキスト';
-    const cardButton = shallowMount(CardButton, {
-      slots: {
-        default: dummyButtonText,
-      },
-    });
-    const btnTag = cardButton.find('button');
-    expect(btnTag.text()).toBe(dummyButtonText);
-    expect(btnTag.html()).toMatchSnapshot();
-  });
-});
-
-describe('CardImg', () => {
-  it('値がDOMに反映されているか', () => {
-    const dummyImg = {
-      img: 'http://placehold.jp/150x150.png',
-      alt: 'ダミー画像',
-    };
-    const navImg = shallowMount(CardImg, {
-      propsData: {
-        cardImg: dummyImg.img,
-        imgAlt: dummyImg.alt,
-      },
-    });
-    const imgTag = navImg.find('img');
-    // v-lazyからsrcを取り出せない
-    // expect(imgTag.attributes().src).toBe(dummyImg.img);
-    expect(imgTag.attributes().alt).toBe(dummyImg.alt);
-    expect(navImg.html()).toMatchSnapshot();
-  });
-});
-
-describe('CardTitle', () => {
-  it('値がDOMに反映されているか', () => {
-    const dummyTitle = 'ダミータイトル';
-    const cardTitle = shallowMount(CardTitle, {
-      slots: {
-        default: dummyTitle,
-      },
-    });
-    const hTag = cardTitle.find('h2');
-    expect(hTag.text()).toBe(dummyTitle);
-    expect(cardTitle.html()).toMatchSnapshot();
   });
 });

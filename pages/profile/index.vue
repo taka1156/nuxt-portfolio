@@ -36,7 +36,7 @@
 
 <script>
 import meta from 'assets/js/mixin/meta.mixin.js';
-import ProfileList from '@/components/molecules/ProflieList';
+import ProfileList from '@/components/molecules/profile/ProflieList';
 
 export default {
   name: 'Profile',

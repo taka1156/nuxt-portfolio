@@ -3,6 +3,13 @@
 </template>
 
 <style scoped>
+/* css reset */
+li {
+  list-style-type: none;
+}
+
+/* css reset */
+
 .profile-list-item {
   position: relative;
   margin: 7px auto;

@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import NavImg from '../atoms/NavImg';
-import BaseText from '../atoms/BaseText';
+import NavImg from '../../atoms/nav/NavImg';
+import BaseText from '../../atoms/base/BaseText';
 
 export default {
   name: 'NavListItem',
