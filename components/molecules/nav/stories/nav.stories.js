@@ -4,31 +4,9 @@ import { action } from '@storybook/addon-actions';
 import NavBar from '../NavBar.vue';
 import NavList from '../NavList.vue';
 import NavListItem from '../NavListItem.vue';
+import { dummyLogo, dummyRoutes } from '@/testdata/testdata.js';
 
-const ROUTERS = [
-  {
-    name: 'nav-item',
-    to: '/test1',
-    img: 'http://placehold.jp/150x150.png',
-  },
-  {
-    name: 'nav-item',
-    to: '/test2',
-    img: 'http://placehold.jp/150x150.png',
-  },
-  {
-    name: 'nav-item',
-    to: '/test3',
-    img: 'http://placehold.jp/150x150.png',
-  },
-  {
-    name: 'nav-item',
-    to: '/test4',
-    img: 'http://placehold.jp/150x150.png',
-  },
-];
-
-storiesOf('molecules/Nav/NavBar', module).add(
+storiesOf('Molecules/Nav/NavBar', module).add(
   'default',
   () => ({
     components: { NavBar },
@@ -37,7 +15,7 @@ storiesOf('molecules/Nav/NavBar', module).add(
     props: {
       logoText: {
         type: String,
-        default: text('text', 'logoText'),
+        default: text('text', dummyLogo),
       },
       isOpen: {
         type: Boolean,
@@ -55,7 +33,7 @@ storiesOf('molecules/Nav/NavBar', module).add(
   }
 );
 
-storiesOf('molecules/Nav/NavList', module).add(
+storiesOf('Molecules/Nav/NavList', module).add(
   'default',
   () => ({
     components: { NavList },
@@ -68,7 +46,7 @@ storiesOf('molecules/Nav/NavList', module).add(
       },
       routes: {
         type: Array,
-        default: array('routers', ROUTERS),
+        default: array('routers', dummyRoutes),
       },
     },
     methods: {
@@ -82,7 +60,7 @@ storiesOf('molecules/Nav/NavList', module).add(
   }
 );
 
-storiesOf('molecules/Nav/NavListItem', module).add(
+storiesOf('Molecules/Nav/NavListItem', module).add(
   'default',
   () => ({
     components: { NavListItem },
@@ -90,7 +68,7 @@ storiesOf('molecules/Nav/NavListItem', module).add(
     props: {
       item: {
         type: Object,
-        default: object('item', ROUTERS[3]),
+        default: object('item', dummyRoutes[3]),
       },
     },
     methods: {

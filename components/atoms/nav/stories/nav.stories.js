@@ -9,12 +9,6 @@ storiesOf('Atoms/Nav/NavLogo', module).add(
   () => ({
     components: { NavLogo },
     template: '<nav-logo>Text</nav-logo>',
-    props: {
-      text: {
-        type: String,
-        default: text('text', 'text'),
-      },
-    },
   }),
   {
     info: {
@@ -46,11 +40,15 @@ storiesOf('Atoms/Nav/NavImg', module).add(
   'default',
   () => ({
     components: { NavImg },
-    template: '<nav-img :nav-img="path" />',
+    template: '<nav-img :nav-img="path" :img-alt="imgAlt" />',
     props: {
       path: {
         type: String,
         default: text('path', 'http://placehold.jp/150x150.png'),
+      },
+      imgAlt: {
+        type: String,
+        default: text('imgAlt', 'ダミーalt'),
       },
     },
   }),

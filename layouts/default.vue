@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import PortfolioNavigation from '@/components/organisms/PortfolioNavigation';
+import PortfolioNavigation from '@/components/organisms/nav/PortfolioNavigation';
 
 export default {
   components: {

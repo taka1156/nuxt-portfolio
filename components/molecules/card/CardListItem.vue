@@ -13,7 +13,7 @@
           <base-text class="base-text--card">{{ cardInfo.content2 }}</base-text>
         </figcaption>
       </figure>
-      <base-btn v-if="cardInfo.link != null" @click="jump(cardInfo)">
+      <base-btn v-if="cardInfo.link != null" @click="$emit('jump', cardInfo)">
         {{ isGithubRepo(cardInfo) ? 'GitHub' : 'WebSite' }}
       </base-btn>
     </article>
@@ -42,11 +42,6 @@ export default {
     },
   },
   methods: {
-    jump({ link }) {
-      if (link != null) {
-        location.assign(link);
-      }
-    },
     isGithubRepo({ link }) {
       // githubがリンクに含まれてる、かつgithub.ioではないならリポジトリなので表示変更
       return `${link}`.includes('github') && !`${link}`.includes('github.io');

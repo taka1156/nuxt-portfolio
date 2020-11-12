@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import NavBar from '../molecules/nav/NavBar';
-import NavList from '../molecules/nav/NavList';
+import NavBar from '../../molecules/nav/NavBar';
+import NavList from '../../molecules/nav/NavList';
 
 export default {
   name: 'BaseNav',
