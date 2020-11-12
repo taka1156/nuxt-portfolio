@@ -20,12 +20,12 @@ describe('BaseText', () => {
 describe('BaseBtn', () => {
   it('slotがDOMに反映されているか', () => {
     const dummyButtonText = 'ダミーボタンテキスト';
-    const cardButton = shallowMount(BaseBtn, {
+    const baseBtn = shallowMount(BaseBtn, {
       slots: {
         default: dummyButtonText,
       },
     });
-    const btnTag = cardButton.find('button');
+    const btnTag = baseBtn.find('button');
     expect(btnTag.text()).toBe(dummyButtonText);
     expect(btnTag.html()).toMatchSnapshot();
   });
