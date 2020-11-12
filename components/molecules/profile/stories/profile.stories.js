@@ -1,15 +1,9 @@
 import { storiesOf } from '@storybook/vue';
 import { array } from '@storybook/addon-knobs/vue';
 import ProfileList from '../ProflieList.vue';
+import { dummyProfile } from '@/testdata/testdata.js';
 
-const DUMMEY = [
-  'TypeScriptの学習',
-  'Laravel+Vueでサービスを作る',
-  'AWSなどインフラ周りの学習',
-  'CSS/SASSの学習',
-];
-
-storiesOf('molecules/Profile/ProfileList', module).add(
+storiesOf('Molecules/Profile/ProfileList', module).add(
   'default',
   () => ({
     components: { ProfileList },
@@ -17,7 +11,7 @@ storiesOf('molecules/Profile/ProfileList', module).add(
     props: {
       arr: {
         type: Array,
-        default: array('arr', DUMMEY),
+        default: array('arr', dummyProfile),
       },
     },
   }),

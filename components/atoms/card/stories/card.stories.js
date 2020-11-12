@@ -21,11 +21,16 @@ storiesOf('Atoms/Card/CardImg', module).add(
   'default',
   () => ({
     components: { CardImg },
-    template: '<card-img :card-img="path" :is-portfolio="isPortfolio" />',
+    template:
+      '<card-img :card-img="cardImg" :is-portfolio="isPortfolio" img-alt="imgAlt" />',
     props: {
-      path: {
+      cardImg: {
         type: String,
-        default: text('path', 'http://placehold.jp/150x150.png'),
+        default: text('cardImg', 'http://placehold.jp/150x150.png'),
+      },
+      imgAlt: {
+        type: String,
+        default: text('imgAlt', 'ダミーのalt'),
       },
       isPortfolio: {
         type: Boolean,

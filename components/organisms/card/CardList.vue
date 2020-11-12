@@ -6,13 +6,14 @@
         :key="index"
         :card-info="cardInfo"
         class="card-list__card"
-      ></card-item>
+        @jump="jump"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import CardListItem from '../molecules/card/CardListItem';
+import CardListItem from '../../molecules/card/CardListItem';
 
 export default {
   name: 'CardList',
@@ -24,6 +25,13 @@ export default {
       type: Array,
       default: () => [],
       required: true,
+    },
+  },
+  methods: {
+    jump({ link }) {
+      if (link != null) {
+        location.assign(link);
+      }
     },
   },
 };

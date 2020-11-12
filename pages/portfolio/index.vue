@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import CardList from '@/components/organisms/CardList';
+import CardList from '@/components/organisms/card/CardList';
 import meta from 'assets/js/mixin/meta.mixin.js';
 const CONTENT_MAX = 20;
 

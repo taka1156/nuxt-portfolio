@@ -2,19 +2,15 @@ import { mount, RouterLinkStub } from '@vue/test-utils';
 import NavBar from '../NavBar.vue';
 import NavList from '../NavList.vue';
 import NavListItem from '../NavListItem.vue';
-
-const dummyRoutes = [
-  { name: 'Top', to: '/home', img: 'http://placehold.jp/150x150.png' },
-];
+import { dummyLogo, dummyRoutes } from '@/testdata/testdata.js';
 
 // NavBar
 describe('NavBar', () => {
-  const dummyText = 'ダミーテキスト';
   const navBar = propsData => {
     return mount(NavBar, {
       propsData: {
-        logoText: dummyText,
         ...propsData,
+        logoText: dummyLogo,
       },
     });
   };
@@ -23,7 +19,7 @@ describe('NavBar', () => {
     const wrapper = navBar({ isOpen: false });
     // logoText
     expect(wrapper.vm.$options.props.logoText.required).toBe(true);
-    expect(wrapper.vm.logoText).toBe(dummyText);
+    expect(wrapper.vm.logoText).toBe(dummyLogo);
     // isOpen
     expect(wrapper.vm.$options.props.isOpen.required).toBe(true);
     expect(wrapper.vm.isOpen).toBe(false);
@@ -32,7 +28,7 @@ describe('NavBar', () => {
   it('logoTextが反映されているか', () => {
     const wrapper = navBar({ isOpen: false });
     const navLogo = wrapper.find('.nav-logo');
-    expect(navLogo.text()).toBe(dummyText);
+    expect(navLogo.text()).toBe(dummyLogo);
   });
 
   it('ナビゲーションバーを開く', () => {
