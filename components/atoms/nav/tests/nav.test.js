@@ -21,6 +21,7 @@ describe('NavIcon', () => {
     expect(TOP.classes()).toContain('nav-icon__top--open');
     expect(MIDDLE.classes()).toContain('nav-icon__middle--fade');
     expect(BOTTOM.classes()).toContain('nav-icon__bottom--open');
+    // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
   });
 
@@ -32,6 +33,7 @@ describe('NavIcon', () => {
     expect(TOP.classes()).toContain('nav-icon__top--close');
     expect(MIDDLE.classes()).not.toContain('nav-icon__middle--fade');
     expect(BOTTOM.classes()).toContain('nav-icon__bottom--close');
+    // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
   });
 });
@@ -52,6 +54,7 @@ describe('NavImg', () => {
     const imgTag = navImg.find('img');
     expect(imgTag.attributes().src).toBe(dummyImg.img);
     expect(imgTag.attributes().alt).toBe(dummyImg.alt);
+    // スナップショット
     expect(navImg.html()).toMatchSnapshot();
   });
 });
@@ -66,6 +69,7 @@ describe('NavLogo', () => {
       },
     });
     expect(navLogo.text()).toBe(dummyLogo);
+    // スナップショット
     expect(navLogo.html()).toMatchSnapshot();
   });
 });

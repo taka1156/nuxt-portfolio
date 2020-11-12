@@ -1,29 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { text, array } from '@storybook/addon-knobs/vue';
 import PortfolioNavigation from '../PortfolioNavigation.vue';
-
-const ROUTERS = [
-  {
-    name: 'nav-item',
-    to: '/test1',
-    img: 'http://placehold.jp/150x150.png',
-  },
-  {
-    name: 'nav-item',
-    to: '/test2',
-    img: 'http://placehold.jp/150x150.png',
-  },
-  {
-    name: 'nav-item',
-    to: '/test3',
-    img: 'http://placehold.jp/150x150.png',
-  },
-  {
-    name: 'nav-item',
-    to: '/test4',
-    img: 'http://placehold.jp/150x150.png',
-  },
-];
+import { dummyLogo, dummyRoutes } from '@/testdata/testdata';
 
 storiesOf('Organisms/Nav/PortfolioNavigation', module).add(
   'default',
@@ -33,11 +11,11 @@ storiesOf('Organisms/Nav/PortfolioNavigation', module).add(
     props: {
       logoText: {
         type: String,
-        default: text('text', 'text'),
+        default: text('text', dummyLogo),
       },
       routes: {
         type: Array,
-        default: array('routers', ROUTERS),
+        default: array('routers', dummyRoutes),
       },
     },
   }),

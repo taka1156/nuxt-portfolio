@@ -3,11 +3,11 @@
 exports[`CardListItem CardListItemの初期値(linkあり): dummyCardsLink 1`] = `
 "<div>
   <article class=\\"card-list-item\\">
-    <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--lg\\">
+    <figure><img alt=\\"ブログサイトの画像\\" class=\\"card-img card-img--lg\\">
       <div class=\\"card-list-item__border\\"></div>
       <figcaption>
-        <h2 class=\\"card-title\\">ダミータイトル</h2>
-        <p class=\\"base-text base-text--card\\">詳細</p>
+        <h2 class=\\"card-title\\">ブログサイト</h2>
+        <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
       </figcaption>
     </figure> <button class=\\"btn\\">
       WebSite
@@ -19,11 +19,11 @@ exports[`CardListItem CardListItemの初期値(linkあり): dummyCardsLink 1`] =
 exports[`CardListItem CardListItemの初期値(linkなし): dummyCards 1`] = `
 "<div>
   <article class=\\"card-list-item\\">
-    <figure><img alt=\\"ダミータイトルの画像\\" class=\\"card-img card-img--sm\\">
+    <figure><img alt=\\"PHPの画像\\" class=\\"card-img card-img--sm\\">
       <div class=\\"card-list-item__border\\"></div>
       <figcaption>
-        <h2 class=\\"card-title\\">ダミータイトル</h2>
-        <p class=\\"base-text base-text--card\\">詳細</p>
+        <h2 class=\\"card-title\\">PHP</h2>
+        <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
       </figcaption>
     </figure>
     <!---->

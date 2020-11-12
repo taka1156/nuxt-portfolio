@@ -1,13 +1,9 @@
 import { mount, RouterLinkStub } from '@vue/test-utils';
 import PortfolioNavigation from '../PortfolioNavigation.vue';
+import { dummyLogo, dummyRoutes } from '@/testdata/testdata.js';
 
 // PortfolioNavigation
 describe('PortfolioNavigation', () => {
-  const dummyLogo = 'ダミー';
-  const dummyRoutes = [
-    { name: 'Top', to: '/home', img: 'http://placehold.jp/150x150.png' },
-  ];
-
   const baseNav = mount(PortfolioNavigation, {
     stubs: {
       NuxtLink: RouterLinkStub,

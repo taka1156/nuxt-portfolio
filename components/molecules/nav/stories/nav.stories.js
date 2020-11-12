@@ -4,29 +4,7 @@ import { action } from '@storybook/addon-actions';
 import NavBar from '../NavBar.vue';
 import NavList from '../NavList.vue';
 import NavListItem from '../NavListItem.vue';
-
-const ROUTERS = [
-  {
-    name: 'nav-item',
-    to: '/test1',
-    img: 'http://placehold.jp/150x150.png',
-  },
-  {
-    name: 'nav-item',
-    to: '/test2',
-    img: 'http://placehold.jp/150x150.png',
-  },
-  {
-    name: 'nav-item',
-    to: '/test3',
-    img: 'http://placehold.jp/150x150.png',
-  },
-  {
-    name: 'nav-item',
-    to: '/test4',
-    img: 'http://placehold.jp/150x150.png',
-  },
-];
+import { dummyLogo, dummyRoutes } from '@/testdata/testdata.js';
 
 storiesOf('Molecules/Nav/NavBar', module).add(
   'default',
@@ -37,7 +15,7 @@ storiesOf('Molecules/Nav/NavBar', module).add(
     props: {
       logoText: {
         type: String,
-        default: text('text', 'logoText'),
+        default: text('text', dummyLogo),
       },
       isOpen: {
         type: Boolean,
@@ -68,7 +46,7 @@ storiesOf('Molecules/Nav/NavList', module).add(
       },
       routes: {
         type: Array,
-        default: array('routers', ROUTERS),
+        default: array('routers', dummyRoutes),
       },
     },
     methods: {
@@ -90,7 +68,7 @@ storiesOf('Molecules/Nav/NavListItem', module).add(
     props: {
       item: {
         type: Object,
-        default: object('item', ROUTERS[3]),
+        default: object('item', dummyRoutes[3]),
       },
     },
     methods: {

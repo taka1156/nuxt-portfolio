@@ -1,33 +1,6 @@
 import { mount } from '@vue/test-utils';
 import CardListItem from '../CardListItem.vue';
-
-const dummyCards = [
-  {
-    title: 'ダミータイトル',
-    img: { url: 'http://placehold.jp/150x150.png' },
-    content2: '詳細',
-  },
-  {
-    title: 'ダミータイトル',
-    img: { url: 'http://placehold.jp/150x150.png' },
-    content2: '詳細',
-  },
-];
-
-const dummyCardsLink = [
-  {
-    title: 'ダミータイトル',
-    img: { url: 'http://placehold.jp/150x150.png' },
-    content2: '詳細',
-    link: 'https://taka1156.site',
-  },
-  {
-    title: 'ダミータイトル',
-    img: { url: 'http://placehold.jp/150x150.png' },
-    content2: '詳細',
-    link: 'https://github.com/taka1156/nuxt-portoflio',
-  },
-];
+import { dummyCards, dummyCardsLink } from '@/testdata/testdata.js';
 
 // CardListItem
 describe('CardListItem', () => {

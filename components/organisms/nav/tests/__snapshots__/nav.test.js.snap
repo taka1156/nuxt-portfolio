@@ -17,8 +17,23 @@ exports[`PortfolioNavigation 閉じた時のスナップショット 1`] = `
         <div class=\\"nav-list\\" style=\\"display: none;\\">
           <ul>
             <div>
-              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav-img\\">
-                  <p class=\\"base-text base-text--nav\\">Top</p>
+              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
+                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+                </a></li>
+            </div>
+            <div>
+              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
+                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+                </a></li>
+            </div>
+            <div>
+              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
+                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+                </a></li>
+            </div>
+            <div>
+              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
+                  <p class=\\"base-text base-text--nav\\">nav-item</p>
                 </a></li>
             </div>
           </ul>
@@ -46,8 +61,23 @@ exports[`PortfolioNavigation 開いた時のスナップショット 1`] = `
         <div class=\\"nav-list\\" style=\\"\\">
           <ul>
             <div>
-              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"Topの画像\\" class=\\"nav-img\\">
-                  <p class=\\"base-text base-text--nav\\">Top</p>
+              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
+                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+                </a></li>
+            </div>
+            <div>
+              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
+                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+                </a></li>
+            </div>
+            <div>
+              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
+                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+                </a></li>
+            </div>
+            <div>
+              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
+                  <p class=\\"base-text base-text--nav\\">nav-item</p>
                 </a></li>
             </div>
           </ul>
