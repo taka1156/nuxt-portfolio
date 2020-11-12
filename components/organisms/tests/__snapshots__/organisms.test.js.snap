@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseCads CardListの初期値(linkあり): dummyCardsLink 1`] = `
+exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
 "<div>
   <div class=\\"card-list\\">
     <div class=\\"card-list__card\\">
@@ -33,7 +33,7 @@ exports[`BaseCads CardListの初期値(linkあり): dummyCardsLink 1`] = `
 </div>"
 `;
 
-exports[`BaseCads CardListの初期値(linkなし): dummyCards 1`] = `
+exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
 "<div>
   <div class=\\"card-list\\">
     <div class=\\"card-list__card\\">
@@ -64,7 +64,7 @@ exports[`BaseCads CardListの初期値(linkなし): dummyCards 1`] = `
 </div>"
 `;
 
-exports[`BaseNav 閉じた時のスナップショット 1`] = `
+exports[`PortfolioNavigation 閉じた時のスナップショット 1`] = `
 "<div>
   <nav>
     <div>
@@ -93,7 +93,7 @@ exports[`BaseNav 閉じた時のスナップショット 1`] = `
 </div>"
 `;
 
-exports[`BaseNav 開いた時のスナップショット 1`] = `
+exports[`PortfolioNavigation 開いた時のスナップショット 1`] = `
 "<div>
   <nav>
     <div>

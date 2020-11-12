@@ -69,13 +69,4 @@ describe('CardListItem', () => {
     expect(wrapper.vm.isGithubRepo(dummyCardsLink[0])).toBe(false);
     expect(wrapper.vm.isGithubRepo(dummyCardsLink[1])).toBe(true);
   });
-
-  it('jumpメソッド', () => {
-    // https://remarkablemark.org/blog/2018/11/17/mock-window-location/#update-for-jsdom-14
-    delete window.location;
-    window.location = { assign: jest.fn() };
-    const wrapper = cardListItem({ cardInfo: dummyCardsLink[0] });
-    wrapper.vm.jump(dummyCardsLink[0]);
-    expect(window.location.assign).toBeCalledWith(dummyCardsLink[0].link);
-  });
 });

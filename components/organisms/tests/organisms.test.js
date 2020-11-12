@@ -2,12 +2,13 @@ import { mount, RouterLinkStub } from '@vue/test-utils';
 import PortfolioNavigation from '../PortfolioNavigation.vue';
 import CardList from '../CardList.vue';
 
-// BaseNav
-describe('BaseNav', () => {
+// PortfolioNavigation
+describe('PortfolioNavigation', () => {
   const dummyLogo = 'ダミー';
   const dummyRoutes = [
     { name: 'Top', to: '/home', img: 'http://placehold.jp/150x150.png' },
   ];
+
   const baseNav = mount(PortfolioNavigation, {
     stubs: {
       NuxtLink: RouterLinkStub,
@@ -44,7 +45,7 @@ describe('BaseNav', () => {
 });
 
 // BaseCard
-describe('BaseCads', () => {
+describe('CardList', () => {
   const cardList = propsData => {
     return mount(CardList, {
       propsData: {
@@ -80,6 +81,15 @@ describe('BaseCads', () => {
       link: 'https://github.com/taka1156/nuxt-portoflio',
     },
   ];
+
+  it('jumpメソッド', () => {
+    // https://remarkablemark.org/blog/2018/11/17/mock-window-location/#update-for-jsdom-14
+    delete window.location;
+    window.location = { assign: jest.fn() };
+    const wrapper = cardList({ cards: dummyCardsLink });
+    wrapper.vm.jump(dummyCardsLink[0]);
+    expect(window.location.assign).toBeCalledWith(dummyCardsLink[0].link);
+  });
 
   it('CardListの初期値(linkなし): dummyCards', () => {
     const wrapper = cardList({ cards: dummyCards });

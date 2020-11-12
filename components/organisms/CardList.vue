@@ -6,6 +6,7 @@
         :key="index"
         :card-info="cardInfo"
         class="card-list__card"
+        @jump="jump"
       ></card-item>
     </div>
   </div>
@@ -24,6 +25,13 @@ export default {
       type: Array,
       default: () => [],
       required: true,
+    },
+  },
+  methods: {
+    jump({ link }) {
+      if (link != null) {
+        location.assign(link);
+      }
     },
   },
 };
