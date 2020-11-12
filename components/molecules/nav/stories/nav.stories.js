@@ -28,7 +28,7 @@ const ROUTERS = [
   },
 ];
 
-storiesOf('molecules/Nav/NavBar', module).add(
+storiesOf('Molecules/Nav/NavBar', module).add(
   'default',
   () => ({
     components: { NavBar },
@@ -55,7 +55,7 @@ storiesOf('molecules/Nav/NavBar', module).add(
   }
 );
 
-storiesOf('molecules/Nav/NavList', module).add(
+storiesOf('Molecules/Nav/NavList', module).add(
   'default',
   () => ({
     components: { NavList },
@@ -82,7 +82,7 @@ storiesOf('molecules/Nav/NavList', module).add(
   }
 );
 
-storiesOf('molecules/Nav/NavListItem', module).add(
+storiesOf('Molecules/Nav/NavListItem', module).add(
   'default',
   () => ({
     components: { NavListItem },

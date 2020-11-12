@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import { select } from '@storybook/addon-knobs/vue';
-import CardListItem from '../CardListItem.vue';
+import CardList from '../CardList.vue';
 
 const POSTS1 = [
   {
@@ -68,25 +68,21 @@ const POSTS2 = [
   },
 ];
 
-storiesOf('Molecules/Card/CardListItem', module).add(
+storiesOf('Organisms/Card/CardList', module).add(
   'default',
   () => ({
-    components: { CardListItem },
-    template: '<card-list-item :card-info="card" />',
+    components: { CardList },
+    template: '<card-list :cards="posts" />',
     props: {
-      card: {
-        type: Object,
-        default: select(
-          'card',
-          { default: POSTS1[3], clickable: POSTS2[3] },
-          POSTS1[3]
-        ),
+      posts: {
+        type: Array,
+        default: select('posts', { default: POSTS1, clickable: POSTS2 }, POSTS1),
       },
     },
   }),
   {
     info: {
-      summary: 'カード型レイアウト',
+      summary: 'カードの一覧表示',
     },
   }
 );

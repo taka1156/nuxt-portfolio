@@ -9,7 +9,7 @@ const DUMMEY = [
   'CSS/SASSの学習',
 ];
 
-storiesOf('molecules/Profile/ProfileList', module).add(
+storiesOf('Molecules/Profile/ProfileList', module).add(
   'default',
   () => ({
     components: { ProfileList },

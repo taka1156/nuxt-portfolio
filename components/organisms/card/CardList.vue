@@ -7,13 +7,13 @@
         :card-info="cardInfo"
         class="card-list__card"
         @jump="jump"
-      ></card-item>
+      />
     </div>
   </div>
 </template>
 
 <script>
-import CardListItem from '../molecules/card/CardListItem';
+import CardListItem from '../../molecules/card/CardListItem';
 
 export default {
   name: 'CardList',

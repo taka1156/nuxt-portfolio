@@ -9,6 +9,7 @@
 
 <style scoped>
 .card-img {
+  display: block;
   margin: 0 auto;
   padding: 5px;
   box-sizing: border-box;
