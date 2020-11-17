@@ -1,11 +1,17 @@
-<template functional>
-  <li class="profile-list-item">{{ props.profileText }}</li>
+<template>
+  <div>
+    <p class="profile-list-item">
+      <!-- @slot プロフィールテキスト -->
+      <slot />
+    </p>
+  </div>
 </template>
 
 <style scoped>
 /* css reset */
-li {
-  list-style-type: none;
+p {
+  margin: 0;
+  padding: 0;
 }
 
 /* css reset */
@@ -18,6 +24,7 @@ li {
   padding-left: 40px;
   line-height: 30px;
   text-align: left;
+  width: 100%;
   color: dimgray;
   border: solid 1px dimgray;
 }

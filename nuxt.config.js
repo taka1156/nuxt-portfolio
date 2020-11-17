@@ -150,10 +150,29 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    splitChunks: {
+      layouts: true,
+      pages: true,
+      commons: true,
+    },
     extend: function (config) {
       config.node = {
         fs: 'empty',
       };
+    },
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            require.resolve('@nuxt/babel-preset-app'),
+            // require.resolve('@nuxt/babel-preset-app-edge'), // For nuxt-edge users
+            {
+              buildTarget: isServer ? 'server' : 'client',
+              corejs: { version: 3 },
+            },
+          ],
+        ];
+      },
     },
   },
 };
