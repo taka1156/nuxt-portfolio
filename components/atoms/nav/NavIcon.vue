@@ -1,19 +1,37 @@
-<template functional>
-  <div class="nav-icon">
-    <span
-      class="nav-icon__top"
-      :class="[props.isOpen ? 'nav-icon__top--open' : 'nav-icon__top--close']"
-    ></span>
-    <span
-      class="nav-icon__middle"
-      :class="{ 'nav-icon__middle--fade': props.isOpen }"
-    ></span>
-    <span
-      class="nav-icon__bottom"
-      :class="[props.isOpen ? 'nav-icon__bottom--open' : 'nav-icon__bottom--close']"
-    ></span>
+<template>
+  <div>
+    <div class="nav-icon">
+      <span
+        class="nav-icon__top"
+        :class="[isOpen ? 'nav-icon__top--open' : 'nav-icon__top--close']"
+      ></span>
+      <span
+        class="nav-icon__middle"
+        :class="{ 'nav-icon__middle--fade': isOpen }"
+      ></span>
+      <span
+        class="nav-icon__bottom"
+        :class="[isOpen ? 'nav-icon__bottom--open' : 'nav-icon__bottom--close']"
+      ></span>
+    </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'NavIcon',
+  props: {
+    /**
+     * ナビゲーションの開閉状態
+     */
+    isOpen: {
+      type: Boolean,
+      default: false,
+      requred: true,
+    },
+  },
+};
+</script>
 
 <style scoped>
 .nav-icon {

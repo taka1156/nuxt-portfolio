@@ -3,18 +3,22 @@
     <article class="card-list-item">
       <figure>
         <card-img
-          :card-img="cardInfo.img.url"
-          :img-alt="`${cardInfo.title}の画像`"
-          :is-portfolio="cardInfo.link != null"
+          :img-url="card.img.url"
+          :img-alt="`${card.title}の画像`"
+          :size="`${card.link == null ? 'sm' : 'lg'}`"
         />
         <div class="card-list-item__border" />
         <figcaption>
-          <card-title>{{ cardInfo.title }}</card-title>
-          <base-text class="base-text--card">{{ cardInfo.content2 }}</base-text>
+          <card-title>{{ card.title }}</card-title>
+          <base-text :use-type="`card`">{{ card.content2 }}</base-text>
         </figcaption>
       </figure>
-      <base-btn v-if="cardInfo.link != null" @click="$emit('jump', cardInfo)">
-        {{ isGithubRepo(cardInfo) ? 'GitHub' : 'WebSite' }}
+      <base-btn
+        v-if="card.link != null"
+        :use-type="`card`"
+        @btn-click="$emit('jump', card)"
+      >
+        {{ isGithubRepo(card) ? 'GitHub' : 'WebSite' }}
       </base-btn>
     </article>
   </div>
@@ -35,7 +39,10 @@ export default {
     'base-btn': BaseBtn,
   },
   props: {
-    cardInfo: {
+    /**
+     * カードリスト１つ分
+     */
+    card: {
       type: Object,
       default: () => {},
       required: true,
@@ -43,7 +50,9 @@ export default {
   },
   methods: {
     isGithubRepo({ link }) {
-      // githubがリンクに含まれてる、かつgithub.ioではないならリポジトリなので表示変更
+      /**
+       * githubリポジトリかどうかを判定する処理
+       */
       return `${link}`.includes('github') && !`${link}`.includes('github.io');
     },
   },

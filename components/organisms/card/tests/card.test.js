@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import CardList from '../CardList.vue';
-import { dummyCards, dummyCardsLink } from '@/testdata/testdata.js';
+import { dummyCards, dummyCardsLink } from '@/__testdata__/testdata.js';
 
 // CardList
 describe('CardList', () => {
@@ -12,13 +12,22 @@ describe('CardList', () => {
     });
   };
 
-  it('jumpメソッド', () => {
+  it('jumpメソッド(引数あり)', () => {
     // https://remarkablemark.org/blog/2018/11/17/mock-window-location/#update-for-jsdom-14
     delete window.location;
     window.location = { assign: jest.fn() };
     const wrapper = cardList({ cards: dummyCardsLink });
     wrapper.vm.jump(dummyCardsLink[0]);
     expect(window.location.assign).toBeCalledWith(dummyCardsLink[0].link);
+  });
+
+  it('jumpメソッド(引数なし)', () => {
+    // https://remarkablemark.org/blog/2018/11/17/mock-window-location/#update-for-jsdom-14
+    delete window.location;
+    window.location = { assign: jest.fn() };
+    const wrapper = cardList({ cards: dummyCardsLink });
+    wrapper.vm.jump();
+    expect(window.location.assign).not.toBeCalledWith(dummyCardsLink[0].link);
   });
 
   it('CardListの初期値(linkなし): dummyCards', () => {

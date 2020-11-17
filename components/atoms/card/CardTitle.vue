@@ -1,7 +1,10 @@
-<template functional>
-  <h2 class="card-title">
-    <slot />
-  </h2>
+<template>
+  <div>
+    <h2 class="card-title">
+      <!-- @slot カードタイトル -->
+      <slot />
+    </h2>
+  </div>
 </template>
 
 <style scoped>

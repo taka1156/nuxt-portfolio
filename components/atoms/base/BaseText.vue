@@ -1,8 +1,24 @@
-<template functional>
-  <p class="base-text" :class="data.staticClass || ''">
+<template>
+  <p class="base-text" :class="`base-text--${useType}`">
+    <!-- @slot テキスト -->
     <slot />
   </p>
 </template>
+
+<script>
+export default {
+  name: 'BaseText',
+  props: {
+    useType: {
+      type: String,
+      default: 'none',
+      validator: function (value) {
+        return ['none', 'nav', 'card'].indexOf(value) !== -1;
+      },
+    },
+  },
+};
+</script>
 
 <style scoped>
 /* css reset */

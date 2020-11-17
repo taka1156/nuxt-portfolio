@@ -5,10 +5,13 @@ exports[`PortfolioNavigation 閉じた時のスナップショット 1`] = `
   <nav>
     <div>
       <div class=\\"nav-bar\\">
-        <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav-logo\\">ダミー</a>
-          <div>
-            <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__middle\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--close\\"></span></div>
-          </div>
+        <div class=\\"nav-bar__box\\">
+          <div><a href=\\"/\\" class=\\"nav-logo\\">ダミーロゴ</a></div>
+          <div><button class=\\"base-btn base-btn--none\\">
+              <div>
+                <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__middle\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--close\\"></span></div>
+              </div>
+            </button></div>
         </div>
       </div>
     </div>
@@ -17,23 +20,27 @@ exports[`PortfolioNavigation 閉じた時のスナップショット 1`] = `
         <div class=\\"nav-list\\" style=\\"display: none;\\">
           <ul>
             <div>
-              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
-                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+              <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+                  <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+                  <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
                 </a></li>
             </div>
             <div>
-              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
-                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+              <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+                  <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+                  <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
                 </a></li>
             </div>
             <div>
-              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
-                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+              <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+                  <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+                  <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
                 </a></li>
             </div>
             <div>
-              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
-                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+              <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+                  <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+                  <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
                 </a></li>
             </div>
           </ul>
@@ -49,10 +56,13 @@ exports[`PortfolioNavigation 開いた時のスナップショット 1`] = `
   <nav>
     <div>
       <div class=\\"nav-bar\\">
-        <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav-logo\\">ダミー</a>
-          <div>
-            <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--open\\"></span></div>
-          </div>
+        <div class=\\"nav-bar__box\\">
+          <div><a href=\\"/\\" class=\\"nav-logo\\">ダミーロゴ</a></div>
+          <div><button class=\\"base-btn base-btn--none\\">
+              <div>
+                <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--open\\"></span></div>
+              </div>
+            </button></div>
         </div>
       </div>
     </div>
@@ -61,23 +71,27 @@ exports[`PortfolioNavigation 開いた時のスナップショット 1`] = `
         <div class=\\"nav-list\\" style=\\"\\">
           <ul>
             <div>
-              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
-                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+              <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+                  <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+                  <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
                 </a></li>
             </div>
             <div>
-              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
-                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+              <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+                  <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+                  <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
                 </a></li>
             </div>
             <div>
-              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
-                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+              <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+                  <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+                  <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
                 </a></li>
             </div>
             <div>
-              <li class=\\"nav-list-item\\"><a class=\\"nav-list-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"nav-itemの画像\\" class=\\"nav-img\\">
-                  <p class=\\"base-text base-text--nav\\">nav-item</p>
+              <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+                  <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+                  <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
                 </a></li>
             </div>
           </ul>

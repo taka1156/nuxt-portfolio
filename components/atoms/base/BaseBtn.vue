@@ -1,19 +1,51 @@
-<template functional>
-  <button class="btn" v-on="listeners">
-    <slot />
-  </button>
+<template>
+  <div>
+    <button class="base-btn" :class="`base-btn--${useType}`" @click="btnClick">
+      <!-- @slot ボタンラベル -->
+      <slot />
+    </button>
+  </div>
 </template>
+
+<script>
+export default {
+  name: 'BaseBtn',
+  props: {
+    useType: {
+      type: String,
+      default: 'none',
+      validator: function (value) {
+        return ['none', 'card'].indexOf(value) !== -1;
+      },
+    },
+  },
+  methods: {
+    btnClick() {
+      /**
+       * ボタンクリックイベント
+       * @event btnClick
+       * @type {event}
+       */
+      this.$emit('btn-click');
+    },
+  },
+};
+</script>
 
 <style scoped>
 /* css reset */
 button {
-  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
   outline: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 /* css reset */
 
-.btn {
+.base-btn--card {
   display: block;
   font-size: 1em;
   width: 75%;
@@ -25,9 +57,9 @@ button {
   border-radius: 5px;
 }
 
-.btn:active,
-.btn:hover,
-.btn:focus {
+.base-btn--card:active,
+.base-btn--card:hover,
+.base-btn--card:focus {
   background-color: gray;
   color: white;
 }

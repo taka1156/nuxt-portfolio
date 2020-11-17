@@ -1,11 +1,6 @@
 <template>
   <div>
-    <img
-      v-lazy="imgUrl"
-      :alt="imgAlt"
-      class="card-img"
-      :class="`card-img--${size}`"
-    />
+    <img :src="imgUrl" :alt="imgAlt" class="base-img" :class="`base-img--${size}`" />
   </div>
 </template>
 
@@ -18,7 +13,6 @@ export default {
      */
     imgUrl: {
       type: String,
-      default: '',
       required: true,
     },
     /**
@@ -27,7 +21,6 @@ export default {
      */
     imgAlt: {
       type: String,
-      default: '',
       required: true,
     },
     /**
@@ -47,20 +40,17 @@ export default {
 </script>
 
 <style scoped>
-.card-img {
+.base-img {
   display: block;
-  margin: 0 auto;
-  padding: 5px;
-  box-sizing: border-box;
+  padding: 3px;
+}
+.base-img--lg {
+  height: 50px;
+  width: 50px;
 }
 
-.card-img--sm {
-  height: 50%;
-  width: 50%;
-}
-
-.card-img--lg {
-  height: 100%;
-  width: 100%;
+.base-img--sm {
+  height: 20px;
+  width: 20px;
 }
 </style>

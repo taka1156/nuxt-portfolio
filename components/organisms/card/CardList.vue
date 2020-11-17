@@ -1,10 +1,10 @@
 <template>
   <div>
     <div v-if="cards.length !== 0" class="card-list">
-      <card-item
-        v-for="(cardInfo, index) in cards"
+      <card-list-item
+        v-for="(card, index) in cards"
         :key="index"
-        :card-info="cardInfo"
+        :card="card"
         class="card-list__card"
         @jump="jump"
       />
@@ -18,9 +18,12 @@ import CardListItem from '../../molecules/card/CardListItem';
 export default {
   name: 'CardList',
   components: {
-    'card-item': CardListItem,
+    'card-list-item': CardListItem,
   },
   props: {
+    /**
+     * カードリスト
+     */
     cards: {
       type: Array,
       default: () => [],
@@ -28,10 +31,15 @@ export default {
     },
   },
   methods: {
-    jump({ link }) {
-      if (link != null) {
-        location.assign(link);
+    /**
+     * 制作物関連サイトに移動
+     * (githubやwebサイトのリンク先)
+     */
+    jump(card = null) {
+      if (card == null || card.link == null) {
+        return;
       }
+      location.assign(card.link);
     },
   },
 };

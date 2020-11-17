@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardImg 値がDOMに反映されているか 1`] = `"<img alt=\\"ダミー画像\\" class=\\"card-img card-img--sm\\">"`;
+exports[`CardImg 値がDOMに反映されているか 1`] = `"<div><img alt=\\"ダミー画像\\" class=\\"card-img card-img--lg\\"></div>"`;
 
-exports[`CardTitle 値がDOMに反映されているか 1`] = `"<h2 class=\\"card-title\\">ダミータイトル</h2>"`;
+exports[`CardTitle 値がDOMに反映されているか 1`] = `
+"<div>
+  <h2 class=\\"card-title\\">ダミータイトル</h2>
+</div>"
+`;
