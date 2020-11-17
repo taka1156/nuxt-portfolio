@@ -1,6 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
 import NavIcon from '../NavIcon.vue';
-import NavImg from '../NavImg.vue';
 import NavLogo from '../NavLogo.vue';
 
 // NavIcon
@@ -35,27 +34,6 @@ describe('NavIcon', () => {
     expect(BOTTOM.classes()).toContain('nav-icon__bottom--close');
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
-  });
-});
-
-// NavImg
-describe('NavImg', () => {
-  it('値がDOMに反映されているか', () => {
-    const dummyImg = {
-      img: 'http://placehold.jp/150x150.png',
-      alt: 'ダミー画像',
-    };
-    const navImg = shallowMount(NavImg, {
-      propsData: {
-        navImg: dummyImg.img,
-        imgAlt: dummyImg.alt,
-      },
-    });
-    const imgTag = navImg.find('img');
-    expect(imgTag.attributes().src).toBe(dummyImg.img);
-    expect(imgTag.attributes().alt).toBe(dummyImg.alt);
-    // スナップショット
-    expect(navImg.html()).toMatchSnapshot();
   });
 });
 

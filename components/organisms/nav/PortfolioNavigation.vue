@@ -18,11 +18,17 @@ export default {
     'nav-list': NavList,
   },
   props: {
+    /**
+     * ロゴテキスト
+     */
     logoText: {
       type: String,
       default: 'Please Setting Title',
       required: true,
     },
+    /**
+     * ナビゲーションの項目が定義された配列
+     */
     routes: {
       type: Array,
       default: () => [],
@@ -35,9 +41,11 @@ export default {
     };
   },
   methods: {
-    changeState() {
-      // ナビゲーションバーの開閉管理
-      this.isOpen = !this.isOpen;
+    changeState(isOpen) {
+      /**
+       * ナビゲーションの開閉状態を変更
+       */
+      this.isOpen = isOpen;
     },
   },
 };

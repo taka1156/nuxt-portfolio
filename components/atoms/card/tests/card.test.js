@@ -10,8 +10,9 @@ describe('CardImg', () => {
     };
     const navImg = shallowMount(CardImg, {
       propsData: {
-        cardImg: dummyImg.img,
+        imgUrl: dummyImg.img,
         imgAlt: dummyImg.alt,
+        size: 'lg', //ナビゲーションはlgで固定
       },
     });
     const imgTag = navImg.find('img');

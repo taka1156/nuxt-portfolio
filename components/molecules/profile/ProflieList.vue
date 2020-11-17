@@ -1,11 +1,9 @@
 <template>
   <div>
     <ul class="profile-list">
-      <profile-list-item
-        v-for="(item, index) in list"
-        :key="index"
-        :profile-text="item"
-      ></profile-list-item>
+      <li v-for="(item, index) in list" :key="index">
+        <profile-list-item>{{ item }}</profile-list-item>
+      </li>
     </ul>
   </div>
 </template>
@@ -19,6 +17,9 @@ export default {
     'profile-list-item': ProfileListItem,
   },
   props: {
+    /**
+     * プロフィールリスト
+     */
     list: {
       type: Array,
       default: () => [],

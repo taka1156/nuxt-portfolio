@@ -1,10 +1,10 @@
 import { mount, RouterLinkStub } from '@vue/test-utils';
 import PortfolioNavigation from '../PortfolioNavigation.vue';
-import { dummyLogo, dummyRoutes } from '@/testdata/testdata.js';
+import { dummyLogo, dummyRoutes } from '@/__testdata__/testdata.js';
 
 // PortfolioNavigation
 describe('PortfolioNavigation', () => {
-  const baseNav = mount(PortfolioNavigation, {
+  const portfolioNavigation = mount(PortfolioNavigation, {
     stubs: {
       NuxtLink: RouterLinkStub,
     },
@@ -16,25 +16,25 @@ describe('PortfolioNavigation', () => {
 
   it('NavBar初期値: logoText, routes', () => {
     // logoText
-    expect(baseNav.vm.$options.props.logoText.required).toBe(true);
-    expect(baseNav.vm.logoText).toBe(dummyLogo);
+    expect(portfolioNavigation.vm.$options.props.logoText.required).toBe(true);
+    expect(portfolioNavigation.vm.logoText).toBe(dummyLogo);
     // routes
-    expect(baseNav.vm.$options.props.routes.required).toBe(true);
-    console.log(baseNav.vm.$options.props.routes.default());
-    expect(baseNav.vm.routes).toBe(dummyRoutes);
+    expect(portfolioNavigation.vm.$options.props.routes.required).toBe(true);
+    console.log(portfolioNavigation.vm.$options.props.routes.default());
+    expect(portfolioNavigation.vm.routes).toBe(dummyRoutes);
   });
 
   it('閉じた時のスナップショット', () => {
-    expect(baseNav.html()).toMatchSnapshot();
+    expect(portfolioNavigation.html()).toMatchSnapshot();
   });
 
   it('changeStateのテスト', () => {
-    expect(baseNav.vm.$data.isOpen).toBe(false);
-    baseNav.vm.changeState();
-    expect(baseNav.vm.$data.isOpen).toBe(true);
+    expect(portfolioNavigation.vm.$data.isOpen).toBe(false);
+    portfolioNavigation.vm.changeState(true);
+    expect(portfolioNavigation.vm.$data.isOpen).toBe(true);
   });
 
   it('開いた時のスナップショット', () => {
-    expect(baseNav.html()).toMatchSnapshot();
+    expect(portfolioNavigation.html()).toMatchSnapshot();
   });
 });
