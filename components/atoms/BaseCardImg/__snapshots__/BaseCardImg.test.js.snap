@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseCardImg 値がDOMに反映されているか(size: lg) 1`] = `"<img alt=\\"ダミーの画像\\" class=\\"card-img card-img--lg\\">"`;
+
+exports[`BaseCardImg 値がDOMに反映されているか(size: sm) 1`] = `"<img alt=\\"ダミーの画像\\" class=\\"card-img card-img--sm\\">"`;

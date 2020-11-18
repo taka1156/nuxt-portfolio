@@ -10,25 +10,13 @@
           class="profile__icon"
         />
 
-        <section class="contents">
-          <h2 class="contents__title">最近やっていること</h2>
-          <proflie-list :list="experiences" />
-        </section>
+        <proflie-list :profile="experiences" />
 
-        <section class="contents">
-          <h2 class="contents__title">これからやりたいこと</h2>
-          <proflie-list :list="wants" />
-        </section>
+        <proflie-list :profile="wants" />
 
-        <section class="contents">
-          <h2 class="contents__title">よく使うツール</h2>
-          <proflie-list :list="tools" />
-        </section>
+        <proflie-list :profile="tools" />
 
-        <section class="contents">
-          <h2 class="contents__title">資格</h2>
-          <proflie-list :list="exams" />
-        </section>
+        <proflie-list :profile="exams" />
       </div>
     </div>
   </div>
@@ -36,7 +24,7 @@
 
 <script>
 import meta from 'assets/js/mixin/meta.mixin.js';
-import ProfileList from '@/components/molecules/profile/ProflieList';
+import ProfileList from '@/components/organisms/ProfileList/ProflieList';
 
 export default {
   name: 'Profile',
@@ -46,24 +34,32 @@ export default {
   mixins: [meta],
   data() {
     return {
-      experiences: [
-        'JS(ES6)について学習。',
-        'FireBaseを利用した開発',
-        'Laravelの学習',
-      ],
-      wants: [
-        'TypeScriptの学習',
-        'Laravel+Vueでサービスを作る',
-        'AWSなどインフラ周りの学習',
-        'CSS/SASSの学習',
-      ],
-      tools: ['Homebrew', 'Git', 'VScode', 'Docker', 'LaraDock', 'phpMyAdmin'],
-      exams: [
-        'ITパスポート',
-        '情報セキュリティマネジメント',
-        '基本情報技術者',
-        '応用情報技術者',
-      ],
+      experiences: {
+        title: '最近やっていること',
+        values: ['JS(ES6)について学習。', 'FireBaseを利用した開発', 'Laravelの学習'],
+      },
+      wants: {
+        title: 'これからやりたいこと',
+        values: [
+          'TypeScriptの学習',
+          'Laravel+Vueでサービスを作る',
+          'AWSなどインフラ周りの学習',
+          'CSS/SASSの学習',
+        ],
+      },
+      tools: {
+        title: 'よく使うツール',
+        values: ['Homebrew', 'Git', 'VScode', 'Docker', 'LaraDock', 'phpMyAdmin'],
+      },
+      exams: {
+        title: '資格',
+        values: [
+          'ITパスポート',
+          '情報セキュリティマネジメント',
+          '基本情報技術者',
+          '応用情報技術者',
+        ],
+      },
     };
   },
   head() {
@@ -122,14 +118,6 @@ export default {
   height: 20%;
   width: 20%;
   margin: 1.25em auto 1.25em;
-}
-
-.contents {
-  margin: 0.5em auto 4em;
-}
-
-.contents__title {
-  font-size: 1.5em;
 }
 
 @media (min-width: 790px) {

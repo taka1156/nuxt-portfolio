@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseImg 値がDOMに反映されているか(size: lg) 1`] = `"<img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーの画像\\" class=\\"base-img base-img--lg\\">"`;
+
+exports[`BaseImg 値がDOMに反映されているか(size: sm) 1`] = `"<img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーの画像\\" class=\\"base-img base-img--sm\\">"`;
