@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <portfolio-navigation :logo-text="logoText" :routes="routes" />
+    <the-navigation :logo-text="logoText" :routes="routes" />
     <nuxt />
   </div>
 </template>
 
 <script>
-import PortfolioNavigation from '@/components/organisms/nav/PortfolioNavigation';
+import TheNavigation from '@/components/organisms/TheNavigation/TheNavigation';
 
 export default {
   components: {
-    'portfolio-navigation': PortfolioNavigation,
+    'the-navigation': TheNavigation,
   },
   data() {
     return {
