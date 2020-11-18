@@ -65,7 +65,7 @@ export default {
   height: 100vh;
   width: 100vw;
   z-index: 2;
-  background-color: rgba(40, 167, 69, 0.9);
+  background-color: rgba(12, 12, 12, 0.9);
 }
 
 /* nav-contentsのアニメーション */

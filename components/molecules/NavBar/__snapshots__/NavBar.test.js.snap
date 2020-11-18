@@ -3,9 +3,14 @@
 exports[`NavBar ナビゲーションバーを閉じる 1`] = `
 "<div>
   <div class=\\"nav-bar\\">
-    <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav-logo\\">ダミーロゴ</a> <button class=\\"base-btn base-btn--none\\">
-        <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__middle\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--close\\"></span></div>
-      </button></div>
+    <div class=\\"nav-bar__box\\">
+      <div><a href=\\"/\\" class=\\"nav-logo\\">ダミーロゴ</a></div>
+      <div><button class=\\"base-btn base-btn--none\\">
+          <div>
+            <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__middle\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--close\\"></span></div>
+          </div>
+        </button></div>
+    </div>
   </div>
 </div>"
 `;
@@ -13,9 +18,14 @@ exports[`NavBar ナビゲーションバーを閉じる 1`] = `
 exports[`NavBar ナビゲーションバーを開く 1`] = `
 "<div>
   <div class=\\"nav-bar\\">
-    <div class=\\"nav-bar__box\\"><a href=\\"/\\" class=\\"nav-logo\\">ダミーロゴ</a> <button class=\\"base-btn base-btn--none\\">
-        <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--open\\"></span></div>
-      </button></div>
+    <div class=\\"nav-bar__box\\">
+      <div><a href=\\"/\\" class=\\"nav-logo\\">ダミーロゴ</a></div>
+      <div><button class=\\"base-btn base-btn--none\\">
+          <div>
+            <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--open\\"></span></div>
+          </div>
+        </button></div>
+    </div>
   </div>
 </div>"
 `;

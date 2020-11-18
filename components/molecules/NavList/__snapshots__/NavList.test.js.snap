@@ -6,23 +6,35 @@ exports[`NavList isOpenがfalseの時に\`.nav-list\`が非表示 1`] = `
     <div class=\\"nav-list\\" style=\\"display: none;\\">
       <ul>
         <div>
-          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\">
-              <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+              <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+              <div>
+                <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+              </div>
             </a></li>
         </div>
         <div>
-          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\">
-              <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+              <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+              <div>
+                <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+              </div>
             </a></li>
         </div>
         <div>
-          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\">
-              <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+              <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+              <div>
+                <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+              </div>
             </a></li>
         </div>
         <div>
-          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\">
-              <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+              <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+              <div>
+                <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+              </div>
             </a></li>
         </div>
       </ul>
@@ -37,23 +49,35 @@ exports[`NavList isOpenがtrueの時に\`.nav-list\`が表示 1`] = `
     <div class=\\"nav-list\\">
       <ul>
         <div>
-          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\">
-              <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+              <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+              <div>
+                <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+              </div>
             </a></li>
         </div>
         <div>
-          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\">
-              <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+              <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+              <div>
+                <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+              </div>
             </a></li>
         </div>
         <div>
-          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\">
-              <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+              <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+              <div>
+                <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+              </div>
             </a></li>
         </div>
         <div>
-          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\">
-              <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+          <li class=\\"nav-item\\"><a class=\\"nav-item__link\\">
+              <div><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\"></div>
+              <div>
+                <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+              </div>
             </a></li>
         </div>
       </ul>
