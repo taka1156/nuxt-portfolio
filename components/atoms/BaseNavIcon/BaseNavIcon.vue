@@ -1,17 +1,19 @@
 <template>
-  <div class="nav-icon">
-    <span
-      class="nav-icon__top"
-      :class="[isOpen ? 'nav-icon__top--open' : 'nav-icon__top--close']"
-    ></span>
-    <span
-      class="nav-icon__middle"
-      :class="{ 'nav-icon__middle--fade': isOpen }"
-    ></span>
-    <span
-      class="nav-icon__bottom"
-      :class="[isOpen ? 'nav-icon__bottom--open' : 'nav-icon__bottom--close']"
-    ></span>
+  <div>
+    <div class="nav-icon">
+      <span
+        class="nav-icon__top"
+        :class="[isOpen ? 'nav-icon__top--open' : 'nav-icon__top--close']"
+      ></span>
+      <span
+        class="nav-icon__middle"
+        :class="{ 'nav-icon__middle--fade': isOpen }"
+      ></span>
+      <span
+        class="nav-icon__bottom"
+        :class="[isOpen ? 'nav-icon__bottom--open' : 'nav-icon__bottom--close']"
+      ></span>
+    </div>
   </div>
 </template>
 

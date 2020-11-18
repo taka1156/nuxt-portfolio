@@ -9,11 +9,14 @@ exports[`CardListItem CardListItemの初期値(linkあり): dummyCardsLink 1`] =
         <div>
           <h2 class=\\"base-title\\">ダミーカード</h2>
         </div>
-        <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+        <div>
+          <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+        </div>
       </figcaption>
-    </figure> <button class=\\"base-btn base-btn--card\\">
-      WebSite
-    </button>
+    </figure>
+    <div><button class=\\"base-btn base-btn--card\\">
+        WebSite
+      </button></div>
   </article>
 </div>"
 `;
@@ -27,7 +30,9 @@ exports[`CardListItem CardListItemの初期値(linkなし): dummyCards 1`] = `
         <div>
           <h2 class=\\"base-title\\">ダミーカード</h2>
         </div>
-        <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+        <div>
+          <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+        </div>
       </figcaption>
     </figure>
     <!---->

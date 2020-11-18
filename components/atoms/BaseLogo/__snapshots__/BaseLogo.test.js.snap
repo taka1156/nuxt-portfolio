@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseLogo 値がDOMに反映されているか 1`] = `"<a href=\\"/\\" class=\\"nav-logo\\">ダミーロゴ</a>"`;
+exports[`BaseLogo 値がDOMに反映されているか 1`] = `"<div><a href=\\"/\\" class=\\"nav-logo\\">ダミーロゴ</a></div>"`;

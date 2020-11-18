@@ -1,8 +1,10 @@
 <template>
-  <button class="base-btn" :class="`base-btn--${useType}`" @click="btnClick">
-    <!-- @slot ボタンラベル -->
-    <slot />
-  </button>
+  <div>
+    <button class="base-btn" :class="`base-btn--${useType}`" @click="btnClick">
+      <!-- @slot ボタンラベル -->
+      <slot />
+    </button>
+  </div>
 </template>
 
 <script>

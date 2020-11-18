@@ -1,8 +1,10 @@
 <template>
-  <a class="nav-logo" href="/">
-    <!-- @slot ナビゲーションバーの左側に入るテキストロゴ -->
-    <slot />
-  </a>
+  <div>
+    <a class="nav-logo" href="/">
+      <!-- @slot ナビゲーションバーの左側に入るテキストロゴ -->
+      <slot />
+    </a>
+  </div>
 </template>
 
 <style scoped>
