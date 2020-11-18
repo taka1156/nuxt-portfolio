@@ -47,7 +47,10 @@ const dummyCards = dummyFactory(MAX_CARD_DATA, () => dummyCardTemplate());
 
 const dummyCardsLink = dummyFactory(MAX_CARD_DATA, i => dummyCardLinkTemplate(i));
 
-const dummyProfiles = dummyFactory(MAX_PROFILE_DATA, () => dummyProfileTemplate());
+const dummyProfile = {
+  title: 'ダミータイトル',
+  values: dummyFactory(MAX_PROFILE_DATA, () => dummyProfileTemplate()),
+};
 
 const dummyLogo = 'ダミーロゴ';
 
@@ -57,5 +60,5 @@ export {
   dummyRoutes,
   dummyCards,
   dummyCardsLink,
-  dummyProfiles,
+  dummyProfile,
 };

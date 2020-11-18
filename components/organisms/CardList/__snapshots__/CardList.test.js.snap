@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
+"<div>
+  <div class=\\"card-list\\">
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure> <button class=\\"base-btn base-btn--card\\">
+          WebSite
+        </button>
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure> <button class=\\"base-btn base-btn--card\\">
+          GitHub
+        </button>
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure> <button class=\\"base-btn base-btn--card\\">
+          WebSite
+        </button>
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure> <button class=\\"base-btn base-btn--card\\">
+          GitHub
+        </button>
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure> <button class=\\"base-btn base-btn--card\\">
+          WebSite
+        </button>
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure> <button class=\\"base-btn base-btn--card\\">
+          GitHub
+        </button>
+      </article>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
+"<div>
+  <div class=\\"card-list\\">
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure>
+        <!---->
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure>
+        <!---->
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure>
+        <!---->
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure>
+        <!---->
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure>
+        <!---->
+      </article>
+    </div>
+    <div class=\\"card-list__card\\">
+      <article class=\\"card-list-item\\">
+        <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
+          <div class=\\"card-list-item__border\\"></div>
+          <figcaption class=\\"card-list-item__caption\\">
+            <div>
+              <h2 class=\\"base-title\\">ダミーカード</h2>
+            </div>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
+          </figcaption>
+        </figure>
+        <!---->
+      </article>
+    </div>
+  </div>
+</div>"
+`;

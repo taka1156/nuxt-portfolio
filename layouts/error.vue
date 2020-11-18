@@ -19,9 +19,7 @@
         <NuxtLink class="error-link" to="/">Topに戻る</NuxtLink>
       </div>
 
-      <p v-else class="description">
-        エラーが発生しました。
-      </p>
+      <p v-else class="description">エラーが発生しました。</p>
     </div>
   </div>
 </template>
