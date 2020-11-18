@@ -15,6 +15,7 @@
 import BaseLogo from '../../atoms/BaseLogo/BaseLogo';
 import NavIcon from '../../atoms/BaseNavIcon/BaseNavIcon';
 import BaseBtn from '../../atoms/BaseBtn/BaseBtn';
+
 export default {
   name: 'NavBar',
   components: {
@@ -60,9 +61,10 @@ export default {
   left: 0;
   height: 60px;
   width: 100%;
-  background-color: rgba(40, 167, 69, 0.9);
+  background-color: rgba(12, 12, 12, 0.9);
   z-index: 2;
 }
+
 .nav-bar__box {
   display: flex;
   justify-content: space-between;
