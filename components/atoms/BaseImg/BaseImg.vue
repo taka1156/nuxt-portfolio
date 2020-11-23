@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <img :src="imgUrl" :alt="imgAlt" class="base-img" :class="`base-img--${size}`" />
-  </div>
+  <img :src="imgUrl" :alt="imgAlt" class="base-img" :class="`base-img--${size}`" />
 </template>
 
 <script>

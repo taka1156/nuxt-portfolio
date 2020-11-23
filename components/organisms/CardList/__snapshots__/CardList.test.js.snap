@@ -8,15 +8,11 @@ exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
-        <div><button class=\\"base-btn base-btn--card\\">
+        <div><button class=\\"base-btn--card\\">
             WebSite
           </button></div>
       </article>
@@ -26,15 +22,11 @@ exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
-        <div><button class=\\"base-btn base-btn--card\\">
+        <div><button class=\\"base-btn--card\\">
             GitHub
           </button></div>
       </article>
@@ -44,15 +36,11 @@ exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
-        <div><button class=\\"base-btn base-btn--card\\">
+        <div><button class=\\"base-btn--card\\">
             WebSite
           </button></div>
       </article>
@@ -62,15 +50,11 @@ exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
-        <div><button class=\\"base-btn base-btn--card\\">
+        <div><button class=\\"base-btn--card\\">
             GitHub
           </button></div>
       </article>
@@ -80,15 +64,11 @@ exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
-        <div><button class=\\"base-btn base-btn--card\\">
+        <div><button class=\\"base-btn--card\\">
             WebSite
           </button></div>
       </article>
@@ -98,15 +78,11 @@ exports[`CardList CardListの初期値(linkあり): dummyCardsLink 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
-        <div><button class=\\"base-btn base-btn--card\\">
+        <div><button class=\\"base-btn--card\\">
             GitHub
           </button></div>
       </article>
@@ -123,12 +99,8 @@ exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
         <!---->
@@ -139,12 +111,8 @@ exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
         <!---->
@@ -155,12 +123,8 @@ exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
         <!---->
@@ -171,12 +135,8 @@ exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
         <!---->
@@ -187,12 +147,8 @@ exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
         <!---->
@@ -203,12 +159,8 @@ exports[`CardList CardListの初期値(linkなし): dummyCards 1`] = `
         <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
           <div class=\\"card-list-item__border\\"></div>
           <figcaption class=\\"card-list-item__caption\\">
-            <div>
-              <h2 class=\\"base-title\\">ダミーカード</h2>
-            </div>
-            <div>
-              <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
-            </div>
+            <h2 class=\\"base-title\\">ダミーカード</h2>
+            <p class=\\"base-text base-text--card\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
           </figcaption>
         </figure>
         <!---->

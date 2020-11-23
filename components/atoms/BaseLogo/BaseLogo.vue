@@ -1,14 +1,20 @@
 <template>
   <div>
-    <a class="nav-logo" href="/">
+    <a class="base-logo" href="/">
       <!-- @slot ナビゲーションバーの左側に入るテキストロゴ -->
       <slot />
     </a>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'BaseLogo',
+};
+</script>
+
 <style scoped>
-.nav-logo {
+.base-logo {
   display: block;
   height: 30px;
   margin-top: 10px;

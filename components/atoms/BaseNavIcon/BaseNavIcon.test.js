@@ -5,6 +5,9 @@ import NavIcon from './BaseNavIcon.vue';
 describe('NavIcon', () => {
   const navIcon = propsData => {
     return shallowMount(NavIcon, {
+      slots: {
+        default: 'NAVI',
+      },
       propsData: {
         ...propsData,
       },
@@ -33,5 +36,11 @@ describe('NavIcon', () => {
     expect(BOTTOM.classes()).toContain('nav-icon__bottom--close');
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it('btnClickを実行した時、`btn-click`のイベントが発生するか', () => {
+    const wrapper = navIcon({ isOpen: false });
+    wrapper.vm.btnClick();
+    expect(wrapper.emitted('btn-click')).toBeTruthy();
   });
 });
