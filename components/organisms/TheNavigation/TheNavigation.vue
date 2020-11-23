@@ -12,7 +12,7 @@ import NavBar from '../../molecules/NavBar/NavBar';
 import NavList from '../../molecules/NavList/NavList';
 
 export default {
-  name: 'BaseNav',
+  name: 'TheNavigation',
   components: {
     'nav-bar': NavBar,
     'nav-list': NavList,

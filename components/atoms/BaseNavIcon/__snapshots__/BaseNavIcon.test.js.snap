@@ -1,13 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavIcon 閉じる時(開くアイコン表示) 1`] = `
-"<div>
-  <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__middle\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--close\\"></span></div>
-</div>"
-`;
+exports[`NavIcon 閉じる時(開くアイコン表示) 1`] = `"<div class=\\"nav-icon\\"><button><span class=\\"nav-icon__border nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__border nav-icon__middle\\"></span> <span class=\\"nav-icon__border nav-icon__bottom nav-icon__bottom--close\\"></span> <span class=\\"nav-icon__text\\">NAVI</span></button></div>"`;
 
-exports[`NavIcon 開いた時(閉じるアイコン表示) 1`] = `
-"<div>
-  <div class=\\"nav-icon\\"><span class=\\"nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--open\\"></span></div>
-</div>"
-`;
+exports[`NavIcon 開いた時(閉じるアイコン表示) 1`] = `"<div class=\\"nav-icon\\"><button><span class=\\"nav-icon__border nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__border nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__border nav-icon__bottom nav-icon__bottom--open\\"></span> <span class=\\"nav-icon__text\\">NAVI</span></button></div>"`;
