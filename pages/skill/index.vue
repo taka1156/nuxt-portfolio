@@ -13,7 +13,7 @@ import CardList from '@/components/organisms/CardList/CardList.vue';
 const CONTENT_MAX = 20;
 
 export default {
-  name: 'Portfolio',
+  name: 'Skill',
   components: {
     'card-list': CardList,
   },

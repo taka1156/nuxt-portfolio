@@ -1,5 +1,5 @@
 <template>
-  <div class="Portfolio">
+  <div>
     <div class="container">
       <h1>Portfolio</h1>
       <card-list :cards="posts" />
@@ -13,7 +13,7 @@ import CardList from '@/components/organisms/CardList/CardList';
 const CONTENT_MAX = 20;
 
 export default {
-  name: 'Skill',
+  name: 'Portfolio',
   components: {
     'card-list': CardList,
   },

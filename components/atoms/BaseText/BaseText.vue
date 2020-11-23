@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <p class="base-text" :class="`base-text--${useType}`">
-      <!-- @slot テキスト -->
-      <slot />
-    </p>
-  </div>
+  <p class="base-text" :class="`base-text--${useType}`">
+    <!-- @slot テキスト -->
+    <slot />
+  </p>
 </template>
 
 <script>

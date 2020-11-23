@@ -24,7 +24,7 @@ describe('NavBar', () => {
 
   it('logoTextが反映されているか', () => {
     const wrapper = navBar({ isOpen: false });
-    const navLogo = wrapper.find('.nav-logo');
+    const navLogo = wrapper.find('.base-logo');
     expect(navLogo.text()).toBe(dummyLogo);
   });
 
