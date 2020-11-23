@@ -3,12 +3,9 @@
     <transition name="nav-fade">
       <div v-show="isOpen" class="nav-list">
         <ul>
-          <nav-item
-            v-for="(item, index) in routes"
-            :key="index"
-            :nav-item="item"
-            @change-state="changeState"
-          />
+          <li v-for="(item, index) in routes" :key="`nav_${index}`">
+            <nav-item :nav-item="item" @change-state="changeState" />
+          </li>
         </ul>
       </div>
     </transition>
@@ -55,6 +52,14 @@ export default {
 </script>
 
 <style scoped>
+/* css reset */
+ul,
+li {
+  list-style-type: none;
+}
+
+/* css rest */
+
 .nav-list {
   display: flex;
   justify-content: center;
