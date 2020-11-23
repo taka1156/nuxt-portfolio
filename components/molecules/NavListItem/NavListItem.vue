@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <li class="nav-item" @click="changeState">
-      <nuxt-link :to="navItem.to" class="nav-item__link">
-        <base-img
-          :size="`lg`"
-          :img-url="navItem.img"
-          :img-alt="`${navItem.name}の画像`"
-        />
-        <base-text :use-type="`nav`">{{ navItem.name }}</base-text>
-      </nuxt-link>
-    </li>
+  <div class="nav-item" @click="changeState">
+    <nuxt-link :to="navItem.to" class="nav-item__link">
+      <base-img
+        :size="`lg`"
+        :img-url="navItem.img"
+        :img-alt="`${navItem.name}の画像`"
+      />
+      <base-text :use-type="`nav`">{{ navItem.name }}</base-text>
+    </nuxt-link>
   </div>
 </template>
 
