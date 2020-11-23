@@ -7,11 +7,9 @@ exports[`TheNavigation 閉じた時のスナップショット 1`] = `
       <div class=\\"nav-bar\\">
         <div class=\\"nav-bar__box\\">
           <div><a href=\\"/\\" class=\\"base-logo\\">ダミーロゴ</a></div>
-          <div class=\\"nav-icon\\"><button><span class=\\"nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__middle\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--close\\"></span></button>
-            <p class=\\"nav-icon__text\\">
-              NAVI
-            </p>
-          </div>
+          <div class=\\"nav-icon\\"><button><span class=\\"nav-icon__border nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__border nav-icon__middle\\"></span> <span class=\\"nav-icon__border nav-icon__bottom nav-icon__bottom--close\\"></span> <span class=\\"nav-icon__text\\">
+        NAVI
+      </span></button></div>
         </div>
       </div>
     </div>
@@ -54,11 +52,9 @@ exports[`TheNavigation 開いた時のスナップショット 1`] = `
       <div class=\\"nav-bar\\">
         <div class=\\"nav-bar__box\\">
           <div><a href=\\"/\\" class=\\"base-logo\\">ダミーロゴ</a></div>
-          <div class=\\"nav-icon\\"><button><span class=\\"nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__bottom nav-icon__bottom--open\\"></span></button>
-            <p class=\\"nav-icon__text\\">
-              CLOSE
-            </p>
-          </div>
+          <div class=\\"nav-icon\\"><button><span class=\\"nav-icon__border nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__border nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__border nav-icon__bottom nav-icon__bottom--open\\"></span> <span class=\\"nav-icon__text\\">
+        CLOSE
+      </span></button></div>
         </div>
       </div>
     </div>

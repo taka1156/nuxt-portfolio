@@ -2,21 +2,21 @@
   <div class="nav-icon">
     <button @click="btnClick">
       <span
-        class="nav-icon__top"
+        class="nav-icon__border nav-icon__top"
         :class="[isOpen ? 'nav-icon__top--open' : 'nav-icon__top--close']"
       ></span>
       <span
-        class="nav-icon__middle"
+        class="nav-icon__border nav-icon__middle"
         :class="{ 'nav-icon__middle--fade': isOpen }"
       ></span>
       <span
-        class="nav-icon__bottom"
+        class="nav-icon__border nav-icon__bottom"
         :class="[isOpen ? 'nav-icon__bottom--open' : 'nav-icon__bottom--close']"
       ></span>
+      <span class="nav-icon__text">
+        <slot />
+      </span>
     </button>
-    <p class="nav-icon__text">
-      <slot />
-    </p>
   </div>
 </template>
 
@@ -67,7 +67,7 @@ button {
   padding: 0;
 }
 
-span {
+.nav-icon__border {
   display: block;
   height: 2px;
   width: 70%;
@@ -105,7 +105,7 @@ span {
 
 .nav-icon__text {
   display: block;
-  margin-top: 20px;
+  margin-top: 40px;
   color: white;
   font-size: 10px;
 }
