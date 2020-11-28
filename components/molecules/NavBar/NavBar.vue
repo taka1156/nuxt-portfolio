@@ -57,17 +57,17 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  height: 60px;
-  width: 100%;
-  background-color: rgba(12, 12, 12, 0.9);
   z-index: 2;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(12, 12, 12, 0.9);
 }
 
 .nav-bar__box {
   display: flex;
   justify-content: space-between;
-  height: 90%;
   width: 100%;
+  height: 90%;
   margin: 0.5em auto;
 }
 </style>

@@ -23,20 +23,20 @@ export default {
 <style scoped>
 /* css reset */
 p {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 /* css reset */
 
 .base-text--card {
+  box-sizing: border-box;
   display: block;
-  height: 100px;
   width: 100%;
+  height: 100px;
   margin: 0 auto;
   text-align: left;
   word-wrap: break-word;
-  box-sizing: border-box;
 }
 
 .base-text--nav {

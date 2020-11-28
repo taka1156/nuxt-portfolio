@@ -37,9 +37,9 @@ export default {
 <style scoped>
 /* css reset */
 ul {
-  list-style-type: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 /* css rest */
@@ -49,8 +49,8 @@ ul {
 }
 
 .profile-list__list {
-  margin: 1.25em auto 1.25em;
   width: 80%;
+  margin: 1.25em auto 1.25em;
 }
 
 @media (min-width: 790px) {

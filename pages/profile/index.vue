@@ -106,17 +106,17 @@ export default {
 
 <style scoped>
 .jumbotron {
-  margin: 3rem auto;
   width: 90%;
-  border-radius: 5px;
-  border: 3px solid #d3d3d3;
+  margin: 3rem auto;
   background-color: white;
+  border: 3px solid #d3d3d3;
+  border-radius: 5px;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .profile__icon {
-  height: 20%;
   width: 20%;
+  height: 20%;
   margin: 1.25em auto 1.25em;
 }
 
