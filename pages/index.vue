@@ -19,8 +19,19 @@
 </template>
 
 <script>
+import meta from 'assets/js/mixin/meta.mixin.js';
+
 export default {
   name: 'Home',
+  mixins: [meta],
+  head() {
+    // metaタグの設定
+    this.meta.title = 'Top';
+
+    return {
+      title: this.meta.title,
+    };
+  },
 };
 </script>
 

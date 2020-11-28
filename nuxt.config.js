@@ -44,12 +44,12 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'TakasPortfolio',
+    title: "Taka'sPortfolio",
     htmlAttrs: {
       lang: 'ja',
       prefix: 'og: http://ogp.me/ns#',
     },
-    titleTemplate: '%s - TakasPortfolio',
+    titleTemplate: "%s - Taka'sPortfolioSite",
     meta: [
       {
         charset: 'utf-8',
@@ -77,12 +77,12 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: "Taka's Portfolio",
+        content: "Taka's Portfolio Site",
       },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'Takaのポートフォリオです',
+        content: 'taka1156のポートフォリオです',
       },
       {
         hid: 'og:image',
