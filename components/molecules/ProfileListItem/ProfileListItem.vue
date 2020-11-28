@@ -23,33 +23,33 @@ export default {
 <style scoped>
 /* css reset */
 p {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 /* css reset */
 
 .profile-list-item {
   position: relative;
+  width: 80%;
+  padding-left: 40px;
   margin: 7px auto;
   font-size: 14px;
   font-weight: bold;
-  padding-left: 40px;
   line-height: 30px;
-  text-align: left;
-  width: 80%;
   color: dimgray;
+  text-align: left;
   border: solid 1px dimgray;
 }
 
 .profile-list-item::before {
-  content: ' ';
   position: absolute;
+  top: 0%;
   left: 0;
   width: 30px;
   height: 30px;
+  content: ' ';
   background: dimgray;
-  top: 0%;
 }
 
 @media (min-width: 790px) {

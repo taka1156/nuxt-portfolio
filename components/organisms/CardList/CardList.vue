@@ -49,8 +49,8 @@ export default {
 .card-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 90%;
   margin: 0 auto;
 }

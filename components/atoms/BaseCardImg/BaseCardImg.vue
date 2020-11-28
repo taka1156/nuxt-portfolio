@@ -41,19 +41,19 @@ export default {
 
 <style scoped>
 .card-img {
-  display: block;
-  margin: 0 auto;
-  padding: 5px;
   box-sizing: border-box;
+  display: block;
+  padding: 5px;
+  margin: 0 auto;
 }
 
 .card-img--sm {
-  height: 50%;
   width: 50%;
+  height: 50%;
 }
 
 .card-img--lg {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 </style>

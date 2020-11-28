@@ -38,23 +38,23 @@ export default {
 
 <style scoped>
 .error {
-  padding: 1rem;
-  background: #f7f8fb;
-  color: gray;
-  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
   font-family: sans-serif;
   font-weight: 100 !important;
+  color: gray;
+  text-align: center;
+  background: #f7f8fb;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 </style>

@@ -48,34 +48,34 @@ export default {
 
 <style scoped>
 button {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: transparent;
   border: none;
   outline: none;
-  background: transparent;
-  cursor: pointer;
 }
 
 .nav-icon {
   position: relative;
   top: -5px;
   right: 0;
-  height: 50px;
   width: 50px;
-  cursor: pointer;
-  margin: 0;
+  height: 50px;
   padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
 
 .nav-icon__border {
-  display: block;
-  height: 2px;
-  width: 70%;
-  margin: auto;
   position: absolute;
   top: calc((100% - 2px) / 2);
-  left: 0;
   right: 0;
+  left: 0;
+  display: block;
+  width: 70%;
+  height: 2px;
+  margin: auto;
   background-color: #fff;
   border-radius: 1px;
 }
@@ -89,25 +89,25 @@ button {
 }
 
 .nav-icon__top--open {
-  animation: top 0.6s ease;
   transform: rotate(-45deg);
+  animation: top 0.6s ease;
 }
 
 .nav-icon__middle--fade {
-  animation: middle 0.6s ease;
   opacity: 0;
+  animation: middle 0.6s ease;
 }
 
 .nav-icon__bottom--open {
-  animation: bottom 0.6s ease;
   transform: rotate(45deg);
+  animation: bottom 0.6s ease;
 }
 
 .nav-icon__text {
   display: block;
   margin-top: 40px;
-  color: white;
   font-size: 10px;
+  color: white;
 }
 
 @keyframes top {
