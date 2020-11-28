@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import meta from 'assets/js/mixin/meta.mixin.js';
 import CardList from '@/components/organisms/CardList/CardList.vue';
+import meta from 'assets/js/mixin/meta.mixin.js';
 const CONTENT_MAX = 20;
 
 export default {

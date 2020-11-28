@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import meta from 'assets/js/mixin/meta.mixin.js';
 import ProfileList from '@/components/organisms/ProfileList/ProflieList';
+import meta from 'assets/js/mixin/meta.mixin.js';
 
 export default {
   name: 'Profile',
