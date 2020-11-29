@@ -62,20 +62,20 @@ export default {
 <style scoped>
 /* css reset */
 figure {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 figcaption {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 /* css reset */
 
 .card-list-item {
-  height: 100%;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   border: solid 0.6px rgb(211, 211, 211);
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);

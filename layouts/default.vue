@@ -44,7 +44,7 @@ export default {
 
 <style>
 #app {
-  text-decoration: none;
   text-align: center;
+  text-decoration: none;
 }
 </style>

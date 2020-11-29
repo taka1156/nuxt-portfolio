@@ -37,8 +37,8 @@ export default {
 
 <style scoped>
 .logo {
-  text-align: center;
   margin-top: 30vh;
+  text-align: center;
 }
 
 .logo__title {
@@ -46,26 +46,26 @@ export default {
 }
 
 .logo__line {
+  width: 100%;
+  height: 2px;
   margin-top: 2vh;
   margin-bottom: 2vh;
   background-color: black;
-  height: 2px;
-  width: 100%;
 }
 
 .sns {
-  width: 85%;
   display: flex;
-  margin: 10vh auto;
   justify-content: space-around;
+  width: 85%;
+  margin: 10vh auto;
 }
 
 .sns__icon {
   width: 60px;
   height: 60px;
-  border-radius: 60px;
-  border: solid 1px gray;
   background-color: gray;
+  border: solid 1px gray;
+  border-radius: 60px;
 }
 
 .sns__link {

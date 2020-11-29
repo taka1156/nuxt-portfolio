@@ -35,24 +35,24 @@ export default {
 <style scoped>
 /* css reset */
 button {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: transparent;
   border: none;
   outline: none;
-  background: transparent;
-  cursor: pointer;
 }
 
 /* css reset */
 
 .base-btn--card {
   display: block;
-  font-size: 1em;
   width: 75%;
-  margin: 10px auto;
   padding: 10px;
-  background-color: white;
+  margin: 10px auto;
+  font-size: 1em;
   color: gray;
+  background-color: white;
   border: 1px solid gray;
   border-radius: 5px;
 }
@@ -60,7 +60,7 @@ button {
 .base-btn--card:active,
 .base-btn--card:hover,
 .base-btn--card:focus {
-  background-color: gray;
   color: white;
+  background-color: gray;
 }
 </style>
