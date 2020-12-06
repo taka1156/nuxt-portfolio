@@ -14,6 +14,7 @@
     "lint:check": "yarn lint-js & yarn lint-style",
     "lint:fix": "yarn lint-js:fix && yarn lint-style:fix",
     "dev": "nuxt",
+    "dev:mobile": "NUXT_HOST=0.0.0.0 NUXT_PORT=3000 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
