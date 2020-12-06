@@ -1,7 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseText 値がDOMに反映されているか(useType: card) 1`] = `"<p class=\\"base-text base-text--card\\">ダミーテキスト</p>"`;
-
-exports[`BaseText 値がDOMに反映されているか(useType: nav) 1`] = `"<p class=\\"base-text base-text--nav\\">ダミーテキスト</p>"`;
-
-exports[`BaseText 値がDOMに反映されているか(useType: none) 1`] = `"<p class=\\"base-text base-text--none\\">ダミーテキスト</p>"`;
+exports[`BaseText 値がDOMに反映されているか 1`] = `"<p class=\\"base-text--extend\\">ダミーテキスト</p>"`;

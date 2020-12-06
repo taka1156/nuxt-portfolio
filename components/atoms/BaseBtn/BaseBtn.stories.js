@@ -5,12 +5,6 @@ export default {
   component: BaseBtn,
   argTypes: {
     btnClick: { action: 'clicked' },
-    useType: {
-      control: {
-        type: 'inline-radio',
-        options: ['none', 'card'],
-      },
-    },
   },
 };
 

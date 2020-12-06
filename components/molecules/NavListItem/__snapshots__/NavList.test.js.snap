@@ -2,6 +2,6 @@
 
 exports[`NavListItem 値がDOMに反映されているか 1`] = `
 "<div class=\\"nav-item\\"><a class=\\"nav-item__link\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーナビゲーションの画像\\" class=\\"base-img base-img--lg\\">
-    <p class=\\"base-text base-text--nav\\">ダミーナビゲーション</p>
+    <p class=\\"base-text--extend\\" use-type=\\"nav\\">ダミーナビゲーション</p>
   </a></div>"
 `;

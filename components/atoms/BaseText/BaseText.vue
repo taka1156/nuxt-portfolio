@@ -1,5 +1,5 @@
 <template>
-  <p class="base-text" :class="`base-text--${useType}`">
+  <p class="base-text--extend">
     <!-- @slot テキスト -->
     <slot />
   </p>
@@ -8,15 +8,6 @@
 <script>
 export default {
   name: 'BaseText',
-  props: {
-    useType: {
-      type: String,
-      default: 'none',
-      validator: function (value) {
-        return ['none', 'nav', 'card'].indexOf(value) !== -1;
-      },
-    },
-  },
 };
 </script>
 
@@ -28,19 +19,4 @@ p {
 }
 
 /* css reset */
-
-.base-text--card {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  height: 100px;
-  margin: 0 auto;
-  text-align: left;
-  word-wrap: break-word;
-}
-
-.base-text--nav {
-  display: inline;
-  color: white;
-}
 </style>

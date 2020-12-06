@@ -3,14 +3,6 @@ import BaseText from './BaseText.vue';
 export default {
   title: 'Atoms/BaseText',
   component: BaseText,
-  argTypes: {
-    useType: {
-      control: {
-        type: 'inline-radio',
-        options: ['none', 'nav', 'card'],
-      },
-    },
-  },
 };
 
 const Template = (args, { argTypes }) => ({
