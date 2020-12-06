@@ -6,7 +6,7 @@
         :img-url="navItem.img"
         :img-alt="`${navItem.name}の画像`"
       />
-      <base-text :use-type="`nav`">{{ navItem.name }}</base-text>
+      <base-text>{{ navItem.name }}</base-text>
     </nuxt-link>
   </div>
 </template>

@@ -10,15 +10,6 @@
 <script>
 export default {
   name: 'BaseBtn',
-  props: {
-    useType: {
-      type: String,
-      default: 'none',
-      validator: function (value) {
-        return ['none', 'card'].indexOf(value) !== -1;
-      },
-    },
-  },
   methods: {
     btnClick() {
       /**
