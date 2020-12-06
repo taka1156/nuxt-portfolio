@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button :class="`base-btn--${useType}`" @click="btnClick">
+    <button class="base-btn--extend" @click="btnClick">
       <!-- @slot ボタンラベル -->
       <slot />
     </button>
@@ -38,29 +38,7 @@ button {
   padding: 0;
   margin: 0;
   cursor: pointer;
-  background: transparent;
-  border: none;
-  outline: none;
 }
 
 /* css reset */
-
-.base-btn--card {
-  display: block;
-  width: 75%;
-  padding: 10px;
-  margin: 10px auto;
-  font-size: 1em;
-  color: gray;
-  background-color: white;
-  border: 1px solid gray;
-  border-radius: 5px;
-}
-
-.base-btn--card:active,
-.base-btn--card:hover,
-.base-btn--card:focus {
-  color: white;
-  background-color: gray;
-}
 </style>

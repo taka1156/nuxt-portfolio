@@ -48,6 +48,8 @@ export default {
 
 <style scoped>
 button {
+  width: 50px;
+  height: 50px;
   padding: 0;
   margin: 0;
   cursor: pointer;
@@ -105,7 +107,8 @@ button {
 
 .nav-icon__text {
   display: block;
-  margin-top: 40px;
+  width: 50px;
+  margin: 40px auto;
   font-size: 10px;
   color: white;
 }

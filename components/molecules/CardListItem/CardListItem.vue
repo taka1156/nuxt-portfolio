@@ -10,14 +10,10 @@
         <div class="card-list-item__border" />
         <figcaption class="card-list-item__caption">
           <base-title>{{ card.title }}</base-title>
-          <base-text :use-type="`card`">{{ card.content2 }}</base-text>
+          <base-text>{{ card.content2 }}</base-text>
         </figcaption>
       </figure>
-      <base-btn
-        v-if="card.link != null"
-        :use-type="`card`"
-        @btn-click="$emit('jump', card)"
-      >
+      <base-btn v-if="card.link != null" @btn-click="$emit('jump', card)">
         {{ isGithubRepo(card) ? 'GitHub' : 'WebSite' }}
       </base-btn>
     </article>
@@ -72,6 +68,35 @@ figcaption {
 }
 
 /* css reset */
+::v-deep .base-text--extend {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+::v-deep .base-btn--extend {
+  display: block;
+  width: 75%;
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 1em;
+  color: gray;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+}
+
+::v-deep .base-btn--extend:active,
+::v-deep .base-btn--extend:hover,
+::v-deep .base-btn--extend:focus {
+  color: white;
+  background-color: gray;
+}
 
 .card-list-item {
   width: 100%;
