@@ -1,23 +1,21 @@
 <template>
-  <div class="Profile">
-    <div class="container">
-      <h1>Profile</h1>
+  <div>
+    <h1>Profile</h1>
 
-      <div class="jumbotron">
-        <img
-          src="@/assets/img/prof.png"
-          alt="プロフィール画像"
-          class="profile__icon"
-        />
+    <div class="jumbotron">
+      <img
+        src="@/assets/img/prof.png"
+        alt="プロフィール画像"
+        class="profile__icon"
+      />
 
-        <proflie-list :profile="experiences" />
+      <proflie-list :profile="experiences" />
 
-        <proflie-list :profile="wants" />
+      <proflie-list :profile="wants" />
 
-        <proflie-list :profile="tools" />
+      <proflie-list :profile="tools" />
 
-        <proflie-list :profile="exams" />
-      </div>
+      <proflie-list :profile="exams" />
     </div>
   </div>
 </template>
@@ -36,7 +34,7 @@ export default {
     return {
       experiences: {
         title: '最近やっていること',
-        values: ['JS(ES6)について学習。', 'FireBaseを利用した開発', 'Laravelの学習'],
+        values: ['JS(ES6)について学習。', 'Firebaseを利用した開発', 'Laravelの学習'],
       },
       wants: {
         title: 'これからやりたいこと',
@@ -44,7 +42,7 @@ export default {
           'TypeScriptの学習',
           'Laravel+Vueでサービスを作る',
           'AWSなどインフラ周りの学習',
-          'CSS/SASSの学習',
+          'CSS/SCSSの学習',
         ],
       },
       tools: {
@@ -107,7 +105,7 @@ export default {
 <style scoped>
 .jumbotron {
   width: 90%;
-  margin: 3rem auto;
+  margin: 0 auto 10px;
   background-color: white;
   border: 3px solid #d3d3d3;
   border-radius: 5px;
