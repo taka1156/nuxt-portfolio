@@ -3,12 +3,14 @@
     <header>
       <the-navigation :logo-text="logoText" :routes="routes" />
     </header>
-    <main>
-      <nuxt />
-    </main>
-    <footer>
-      <the-copyright />
-    </footer>
+    <div class="container">
+      <main>
+        <nuxt />
+      </main>
+      <footer>
+        <the-copyright />
+      </footer>
+    </div>
   </div>
 </template>
 
@@ -54,7 +56,6 @@ export default {
 <style>
 #app {
   text-align: center;
-  text-decoration: none;
 }
 
 /* css reset */
@@ -67,7 +68,13 @@ footer {
 
 /* css reset */
 
+.container {
+  margin: 70px auto 0;
+}
+
 main {
-  min-height: 65vh;
+  min-height: 70vh;
+  padding: 0;
+  margin: 0;
 }
 </style>

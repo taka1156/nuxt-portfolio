@@ -32,7 +32,6 @@ a {
 }
 
 .the-copyright {
-  bottom: 0;
   width: 100%;
   padding: 0;
   margin: 0;
