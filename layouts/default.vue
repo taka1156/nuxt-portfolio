@@ -32,17 +32,17 @@ export default {
         },
         {
           name: 'Profile',
-          to: '/profile',
+          to: '/profile/',
           img: require('assets/img/ui/profile.png'),
         },
         {
           name: 'Skill',
-          to: '/skill',
+          to: '/skill/',
           img: require('assets/img/ui/skill.png'),
         },
         {
           name: 'Portfolio',
-          to: '/portfolio',
+          to: '/portfolio/',
           img: require('assets/img/ui/portfolio.png'),
         },
       ],
