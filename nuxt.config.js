@@ -1,43 +1,26 @@
-import axios from 'axios';
+import { generateRouter } from './utils/routes/index.js';
 require('dotenv').config();
 const { BASE_URL, MICRO_CMS } = process.env;
-const CONTENT_MAX = 20;
-const api = 'https://taka_portfolio.microcms.io/api/v1';
 
 export default {
   mode: 'universal',
   target: 'static',
+  sitemap: {
+    trailingSlash: true,
+    path: '/sitemap.xml',
+    hostname: 'https://www.taka1156.site',
+    routes() {
+      return generateRouter(MICRO_CMS);
+    },
+  },
+  router: {
+    trailingSlash: true,
+    middleware: 'redirect',
+  },
   generate: {
     fallback: true,
     routes() {
-      const skills = axios
-        .get(`${api}/skill`, {
-          params: { fields: 'title,img,content2', limit: CONTENT_MAX },
-          headers: { 'X-API-KEY': MICRO_CMS },
-        })
-        .then(({ data }) => {
-          return data.contents.map(skill => {
-            return skill;
-          });
-        });
-
-      const portfolios = axios
-        .get(`${api}/portfolio`, {
-          params: { fields: 'title,img,content2,link', limit: CONTENT_MAX },
-          headers: { 'X-API-KEY': MICRO_CMS },
-        })
-        .then(({ data }) => {
-          return data.contents.map(portfolio => {
-            return portfolio;
-          });
-        });
-
-      return Promise.all([skills, portfolios]).then(values => {
-        return [
-          { route: '/skill', payload: values[0] },
-          { route: '/portfolio', payload: values[1] },
-        ];
-      });
+      return generateRouter(MICRO_CMS);
     },
   },
   /*
@@ -128,6 +111,7 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Axios module configuration

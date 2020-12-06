@@ -16,10 +16,12 @@
       <div class="title">{{ error.message }}</div>
       <div v-if="error.statusCode === 404" class="description">
         <p>ページがありません。<br />(URLを確認してください。)</p>
-        <NuxtLink class="error-link" to="/">Topに戻る</NuxtLink>
       </div>
 
-      <p v-else class="description">エラーが発生しました。</p>
+      <p v-else class="description">
+        エラーが発生しました。
+        <NuxtLink class="error-link" to="/">Topに戻る</NuxtLink>
+      </p>
     </div>
   </div>
 </template>
