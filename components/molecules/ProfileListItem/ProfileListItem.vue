@@ -54,8 +54,8 @@ p {
 
 @media (min-width: 790px) {
   .profile-list-item {
-    width: 80%;
-    font-size: 25px;
+    width: 90%;
+    font-size: 23px;
   }
 }
 </style>

@@ -73,7 +73,7 @@ footer {
 }
 
 main {
-  min-height: 70vh;
+  min-height: 60vh;
   padding: 0;
   margin: 0;
 }

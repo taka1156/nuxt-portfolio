@@ -37,7 +37,8 @@ export default {
 
 <style scoped>
 .logo {
-  margin: 25vh auto;
+  width: 95%;
+  margin: 35vh auto 0;
   text-align: center;
 }
 
