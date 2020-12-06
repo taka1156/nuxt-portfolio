@@ -45,6 +45,10 @@ export default {
 </script>
 
 <style scoped>
+::v-deep .base-text--extend {
+  display: inline;
+  color: white;
+}
 .nav-item {
   display: block;
   font-size: 50px;
