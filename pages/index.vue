@@ -48,7 +48,7 @@ export default {
 
 .logo__line {
   width: 100%;
-  margin-top: 10px auto 10px;
+  margin-top: 10px;
   border: 1px solid black;
 }
 
