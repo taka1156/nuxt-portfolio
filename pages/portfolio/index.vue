@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div class="container">
-      <h1>Portfolio</h1>
-      <card-list :cards="posts" />
-    </div>
+    <h1>Portfolio</h1>
+    <card-list :cards="posts" />
   </div>
 </template>
 

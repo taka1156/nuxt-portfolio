@@ -1,5 +1,5 @@
 <template>
-  <div class="Home">
+  <div>
     <div class="logo">
       <h1 class="logo__title">Welcome to Taka's Portfolio</h1>
       <div class="logo__line" />
@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .logo {
-  margin-top: 30vh;
+  margin: 25vh auto;
   text-align: center;
 }
 
@@ -47,17 +47,15 @@ export default {
 
 .logo__line {
   width: 100%;
-  height: 2px;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  background-color: black;
+  margin-top: 10px auto 10px;
+  border: 1px solid black;
 }
 
 .sns {
   display: flex;
   justify-content: space-around;
   width: 85%;
-  margin: 10vh auto;
+  margin: 40px auto;
 }
 
 .sns__icon {
