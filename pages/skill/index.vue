@@ -68,6 +68,11 @@ export default {
           property: 'og:image',
           content: this.meta.image,
         },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.meta.description,
+        },
       ],
     };
   },
