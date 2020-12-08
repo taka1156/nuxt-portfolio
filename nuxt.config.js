@@ -65,12 +65,18 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'taka1156のポートフォリオです',
+        content: 'taka1156のポートフォリオです。',
       },
       {
         hid: 'og:image',
         property: 'og:image',
         content: `${BASE_URL}/img/ogp/logo.jpg`,
+      },
+      // web閲覧時の説明文
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'taka1156のポートフォリオです。',
       },
       // Twitter Card
       {
