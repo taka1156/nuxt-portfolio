@@ -45,7 +45,7 @@ jobs:
       env:
         BASE_URL: ${{ secrets.BASE_URL }}
         MICRO_CMS: ${{ secrets.MICRO_CMS }}
-      run: yarn generate:static
+      run: yarn generate
 
     - name: deploy to Firebase Hosting
       run: yarn firebase deploy --token $FIREBASE_TOKEN

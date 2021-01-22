@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Profile</h1>
+    <base-heading1> Profile </base-heading1>
 
     <section class="contents">
       <h2 class="contents__heading">自己紹介</h2>
@@ -15,7 +15,10 @@
       />
     </section>
 
-    <proflie-list :profile="exams" />
+    <section class="contents">
+      <h2 class="contents__heading">取得した資格</h2>
+      <proflie-list :profile="exams" />
+    </section>
 
     <section class="contents">
       <h2 class="contents__heading">SNSやGitHub等</h2>
@@ -25,6 +28,7 @@
 </template>
 
 <script>
+import BaseHeading1 from '@/components/atoms/BaseHeading1/BaseHeading1';
 import ProfileBox from '@/components/organisms/ProfileBox/ProfileBox';
 import ContributionBox from '@/components/organisms/ContributionBox/ContributionBox';
 import ProfileList from '@/components/organisms/ProfileList/ProflieList';
@@ -41,6 +45,7 @@ import {
 export default {
   name: 'Profile',
   components: {
+    'base-heading1': BaseHeading1,
     'profile-box': ProfileBox,
     'contribution-box': ContributionBox,
     'proflie-list': ProfileList,
@@ -102,6 +107,11 @@ export default {
 </script>
 
 <style scoped>
+::v-deep .base-heading1--extend {
+  padding: 0 0 10px;
+  border-bottom: 2.5px solid lightgray;
+}
+
 .contents {
   margin: 1.25em auto 2em;
 }
