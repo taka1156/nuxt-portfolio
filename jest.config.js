@@ -1,7 +1,7 @@
 module.exports = {
   transform: {
     '^.+\\.js$': 'babel-jest',
-    '.*\\.(vue)$': 'vue-jest',
+    '.*\\.(vue)$': 'vue-jest'
   },
   setupFilesAfterEnv: ['<rootDir>/__mocks__/vueModules.js'],
   moduleNameMapper: {
@@ -9,10 +9,10 @@ module.exports = {
       '<rootDir>/__mocks__/fileMock.js',
     '\\.(css|scss)$': '<rootDir>/__mocks__/styleMock.js',
     '^@/(.*)$': '<rootDir>/$1',
-    '^~/(.*)$': '<rootDir>/$1',
+    '^~/(.*)$': '<rootDir>/$1'
   },
   moduleFileExtensions: ['js', 'json', 'vue'],
   testMatch: [
-    '**/tests/**/*.(test|spec).js|**/__tests__/**/*.(test|spec).js|**/**/*.(test|spec).js',
-  ],
+    '**/tests/**/*.(test|spec).js|**/__tests__/**/*.(test|spec).js|**/**/*.(test|spec).js'
+  ]
 };

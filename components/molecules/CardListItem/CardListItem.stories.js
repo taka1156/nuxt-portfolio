@@ -3,19 +3,19 @@ import { dummyCards, dummyCardsLink } from '@/__testdata__/testdata.js';
 
 export default {
   title: 'Molecules/CardListItem',
-  component: CardListItem,
+  component: CardListItem
 };
 
 const Template1 = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { CardListItem },
-  template: '<card-list-item v-bind="$props" />',
+  template: '<card-list-item v-bind="$props" />'
 });
 
 const Template2 = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { CardListItem },
-  template: '<card-list-item v-bind="$props" />',
+  template: '<card-list-item v-bind="$props" />'
 });
 
 export const Default = Template1.bind({});

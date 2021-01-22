@@ -15,7 +15,7 @@ export default {
   name: 'TheNavigation',
   components: {
     'nav-bar': NavBar,
-    'nav-list': NavList,
+    'nav-list': NavList
   },
   props: {
     /**
@@ -23,21 +23,19 @@ export default {
      */
     logoText: {
       type: String,
-      default: 'Please Setting Title',
-      required: true,
+      required: true
     },
     /**
      * ナビゲーションの項目が定義された配列
      */
     routes: {
       type: Array,
-      default: () => [],
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
-      isOpen: false,
+      isOpen: false
     };
   },
   methods: {
@@ -46,7 +44,7 @@ export default {
        * ナビゲーションの開閉状態を変更
        */
       this.isOpen = isOpen;
-    },
-  },
+    }
+  }
 };
 </script>

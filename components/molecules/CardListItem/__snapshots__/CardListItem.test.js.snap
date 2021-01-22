@@ -3,16 +3,15 @@
 exports[`CardListItem CardListItemの初期値(linkあり): dummyCardsLink 1`] = `
 "<div>
   <article class=\\"card-list-item\\">
-    <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--lg\\">
+    <figure><img alt=\\"ダミーカードの画像\\" class=\\"base-img--extend base-img--lg\\">
       <div class=\\"card-list-item__border\\"></div>
       <figcaption class=\\"card-list-item__caption\\">
         <h2 class=\\"base-title\\">ダミーカード</h2>
         <p class=\\"base-text--extend\\">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい</p>
       </figcaption>
-    </figure>
-    <div><button class=\\"base-btn--extend\\">
-        WebSite
-      </button></div>
+    </figure> <a href=\\"https://takatechblog.netlify.app/\\" tag=\\"a\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"base-link--extend\\">
+      WebSite
+    </a>
   </article>
 </div>"
 `;
@@ -20,7 +19,7 @@ exports[`CardListItem CardListItemの初期値(linkあり): dummyCardsLink 1`] =
 exports[`CardListItem CardListItemの初期値(linkなし): dummyCards 1`] = `
 "<div>
   <article class=\\"card-list-item\\">
-    <figure><img alt=\\"ダミーカードの画像\\" class=\\"card-img card-img--sm\\">
+    <figure><img alt=\\"ダミーカードの画像\\" class=\\"base-img--extend base-img--sm\\">
       <div class=\\"card-list-item__border\\"></div>
       <figcaption class=\\"card-list-item__caption\\">
         <h2 class=\\"base-title\\">ダミーカード</h2>

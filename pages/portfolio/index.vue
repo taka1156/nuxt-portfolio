@@ -13,7 +13,7 @@ const CONTENT_MAX = 20;
 export default {
   name: 'Portfolio',
   components: {
-    'card-list': CardList,
+    'card-list': CardList
   },
   mixins: [meta],
   async asyncData({ $axios, payload }) {
@@ -23,13 +23,13 @@ export default {
     const api = 'https://taka_portfolio.microcms.io/api/v1';
     const { contents } = await $axios.$get(`${api}/portfolio`, {
       params: { fields: 'title,img,content2,link', limit: CONTENT_MAX },
-      headers: { 'X-API-KEY': process.env.MICRO_CMS },
+      headers: { 'X-API-KEY': process.env.MICRO_CMS }
     });
     return { posts: contents };
   },
   data() {
     return {
-      posts: [],
+      posts: []
     };
   },
   head() {
@@ -46,35 +46,35 @@ export default {
         {
           hid: 'og:type',
           property: 'og:type',
-          content: this.meta.type,
+          content: this.meta.type
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: this.meta.url,
+          content: this.meta.url
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.meta.title,
+          content: this.meta.title
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.meta.description,
+          content: this.meta.description
         },
         {
           hid: 'og:image',
           property: 'og:image',
-          content: this.meta.image,
+          content: this.meta.image
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.meta.description,
-        },
-      ],
+          content: this.meta.description
+        }
+      ]
     };
-  },
+  }
 };
 </script>

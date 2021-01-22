@@ -3,17 +3,16 @@ import NavList from './NavList.vue';
 import { dummyRoutes } from '@/__testdata__/testdata.js';
 
 describe('NavList', () => {
-  const navList = propsData => {
-    return mount(NavList, {
+  const navList = propsData =>
+    mount(NavList, {
       stubs: {
-        NuxtLink: RouterLinkStub,
+        NuxtLink: RouterLinkStub
       },
       propsData: {
         routes: dummyRoutes,
-        ...propsData,
-      },
+        ...propsData
+      }
     });
-  };
 
   it('NavList初期値: isOpen, routes', () => {
     const wrapper = navList({ isOpen: false });
@@ -22,7 +21,6 @@ describe('NavList', () => {
     expect(wrapper.vm.isOpen).toBe(false);
     // routes
     expect(wrapper.vm.$options.props.routes.required).toBe(true);
-    console.log(wrapper.vm.$options.props.routes.default());
     expect(wrapper.vm.routes).toBe(dummyRoutes);
   });
 

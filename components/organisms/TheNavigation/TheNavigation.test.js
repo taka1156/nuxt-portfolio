@@ -5,12 +5,12 @@ import { dummyLogo, dummyRoutes } from '@/__testdata__/testdata.js';
 describe('TheNavigation', () => {
   const theNavigation = mount(TheNavigation, {
     stubs: {
-      NuxtLink: RouterLinkStub,
+      NuxtLink: RouterLinkStub
     },
     propsData: {
       logoText: dummyLogo,
-      routes: dummyRoutes,
-    },
+      routes: dummyRoutes
+    }
   });
 
   it('NavBar初期値: logoText, routes', () => {
@@ -19,7 +19,6 @@ describe('TheNavigation', () => {
     expect(theNavigation.vm.logoText).toBe(dummyLogo);
     // routes
     expect(theNavigation.vm.$options.props.routes.required).toBe(true);
-    console.log(theNavigation.vm.$options.props.routes.default());
     expect(theNavigation.vm.routes).toBe(dummyRoutes);
   });
 
