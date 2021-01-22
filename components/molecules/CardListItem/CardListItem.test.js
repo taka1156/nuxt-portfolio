@@ -6,18 +6,17 @@ describe('CardListItem', () => {
   const cardListItem = propsData => {
     return mount(CardListItem, {
       propsData: {
-        ...propsData,
-      },
+        ...propsData
+      }
     });
   };
 
   it('CardListItemの初期値(linkなし): dummyCards', () => {
     const wrapper = cardListItem({ card: dummyCards[0] });
-    console.log(wrapper.vm.$options.props.card.default());
     expect(wrapper.vm.$options.props.card.required).toBe(true);
     // linkがない時はボタンがないことを確認
-    const btnTag = wrapper.find('button');
-    expect(btnTag.exists()).toBe(false);
+    const aTag = wrapper.find('a');
+    expect(aTag.exists()).toBe(false);
     expect(wrapper.vm.card).toBe(dummyCards[0]);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();
@@ -27,8 +26,8 @@ describe('CardListItem', () => {
     const wrapper = cardListItem({ card: dummyCardsLink[0] });
     expect(wrapper.vm.$options.props.card.required).toBe(true);
     // linkがある時はボタンがあることを確認
-    const btnTag = wrapper.find('button');
-    expect(btnTag.text()).toBe('WebSite');
+    const aTag = wrapper.find('a');
+    expect(aTag.text()).toBe('WebSite');
     expect(wrapper.vm.card).toBe(dummyCardsLink[0]);
     // スナップショット
     expect(wrapper.html()).toMatchSnapshot();

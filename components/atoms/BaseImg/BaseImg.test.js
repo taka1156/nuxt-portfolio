@@ -1,15 +1,15 @@
-import { shallowMount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import { dummyImg } from '@/__testdata__/testdata.js';
 import BaseImg from './BaseImg.vue';
 
 describe('BaseImg', () => {
   const baseImg = propsData =>
-    shallowMount(BaseImg, {
+    mount(BaseImg, {
       propsData: {
         ...propsData,
         imgUrl: dummyImg.imgUrl,
-        imgAlt: dummyImg.imgAlt,
-      },
+        imgAlt: dummyImg.imgAlt
+      }
     });
 
   it('値がDOMに反映されているか(size: sm)', () => {

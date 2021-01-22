@@ -7,7 +7,7 @@ const generateRouter = async MICRO_CMS => {
   const skills = axios
     .get(`${api}/skill`, {
       params: { fields: 'title,img,content2', limit: CONTENT_MAX },
-      headers: { 'X-API-KEY': MICRO_CMS },
+      headers: { 'X-API-KEY': MICRO_CMS }
     })
     .then(({ data }) => {
       return data.contents.map(skill => {
@@ -18,7 +18,7 @@ const generateRouter = async MICRO_CMS => {
   const portfolios = axios
     .get(`${api}/portfolio`, {
       params: { fields: 'title,img,content2,link', limit: CONTENT_MAX },
-      headers: { 'X-API-KEY': MICRO_CMS },
+      headers: { 'X-API-KEY': MICRO_CMS }
     })
     .then(({ data }) => {
       return data.contents.map(portfolio => {
@@ -29,7 +29,7 @@ const generateRouter = async MICRO_CMS => {
   return Promise.all([skills, portfolios]).then(values => {
     return [
       { route: '/skill/', payload: values[0] },
-      { route: '/portfolio/', payload: values[1] },
+      { route: '/portfolio/', payload: values[1] }
     ];
   });
 };

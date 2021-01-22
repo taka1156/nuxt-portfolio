@@ -1,19 +1,21 @@
 <template>
-  <div class="nav-icon">
+  <div class="base-nav-icon base-nav-icon--extend">
     <button @click="btnClick">
       <span
-        class="nav-icon__border nav-icon__top"
-        :class="[isOpen ? 'nav-icon__top--open' : 'nav-icon__top--close']"
+        class="base-nav-icon__border base-nav-icon__top"
+        :class="[isOpen ? 'base-nav-icon__top--open' : 'base-nav-icon__top--close']"
       ></span>
       <span
-        class="nav-icon__border nav-icon__middle"
-        :class="{ 'nav-icon__middle--fade': isOpen }"
+        class="base-nav-icon__border base-nav-icon__middle"
+        :class="{ 'base-nav-icon__middle--fade': isOpen }"
       ></span>
       <span
-        class="nav-icon__border nav-icon__bottom"
-        :class="[isOpen ? 'nav-icon__bottom--open' : 'nav-icon__bottom--close']"
+        class="base-nav-icon__border base-nav-icon__bottom"
+        :class="[
+          isOpen ? 'base-nav-icon__bottom--open' : 'base-nav-icon__bottom--close'
+        ]"
       ></span>
-      <span class="nav-icon__text">
+      <span class="base-nav-icon__text">
         <slot />
       </span>
     </button>
@@ -29,9 +31,8 @@ export default {
      */
     isOpen: {
       type: Boolean,
-      default: false,
-      requred: true,
-    },
+      requred: true
+    }
   },
   methods: {
     btnClick() {
@@ -41,24 +42,23 @@ export default {
        * @type {event}
        */
       this.$emit('btn-click');
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style scoped>
 button {
   width: 50px;
-  height: 50px;
+  height: 55px;
   padding: 0;
   margin: 0;
   cursor: pointer;
   background: transparent;
   border: none;
-  outline: none;
 }
 
-.nav-icon {
+.base-nav-icon {
   position: relative;
   top: -5px;
   right: 0;
@@ -66,10 +66,9 @@ button {
   height: 50px;
   padding: 0;
   margin: 0;
-  cursor: pointer;
 }
 
-.nav-icon__border {
+.base-nav-icon__border {
   position: absolute;
   top: calc((100% - 2px) / 2);
   right: 0;
@@ -82,33 +81,34 @@ button {
   border-radius: 1px;
 }
 
-.nav-icon__top--close {
+.base-nav-icon__top--close {
   transform: translateY(-10px);
 }
 
-.nav-icon__bottom--close {
+.base-nav-icon__bottom--close {
   transform: translateY(10px);
 }
 
-.nav-icon__top--open {
+.base-nav-icon__top--open {
   transform: rotate(-45deg);
   animation: top 0.6s ease;
 }
 
-.nav-icon__middle--fade {
+.base-nav-icon__middle--fade {
   opacity: 0;
   animation: middle 0.6s ease;
 }
 
-.nav-icon__bottom--open {
+.base-nav-icon__bottom--open {
   transform: rotate(45deg);
   animation: bottom 0.6s ease;
 }
 
-.nav-icon__text {
+.base-nav-icon__text {
   display: block;
   width: 50px;
-  margin: 40px auto;
+  height: 10px;
+  margin: 30px auto 0 auto;
   font-size: 10px;
   color: white;
 }

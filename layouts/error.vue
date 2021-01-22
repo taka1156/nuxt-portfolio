@@ -32,9 +32,9 @@ export default {
   props: {
     error: {
       type: Object,
-      default: () => {},
-    },
-  },
+      default: () => {}
+    }
+  }
 };
 </script>
 

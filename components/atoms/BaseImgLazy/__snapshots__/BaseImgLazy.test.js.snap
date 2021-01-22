@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseImgLazy 値がDOMに反映されているか(size: lg) 1`] = `"<img alt=\\"ダミーの画像\\" class=\\"base-img--extend base-img--lg\\">"`;
+
+exports[`BaseImgLazy 値がDOMに反映されているか(size: sm) 1`] = `"<img alt=\\"ダミーの画像\\" class=\\"base-img--extend base-img--sm\\">"`;
