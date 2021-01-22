@@ -1,5 +1,5 @@
 import CardListItem from './CardListItem.vue';
-import { dummyCards, dummyCardsLink } from '@/@/__testdata__/testdata.js';
+import { dummyCards, dummyCardsLink } from '@/__testdata__/testdata.js';
 
 export default {
   title: 'Molecules/CardListItem',
