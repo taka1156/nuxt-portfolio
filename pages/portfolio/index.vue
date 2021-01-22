@@ -1,11 +1,12 @@
 <template>
   <div>
-    <h1>Portfolio</h1>
+    <base-heading1> Portfolio </base-heading1>
     <card-list :cards="posts" />
   </div>
 </template>
 
 <script>
+import BaseHeading1 from '@/components/atoms/BaseHeading1/BaseHeading1';
 import CardList from '@/components/organisms/CardList/CardList';
 import meta from 'assets/js/mixin/meta.mixin.js';
 const CONTENT_MAX = 20;
@@ -13,6 +14,7 @@ const CONTENT_MAX = 20;
 export default {
   name: 'Portfolio',
   components: {
+    'base-heading1': BaseHeading1,
     'card-list': CardList
   },
   mixins: [meta],
@@ -78,3 +80,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+::v-deep .base-heading1--extend {
+  padding: 0 0 10px;
+  border-bottom: 2.5px solid lightgray;
+}
+</style>
