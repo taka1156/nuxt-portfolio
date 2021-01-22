@@ -1,18 +1,22 @@
 <template>
-  <img v-lazy="imgUrl" :alt="imgAlt" class="card-img" :class="`card-img--${size}`" />
+  <img
+    v-lazy="imgUrl"
+    :alt="imgAlt"
+    class="base-img--extend"
+    :class="`base-img--${size}`"
+  />
 </template>
 
 <script>
 export default {
-  name: 'BaseImg',
+  name: 'BaseImgLazy',
   props: {
     /**
      * 画像のURL
      */
     imgUrl: {
       type: String,
-      default: '',
-      required: true,
+      required: true
     },
     /**
      * 画像が表示できない時に使用する代替テキスト
@@ -20,8 +24,7 @@ export default {
      */
     imgAlt: {
       type: String,
-      default: '',
-      required: true,
+      required: true
     },
     /**
      * 画像サイズ
@@ -32,28 +35,30 @@ export default {
       default: 'sm',
       required: true,
       validator: function (value) {
-        return ['sm', 'lg'].indexOf(value) !== -1;
-      },
-    },
-  },
+        return ['sm', 'lg', 'free'].indexOf(value) !== -1;
+      }
+    }
+  }
 };
 </script>
 
 <style scoped>
-.card-img {
-  box-sizing: border-box;
+img {
   display: block;
-  padding: 5px;
-  margin: 0 auto;
+  padding: 3px;
 }
 
-.card-img--sm {
+.base-img--sm {
   width: 50%;
   height: 50%;
 }
 
-.card-img--lg {
+.base-img--lg {
   width: 100%;
   height: 100%;
+}
+
+.base-img--free {
+  height: auto;
 }
 </style>

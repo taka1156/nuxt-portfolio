@@ -1,24 +1,24 @@
-import BaseCardImg from './BaseCardImg.vue';
+import BaseImgLazy from './BaseImgLazy.vue';
 import { dummyImg } from '@/__testdata__/testdata.js';
 
 export default {
-  title: 'Atoms/BaseCardImg',
-  component: BaseCardImg,
+  title: 'Atoms/BaseImgLazy',
+  component: BaseImgLazy,
   argTypes: {
     size: {
       control: {
         type: 'inline-radio',
-        options: ['sm', 'lg'],
-      },
-    },
-  },
+        options: ['sm', 'lg', 'free']
+      }
+    }
+  }
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { BaseCardImg },
-  template: '<base-card-img v-bind="$props" />',
+  components: { BaseImgLazy },
+  template: '<base-img-lazy v-bind="$props" />'
 });
 
 export const Default = Template.bind({});
-Default.args = dummyImg;
+Default.args = { ...dummyImg };

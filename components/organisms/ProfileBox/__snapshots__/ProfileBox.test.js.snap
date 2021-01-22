@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileBox ProfileBox初期値: profile 1`] = `
+"<div class=\\"profile-box\\">
+  <base-img-stub imgurl=\\"http://placehold.jp/150x150.png\\" imgalt=\\"プロフィール画像\\" size=\\"free\\"></base-img-stub>
+  <base-text-stub>
+    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+  </base-text-stub>
+</div>"
+`;

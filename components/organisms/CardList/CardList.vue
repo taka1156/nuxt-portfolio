@@ -6,7 +6,6 @@
         :key="index"
         :card="card"
         class="card-list__card"
-        @jump="jump"
       />
     </div>
   </div>
@@ -18,7 +17,7 @@ import CardListItem from '../../molecules/CardListItem/CardListItem';
 export default {
   name: 'CardList',
   components: {
-    'card-list-item': CardListItem,
+    'card-list-item': CardListItem
   },
   props: {
     /**
@@ -26,22 +25,9 @@ export default {
      */
     cards: {
       type: Array,
-      default: () => [],
-      required: true,
-    },
-  },
-  methods: {
-    /**
-     * 制作物関連サイトに移動
-     * (githubやwebサイトのリンク先)
-     */
-    jump(card = null) {
-      if (card == null || card.link == null) {
-        return;
-      }
-      location.assign(card.link);
-    },
-  },
+      required: true
+    }
+  }
 };
 </script>
 

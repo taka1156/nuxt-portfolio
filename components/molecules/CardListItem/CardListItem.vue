@@ -2,7 +2,7 @@
   <div>
     <article class="card-list-item">
       <figure>
-        <base-card-img
+        <base-img-lazy
           :img-url="card.img.url"
           :img-alt="`${card.title}の画像`"
           :size="`${card.link == null ? 'sm' : 'lg'}`"
@@ -13,26 +13,26 @@
           <base-text>{{ card.content2 }}</base-text>
         </figcaption>
       </figure>
-      <base-btn v-if="card.link != null" @btn-click="$emit('jump', card)">
+      <base-link v-if="card.link != null" :route-to="card.link" :is-target="true">
         {{ isGithubRepo(card) ? 'GitHub' : 'WebSite' }}
-      </base-btn>
+      </base-link>
     </article>
   </div>
 </template>
 
 <script>
-import BaseText from '../../atoms/BaseText/BaseText';
-import BaseBtn from '../../atoms/BaseBtn/BaseBtn';
 import BaseTitle from '../../atoms/BaseTitle/BaseTitle';
-import BaseCardImg from '../../atoms/BaseCardImg/BaseCardImg';
+import BaseText from '../../atoms/BaseText/BaseText';
+import BaseLink from '../../atoms/BaseLink/BaseLink';
+import BaseImgLazy from '../../atoms/BaseImgLazy/BaseImgLazy';
 
 export default {
   name: 'CardListItem',
   components: {
     'base-title': BaseTitle,
     'base-text': BaseText,
-    'base-btn': BaseBtn,
-    'base-card-img': BaseCardImg,
+    'base-link': BaseLink,
+    'base-img-lazy': BaseImgLazy
   },
   props: {
     /**
@@ -40,9 +40,8 @@ export default {
      */
     card: {
       type: Object,
-      default: () => {},
-      required: true,
-    },
+      required: true
+    }
   },
   methods: {
     isGithubRepo({ link }) {
@@ -50,8 +49,8 @@ export default {
        * githubリポジトリかどうかを判定する処理
        */
       return `${link}`.includes('github') && !`${link}`.includes('github.io');
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -78,7 +77,7 @@ figcaption {
   word-wrap: break-word;
 }
 
-::v-deep .base-btn--extend {
+::v-deep .base-link--extend {
   display: block;
   width: 75%;
   padding: 10px;
@@ -91,11 +90,16 @@ figcaption {
   outline: none;
 }
 
-::v-deep .base-btn--extend:active,
-::v-deep .base-btn--extend:hover,
-::v-deep .base-btn--extend:focus {
+::v-deep .base-link--extend:active,
+::v-deep .base-link--extend:hover,
+::v-deep .base-link--extend:focus {
   color: white;
   background-color: gray;
+}
+
+::v-deep .base-img--extend {
+  padding: 3px;
+  margin: 0 auto;
 }
 
 .card-list-item {

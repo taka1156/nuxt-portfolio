@@ -3,8 +3,12 @@
     <transition name="nav-fade">
       <div v-show="isOpen" class="nav-list">
         <ul>
-          <li v-for="(item, index) in routes" :key="`nav_${index}`">
-            <nav-item :nav-item="item" @change-state="changeState" />
+          <li
+            v-for="(item, index) in routes"
+            :key="`nav_${index}`"
+            @click="changeState"
+          >
+            <nav-list-item :nav-item="item" @change-state="changeState" />
           </li>
         </ul>
       </div>
@@ -18,7 +22,7 @@ import NavListItem from '../NavListItem/NavListItem';
 export default {
   name: 'NavList',
   components: {
-    'nav-item': NavListItem,
+    'nav-list-item': NavListItem
   },
   props: {
     /**
@@ -26,17 +30,15 @@ export default {
      */
     isOpen: {
       type: Boolean,
-      default: false,
-      required: true,
+      required: true
     },
     /**
      * ナビゲーションの項目が定義された配列
      */
     routes: {
       type: Array,
-      default: () => [],
-      required: true,
-    },
+      required: true
+    }
   },
   methods: {
     changeState() {
@@ -46,8 +48,8 @@ export default {
        * @event changeState
        */
       this.$emit('change-state', false);
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -58,14 +60,13 @@ li {
   list-style-type: none;
 }
 
-/* css rest */
-
+/* css reset */
 .nav-list {
   position: fixed;
   top: 60px;
   right: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -78,10 +79,12 @@ li {
 .nav-fade-leave-to {
   opacity: 0;
 }
+
 .nav-fade-enter-to,
 .nav-fade-leave {
   opacity: 1;
 }
+
 .nav-fade-enter-active,
 .nav-fade-leave-active {
   transition: opacity 0.6s ease;
