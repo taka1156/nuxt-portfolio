@@ -58,7 +58,6 @@ const GITHUB_CONTRIBUTION_IMG = {
 };
 
 const EXPERIENCES = {
-  title: '最近やっていること',
   values: [
     'JS(ES6)について学習。',
     'TypeScriptの学習',

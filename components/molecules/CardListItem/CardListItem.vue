@@ -9,7 +9,7 @@
         />
         <div class="card-list-item__border" />
         <figcaption class="card-list-item__caption">
-          <base-title>{{ card.title }}</base-title>
+          <h2 class="card-list-item__title">{{ card.title }}</h2>
           <base-text>{{ card.content2 }}</base-text>
         </figcaption>
       </figure>
@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import BaseTitle from '../../atoms/BaseTitle/BaseTitle';
 import BaseText from '../../atoms/BaseText/BaseText';
 import BaseLink from '../../atoms/BaseLink/BaseLink';
 import BaseImgLazy from '../../atoms/BaseImgLazy/BaseImgLazy';
@@ -29,7 +28,6 @@ import BaseImgLazy from '../../atoms/BaseImgLazy/BaseImgLazy';
 export default {
   name: 'CardListItem',
   components: {
-    'base-title': BaseTitle,
     'base-text': BaseText,
     'base-link': BaseLink,
     'base-img-lazy': BaseImgLazy
@@ -108,6 +106,12 @@ figcaption {
   margin: 0 auto;
   border: solid 0.6px rgb(211, 211, 211);
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-list-item__title {
+  font-size: 1.3em;
+  line-height: 0em;
+  text-align: center;
 }
 
 .card-list-item__border {

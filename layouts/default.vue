@@ -52,14 +52,14 @@ footer {
 }
 
 main {
-  min-height: 60vh;
+  min-height: 55vh;
   padding: 0;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
   main {
-    width: 80vw;
+    width: 90vw;
   }
 }
 </style>
