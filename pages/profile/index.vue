@@ -2,63 +2,57 @@
   <div>
     <h1>Profile</h1>
 
-    <div class="jumbotron">
-      <img
-        src="@/assets/img/prof.png"
-        alt="プロフィール画像"
-        class="profile__icon"
+    <section class="contents">
+      <h2 class="contents__heading">自己紹介</h2>
+      <profile-box :profile="profile" />
+    </section>
+
+    <section class="contents">
+      <h2 class="contents__heading">githubの活動</h2>
+      <contribution-box
+        :img-url="contributionImg.imgUrl"
+        :img-alt="contributionImg.imgAlt"
       />
+    </section>
 
-      <proflie-list :profile="experiences" />
+    <proflie-list :profile="exams" />
 
-      <proflie-list :profile="wants" />
-
-      <proflie-list :profile="tools" />
-
-      <proflie-list :profile="exams" />
-    </div>
+    <section class="contents">
+      <h2 class="contents__heading">SNSやGitHub等</h2>
+      <sns-icons :sns-icons="snsIcons" />
+    </section>
   </div>
 </template>
 
 <script>
+import ProfileBox from '@/components/organisms/ProfileBox/ProfileBox';
+import ContributionBox from '@/components/organisms/ContributionBox/ContributionBox';
 import ProfileList from '@/components/organisms/ProfileList/ProflieList';
+import SnsIcons from '@/components/organisms/SnsIcons/SnsIcons';
 import meta from 'assets/js/mixin/meta.mixin.js';
+import {
+  PROFILE,
+  GITHUB_CONTRIBUTION_IMG,
+  EXPERIENCES,
+  EXAMS,
+  SNS_ICONS
+} from '@/constants/index.js';
 
 export default {
   name: 'Profile',
   components: {
+    'profile-box': ProfileBox,
+    'contribution-box': ContributionBox,
     'proflie-list': ProfileList,
+    'sns-icons': SnsIcons
   },
   mixins: [meta],
-  data() {
-    return {
-      experiences: {
-        title: '最近やっていること',
-        values: ['JS(ES6)について学習。', 'Firebaseを利用した開発', 'Laravelの学習'],
-      },
-      wants: {
-        title: 'これからやりたいこと',
-        values: [
-          'TypeScriptの学習',
-          'Laravel+Vueでサービスを作る',
-          'AWSなどインフラ周りの学習',
-          'CSS/SCSSの学習',
-        ],
-      },
-      tools: {
-        title: 'よく使うツール',
-        values: ['Homebrew', 'Git', 'VScode', 'Docker', 'LaraDock', 'phpMyAdmin'],
-      },
-      exams: {
-        title: '資格',
-        values: [
-          'ITパスポート',
-          '情報セキュリティマネジメント',
-          '基本情報技術者',
-          '応用情報技術者',
-        ],
-      },
-    };
+  computed: {
+    profile: () => PROFILE,
+    contributionImg: () => GITHUB_CONTRIBUTION_IMG,
+    experiences: () => EXPERIENCES,
+    exams: () => EXAMS,
+    snsIcons: () => SNS_ICONS
   },
   head() {
     // metaタグの設定
@@ -74,58 +68,45 @@ export default {
         {
           hid: 'og:type',
           property: 'og:type',
-          content: this.meta.type,
+          content: this.meta.type
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: this.meta.url,
+          content: this.meta.url
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.meta.title,
+          content: this.meta.title
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.meta.description,
+          content: this.meta.description
         },
         {
           hid: 'og:image',
           property: 'og:image',
-          content: this.meta.image,
+          content: this.meta.image
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.meta.description,
-        },
-      ],
+          content: this.meta.description
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
 <style scoped>
-.jumbotron {
-  width: 90%;
-  margin: 0 auto 10px;
-  background-color: white;
-  border: 3px solid #d3d3d3;
-  border-radius: 5px;
-  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+.contents {
+  margin: 1.25em auto 2em;
 }
 
-.profile__icon {
-  width: 20%;
-  height: 20%;
-  margin: 1.25em auto 1.25em;
-}
-
-@media (min-width: 790px) {
-  .jumbotron {
-    width: 80%;
-  }
+.contents__heading {
+  font-size: 1.25em;
 }
 </style>

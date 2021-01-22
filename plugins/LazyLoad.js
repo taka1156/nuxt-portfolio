@@ -6,7 +6,7 @@ Vue.use(VueLazyload, {
   observer: true,
   observerOptions: {
     rootMargin: '220px',
-    threshold: 1,
+    threshold: 1
   },
   filter: {
     webp(listener, options) {
@@ -14,6 +14,6 @@ Vue.use(VueLazyload, {
         return;
       }
       listener.src += '?fm=webp';
-    },
-  },
+    }
+  }
 });

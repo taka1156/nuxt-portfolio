@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TheNavigation スナップショット 1`] = `
+exports[`TheNavigation 値がDOMに反映されているか 1`] = `
 "<div>
   <div class=\\"the-copyright\\">
     <p class=\\"base-text--extend\\">
       © 2019 taka1156 <br>使用素材、プライバシーポリシー等は
-      <a href=\\"https://policy.taka1156.site/\\" target=\\"_blank\\">コチラ</a></p>
+      <a href=\\"http://placehold.jp\\" tag=\\"a\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"base-link--extend\\">コチラ</a></p>
   </div>
 </div>"
 `;

@@ -1,13 +1,13 @@
-import { shallowMount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import BaseText from './BaseText.vue';
 
 describe('BaseText', () => {
   const dummyText = 'ダミーテキスト';
   const baseText = () =>
-    shallowMount(BaseText, {
+    mount(BaseText, {
       slots: {
-        default: dummyText,
-      },
+        default: dummyText
+      }
     });
 
   it('値がDOMに反映されているか', () => {

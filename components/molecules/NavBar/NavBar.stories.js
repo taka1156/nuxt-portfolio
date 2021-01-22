@@ -7,16 +7,16 @@ export default {
   argTypes: {
     isOpen: {
       control: {
-        type: 'boolean',
-      },
-    },
-  },
+        type: 'boolean'
+      }
+    }
+  }
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { NavBar },
-  template: '<nav-bar v-bind="$props" />',
+  template: '<nav-bar v-bind="$props" />'
 });
 
 export const Default = Template.bind({});

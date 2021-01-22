@@ -2,24 +2,24 @@
   <div>
     <div class="nav-bar">
       <div class="nav-bar__box">
-        <base-logo>{{ logoText }}</base-logo>
-        <nav-icon :is-open="isOpen" @btn-click="changeState">
+        <base-link :route-to="`/`">{{ logoText }}</base-link>
+        <base-nav-icon :is-open="isOpen" @btn-click="changeState">
           {{ isOpen ? 'CLOSE' : 'NAVI' }}
-        </nav-icon>
+        </base-nav-icon>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import BaseLogo from '../../atoms/BaseLogo/BaseLogo';
-import NavIcon from '../../atoms/BaseNavIcon/BaseNavIcon';
+import BaseLink from '../../atoms/BaseLink/BaseLink';
+import BaseNavIcon from '../../atoms/BaseNavIcon/BaseNavIcon';
 
 export default {
   name: 'NavBar',
   components: {
-    'nav-icon': NavIcon,
-    'base-logo': BaseLogo,
+    'base-nav-icon': BaseNavIcon,
+    'base-link': BaseLink
   },
   props: {
     /**
@@ -27,17 +27,15 @@ export default {
      */
     logoText: {
       type: String,
-      default: 'Please Setting Logo',
-      required: true,
+      required: true
     },
     /**
      * ナビゲーションの開閉状態
      */
     isOpen: {
       type: Boolean,
-      default: false,
-      required: true,
-    },
+      required: true
+    }
   },
   methods: {
     changeState() {
@@ -47,12 +45,20 @@ export default {
        * @event changeState
        */
       this.$emit('change-state', !this.isOpen);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style scoped>
+::v-deep .base-link--extend {
+  display: block;
+  height: 30px;
+  margin-top: 10px;
+  font-size: 1.3em;
+  color: white;
+}
+
 .nav-bar {
   position: fixed;
   top: 0;
@@ -67,7 +73,7 @@ export default {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 90%;
+  height: 85%;
   margin: 0.5em auto;
 }
 </style>
