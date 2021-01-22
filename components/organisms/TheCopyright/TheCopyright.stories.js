@@ -1,5 +1,5 @@
 import TheCopyright from './TheCopyright.vue';
-import { dummyCopyrightUrl } from '__testdata__/testdata.js';
+import { dummyCopyrightUrl } from '@/__testdata__/testdata.js';
 
 export default {
   title: 'Organisms/TheCopyright',

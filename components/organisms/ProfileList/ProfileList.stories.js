@@ -1,5 +1,5 @@
 import ProfileList from './ProflieList.vue';
-import { dummyProfile } from '@/@/__testdata__/testdata.js';
+import { dummyExams } from '@/__testdata__/testdata.js';
 
 export default {
   title: 'Organisms/ProfileList',
@@ -13,4 +13,4 @@ const Template = (args, { argTypes }) => ({
 });
 
 export const Default = Template.bind({});
-Default.args = { profile: dummyProfile };
+Default.args = { profile: dummyExams };

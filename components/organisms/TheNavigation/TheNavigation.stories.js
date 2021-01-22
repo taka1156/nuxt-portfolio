@@ -1,5 +1,5 @@
 import TheNavigation from './TheNavigation.vue';
-import { dummyLogo, dummyRoutes } from '@/@/__testdata__/testdata.js';
+import { dummyLogo, dummyRoutes } from '@/__testdata__/testdata.js';
 
 export default {
   title: 'Organisms/TheNavigation',
