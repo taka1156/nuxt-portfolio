@@ -18,8 +18,8 @@ export default {
        * @type {event}
        */
       this.$emit('btn-click');
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -30,6 +30,4 @@ button {
   margin: 0;
   cursor: pointer;
 }
-
-/* css reset */
 </style>

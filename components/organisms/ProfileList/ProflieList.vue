@@ -1,25 +1,20 @@
 <template>
   <div>
-    <section class="profile-list">
-      <base-title>{{ profile.title }}</base-title>
-      <ul class="profile-list__list">
-        <li v-for="(item, index) in profile.values" :key="index">
-          <profile-list-item>{{ item }}</profile-list-item>
-        </li>
-      </ul>
-    </section>
+    <ul class="profile-list__list">
+      <li v-for="(item, index) in profile.values" :key="index">
+        <profile-list-item>{{ item }}</profile-list-item>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import BaseTitle from '../../atoms/BaseTitle/BaseTitle';
 import ProfileListItem from '../../molecules/ProfileListItem/ProfileListItem';
 
 export default {
   name: 'ProfileList',
   components: {
-    'base-title': BaseTitle,
-    'profile-list-item': ProfileListItem,
+    'profile-list-item': ProfileListItem
   },
   props: {
     /**
@@ -27,10 +22,9 @@ export default {
      */
     profile: {
       type: Object,
-      default: () => {},
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 };
 </script>
 
@@ -45,17 +39,11 @@ ul {
 /* css rest */
 
 .profile-list {
-  margin: 0.5em auto 4em;
+  margin: 0.5em auto;
 }
 
 .profile-list__list {
-  width: 80%;
+  width: 90%;
   margin: 1.25em auto 1.25em;
-}
-
-@media (min-width: 790px) {
-  .profile-list {
-    width: 60%;
-  }
 }
 </style>

@@ -15,8 +15,8 @@ import BaseText from '../../atoms/BaseText/BaseText';
 export default {
   name: 'ProfoleListItem',
   components: {
-    'base-text': BaseText,
-  },
+    'base-text': BaseText
+  }
 };
 </script>
 

@@ -8,16 +8,16 @@ export default {
     size: {
       control: {
         type: 'inline-radio',
-        options: ['sm', 'lg'],
-      },
-    },
-  },
+        options: ['sm', 'lg', 'free']
+      }
+    }
+  }
 };
 
 const Template1 = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { BaseImg },
-  template: '<base-img v-bind="$props" />',
+  template: '<base-img v-bind="$props" />'
 });
 
 export const Default = Template1.bind({});

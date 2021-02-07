@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contributionBox ContributionBox初期値: imgUrl, imgAlt 1`] = `
+"<div class=\\"contribution-box\\">
+  <base-img-stub imgurl=\\"http://placehold.jp/150x150.png\\" imgalt=\\"ダミーの画像\\" size=\\"free\\"></base-img-stub>
+</div>"
+`;

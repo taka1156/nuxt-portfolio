@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SnsIcons SnsIcons初期値: snsIcons 1`] = `
+"<ul class=\\"sns-icons\\">
+  <li>
+    <sns-icon-stub sns=\\"[object Object]\\"></sns-icon-stub>
+  </li>
+  <li>
+    <sns-icon-stub sns=\\"[object Object]\\"></sns-icon-stub>
+  </li>
+  <li>
+    <sns-icon-stub sns=\\"[object Object]\\"></sns-icon-stub>
+  </li>
+  <li>
+    <sns-icon-stub sns=\\"[object Object]\\"></sns-icon-stub>
+  </li>
+</ul>"
+`;

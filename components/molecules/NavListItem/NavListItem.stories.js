@@ -6,15 +6,15 @@ export default {
   component: NavListItem,
   parameters: {
     backgrounds: {
-      default: 'dark',
-    },
-  },
+      default: 'dark'
+    }
+  }
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { NavListItem },
-  template: '<nav-list-item v-bind="$props" />',
+  template: '<nav-list-item v-bind="$props" />'
 });
 
 export const Default = Template.bind({});

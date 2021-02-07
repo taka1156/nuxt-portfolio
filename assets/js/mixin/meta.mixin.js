@@ -8,8 +8,8 @@ export default {
         description: '',
         type: '',
         url: '',
-        image: '',
-      },
+        image: ''
+      }
     };
-  },
+  }
 };

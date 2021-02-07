@@ -3,9 +3,8 @@
 exports[`NavBar ナビゲーションバーを閉じる 1`] = `
 "<div>
   <div class=\\"nav-bar\\">
-    <div class=\\"nav-bar__box\\">
-      <div><a href=\\"/\\" class=\\"base-logo\\">ダミーロゴ</a></div>
-      <div class=\\"nav-icon\\"><button><span class=\\"nav-icon__border nav-icon__top nav-icon__top--close\\"></span> <span class=\\"nav-icon__border nav-icon__middle\\"></span> <span class=\\"nav-icon__border nav-icon__bottom nav-icon__bottom--close\\"></span> <span class=\\"nav-icon__text\\">
+    <div class=\\"nav-bar__box\\"><a class=\\"base-link--extend\\">ダミーロゴ</a>
+      <div class=\\"base-nav-icon base-nav-icon--extend\\"><button><span class=\\"base-nav-icon__border base-nav-icon__top base-nav-icon__top--close\\"></span> <span class=\\"base-nav-icon__border base-nav-icon__middle\\"></span> <span class=\\"base-nav-icon__border base-nav-icon__bottom base-nav-icon__bottom--close\\"></span> <span class=\\"base-nav-icon__text\\">
         NAVI
       </span></button></div>
     </div>
@@ -16,9 +15,8 @@ exports[`NavBar ナビゲーションバーを閉じる 1`] = `
 exports[`NavBar ナビゲーションバーを開く 1`] = `
 "<div>
   <div class=\\"nav-bar\\">
-    <div class=\\"nav-bar__box\\">
-      <div><a href=\\"/\\" class=\\"base-logo\\">ダミーロゴ</a></div>
-      <div class=\\"nav-icon\\"><button><span class=\\"nav-icon__border nav-icon__top nav-icon__top--open\\"></span> <span class=\\"nav-icon__border nav-icon__middle nav-icon__middle--fade\\"></span> <span class=\\"nav-icon__border nav-icon__bottom nav-icon__bottom--open\\"></span> <span class=\\"nav-icon__text\\">
+    <div class=\\"nav-bar__box\\"><a class=\\"base-link--extend\\">ダミーロゴ</a>
+      <div class=\\"base-nav-icon base-nav-icon--extend\\"><button><span class=\\"base-nav-icon__border base-nav-icon__top base-nav-icon__top--open\\"></span> <span class=\\"base-nav-icon__border base-nav-icon__middle base-nav-icon__middle--fade\\"></span> <span class=\\"base-nav-icon__border base-nav-icon__bottom base-nav-icon__bottom--open\\"></span> <span class=\\"base-nav-icon__text\\">
         CLOSE
       </span></button></div>
     </div>

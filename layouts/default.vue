@@ -8,7 +8,7 @@
         <nuxt />
       </main>
       <footer>
-        <the-copyright />
+        <the-copyright :copyright-url="copyrightUrl" />
       </footer>
     </div>
   </div>
@@ -17,39 +17,18 @@
 <script>
 import TheNavigation from '@/components/organisms/TheNavigation/TheNavigation';
 import TheCopyright from '@/components/organisms/TheCopyright/TheCopyright.vue';
+import { LOGO_TEXT, ROUTES, COPYRIGHT_URL } from '@/constants/index.js';
 
 export default {
   components: {
     'the-navigation': TheNavigation,
-    'the-copyright': TheCopyright,
+    'the-copyright': TheCopyright
   },
-  data() {
-    return {
-      logoText: "Taka'sPortfolioSite",
-      routes: [
-        {
-          name: 'Top',
-          to: '/',
-          img: require('assets/img/ui/home.png'),
-        },
-        {
-          name: 'Profile',
-          to: '/profile/',
-          img: require('assets/img/ui/profile.png'),
-        },
-        {
-          name: 'Skill',
-          to: '/skill/',
-          img: require('assets/img/ui/skill.png'),
-        },
-        {
-          name: 'Portfolio',
-          to: '/portfolio/',
-          img: require('assets/img/ui/portfolio.png'),
-        },
-      ],
-    };
-  },
+  computed: {
+    logoText: () => LOGO_TEXT,
+    routes: () => ROUTES,
+    copyrightUrl: () => COPYRIGHT_URL
+  }
 };
 </script>
 
@@ -73,8 +52,14 @@ footer {
 }
 
 main {
-  min-height: 60vh;
+  min-height: 55vh;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    width: 90vw;
+  }
 }
 </style>
