@@ -52,13 +52,6 @@ export default {
     'sns-icons': SnsIcons
   },
   mixins: [meta],
-  computed: {
-    profile: () => PROFILE,
-    contributionImg: () => GITHUB_CONTRIBUTION_IMG,
-    experiences: () => EXPERIENCES,
-    exams: () => EXAMS,
-    snsIcons: () => SNS_ICONS
-  },
   head() {
     // metaタグの設定
     this.meta.title = 'Profile';
@@ -102,6 +95,13 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    profile: () => PROFILE,
+    contributionImg: () => GITHUB_CONTRIBUTION_IMG,
+    experiences: () => EXPERIENCES,
+    exams: () => EXAMS,
+    snsIcons: () => SNS_ICONS
   }
 };
 </script>

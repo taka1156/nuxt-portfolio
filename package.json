@@ -11,8 +11,9 @@
     "lint-style": "stylelint \"**/*.vue\" \"**/*.css\"",
     "lint-js:fix": "eslint --ext .js,.vue . --fix",
     "lint-style:fix": "stylelint \"**/*.vue\" \"**/*.css\" --fix",
+    "format": "yarn prettier --write \"**/*.{js, vue}\"",
     "lint:check": "yarn lint-js & yarn lint-style",
-    "lint:fix": "yarn lint-js:fix && yarn lint-style:fix",
+    "lint:fix": "yarn lint-js:fix && yarn lint-style:fix && yarn format",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
@@ -52,7 +53,6 @@
     "eslint": "7.21.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-loader": "4.0.2",
-    "eslint-plugin-prettier": "3.3.1",
     "eslint-plugin-vue": "7.6.0",
     "firebase-tools": "9.5.0",
     "jest": "26.6.3",
@@ -63,7 +63,6 @@
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-recess-order": "2.3.0",
     "stylelint-config-standard": "20.0.0",
-    "stylelint-prettier": "1.2.0",
     "vue-jest": "3.0.7"
   }
 }
