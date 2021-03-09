@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-prettier/recommended", "stylelint-config-recess-order"],
+  "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
   "rules": {
     "selector-pseudo-element-no-unknown": [
       true,
