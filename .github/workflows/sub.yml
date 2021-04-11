@@ -37,7 +37,12 @@ jobs:
 
     - name: test
       run: yarn test
-    
+
+    # Storybookをビルド
+    - name: build Storybook
+      run: yarn build-storybook
+
+    # Nuxtをビルド
     - name: create .env file
       run: echo "${{ secrets.ENV_FIREBASE }}" > .env
 
