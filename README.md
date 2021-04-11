@@ -4,7 +4,7 @@
 
 taka1156のポートフォリオサイトです(https://www.taka1156.site)
 
-Storybookはこちら(https://portfolio-storybook.netlify.app)
+Storybookはこちら(https://taka1156.github.io/nuxt-portfolio/index.html)
 
 # 使用したもの
 - Nuxt.js
