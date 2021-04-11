@@ -38,6 +38,17 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
 
+    # Storybookをgithub pagesにホスティング
+    - name: build Storybook
+      run: yarn build-storybook
+
+    - name: deploy to Github Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./storybook-static
+
+    # Nuxtをfirebase hostingにホスティング
     - name: create .env file
       run: echo "${{ secrets.ENV_FIREBASE }}" > .env
 
