@@ -69,7 +69,7 @@ const dummySnsIcons = dummyFactory(MAX_ICONS_DATA, i => dummySnsIconTemplate(i))
 
 const dummyExams = {
   title: 'ダミー',
-  values: dummyFactory(MAX_PROFILE_DATA, () => dummyExamsTemplate())
+  values: dummyFactory(MAX_PROFILE_DATA, i => dummyExamsTemplate(i))
 };
 
 const dummyProfile = {
