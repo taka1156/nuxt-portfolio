@@ -2,8 +2,8 @@
   <div>
     <div v-if="cards.length !== 0" class="card-list">
       <card-list-item
-        v-for="(card, index) in cards"
-        :key="index"
+        v-for="card in cards"
+        :key="card.name"
         :card="card"
         class="card-list__card"
       />
@@ -17,7 +17,7 @@ import CardListItem from '../../molecules/CardListItem/CardListItem';
 export default {
   name: 'CardList',
   components: {
-    'card-list-item': CardListItem
+    CardListItem
   },
   props: {
     /**

@@ -18,8 +18,8 @@ import BaseNavIcon from '../../atoms/BaseNavIcon/BaseNavIcon';
 export default {
   name: 'NavBar',
   components: {
-    'base-nav-icon': BaseNavIcon,
-    'base-link': BaseLink
+    BaseNavIcon,
+    BaseLink
   },
   props: {
     /**

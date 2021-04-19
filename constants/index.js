@@ -57,15 +57,6 @@ const GITHUB_CONTRIBUTION_IMG = {
   imgAlt: "taka1156's Github chart"
 };
 
-const EXPERIENCES = {
-  values: [
-    'JS(ES6)について学習。',
-    'TypeScriptの学習',
-    'Laravelの学習',
-    'CSS/SASSの学習'
-  ]
-};
-
 const EXAMS = {
   title: '資格',
   values: [
@@ -82,7 +73,6 @@ export {
   COPYRIGHT_URL,
   SNS_ICONS,
   PROFILE,
-  EXPERIENCES,
   EXAMS,
   GITHUB_CONTRIBUTION_IMG
 };

@@ -14,8 +14,8 @@ const CONTENT_MAX = 20;
 export default {
   name: 'Portfolio',
   components: {
-    'base-heading1': BaseHeading1,
-    'card-list': CardList
+    BaseHeading1,
+    CardList
   },
   mixins: [meta],
   async asyncData({ $axios, payload }) {

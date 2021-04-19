@@ -16,18 +16,20 @@
 
 <script>
 import TheNavigation from '@/components/organisms/TheNavigation/TheNavigation';
-import TheCopyright from '@/components/organisms/TheCopyright/TheCopyright.vue';
+import TheCopyright from '@/components/organisms/TheCopyright/TheCopyright';
 import { LOGO_TEXT, ROUTES, COPYRIGHT_URL } from '@/constants/index.js';
 
 export default {
   components: {
-    'the-navigation': TheNavigation,
-    'the-copyright': TheCopyright
+    TheNavigation,
+    TheCopyright
   },
-  computed: {
-    logoText: () => LOGO_TEXT,
-    routes: () => ROUTES,
-    copyrightUrl: () => COPYRIGHT_URL
+  data() {
+    return {
+      logoText: LOGO_TEXT,
+      routes: ROUTES,
+      copyrightUrl: COPYRIGHT_URL
+    };
   }
 };
 </script>

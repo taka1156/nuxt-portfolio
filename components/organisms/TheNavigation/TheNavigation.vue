@@ -14,8 +14,8 @@ import NavList from '../../molecules/NavList/NavList';
 export default {
   name: 'TheNavigation',
   components: {
-    'nav-bar': NavBar,
-    'nav-list': NavList
+    NavBar,
+    NavList
   },
   props: {
     /**

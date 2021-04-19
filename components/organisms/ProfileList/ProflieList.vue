@@ -1,7 +1,7 @@
 <template>
   <div>
-    <ul class="profile-list__list">
-      <li v-for="(item, index) in profile.values" :key="index">
+    <ul class="profile-list">
+      <li v-for="item in profile.values" :key="item">
         <profile-list-item>{{ item }}</profile-list-item>
       </li>
     </ul>
@@ -14,7 +14,7 @@ import ProfileListItem from '../../molecules/ProfileListItem/ProfileListItem';
 export default {
   name: 'ProfileList',
   components: {
-    'profile-list-item': ProfileListItem
+    ProfileListItem
   },
   props: {
     /**
@@ -39,10 +39,6 @@ ul {
 /* css rest */
 
 .profile-list {
-  margin: 0.5em auto;
-}
-
-.profile-list__list {
   width: 90%;
   margin: 1.25em auto 1.25em;
 }

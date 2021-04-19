@@ -16,14 +16,14 @@
 <script>
 import BaseImg from '../../atoms/BaseImg/BaseImg';
 import BaseText from '../../atoms/BaseText/BaseText';
-import BaseLink from '../../atoms/BaseLink/BaseLink.vue';
+import BaseLink from '../../atoms/BaseLink/BaseLink';
 
 export default {
   name: 'NavListItem',
   components: {
-    'base-img': BaseImg,
-    'base-text': BaseText,
-    'base-link': BaseLink
+    BaseImg,
+    BaseText,
+    BaseLink
   },
   props: {
     /**
