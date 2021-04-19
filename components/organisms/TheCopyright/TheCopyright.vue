@@ -16,8 +16,8 @@ import BaseText from '../../atoms/BaseText/BaseText';
 export default {
   name: 'TheCopyright',
   components: {
-    'base-link': BaseLink,
-    'base-text': BaseText
+    BaseLink,
+    BaseText
   },
   props: {
     /**

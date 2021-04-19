@@ -1,6 +1,6 @@
 <template>
   <ul class="sns-icons">
-    <li v-for="(sns, index) in snsIcons" :key="`sns_${index}`">
+    <li v-for="sns in snsIcons" :key="sns.name">
       <sns-icon :sns="sns" />
     </li>
   </ul>
@@ -12,7 +12,7 @@ import SnsIcon from '../../molecules/SnsIcon/SnsIcon';
 export default {
   name: 'SnsIcons',
   components: {
-    'sns-icon': SnsIcon
+    SnsIcon
   },
   props: {
     snsIcons: {

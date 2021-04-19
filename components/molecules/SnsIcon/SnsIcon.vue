@@ -14,8 +14,8 @@ import BaseImg from '@/components/atoms/BaseImg/BaseImg';
 export default {
   name: 'SnsIcon',
   components: {
-    'base-link': BaseLink,
-    'base-img': BaseImg
+    BaseLink,
+    BaseImg
   },
   props: {
     sns: {

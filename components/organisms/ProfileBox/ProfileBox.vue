@@ -13,8 +13,8 @@ import BaseText from '../../atoms/BaseText/BaseText';
 
 export default {
   components: {
-    'base-img': BaseImg,
-    'base-text': BaseText
+    BaseImg,
+    BaseText
   },
   props: {
     profile: {

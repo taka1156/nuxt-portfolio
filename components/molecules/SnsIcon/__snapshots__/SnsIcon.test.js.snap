@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SnsIcon 値がDOMに反映されているか 1`] = `
-"<div class=\\"sns-icon\\"><a href=\\"http://placehold.jp\\" tag=\\"a\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"base-link--extend\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミーアイコンアイコン\\" class=\\"base-img--extend base-img--lg\\">
-    ダミーアイコン
+"<div class=\\"sns-icon\\"><a href=\\"http://placehold.jp\\" tag=\\"a\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"base-link--extend\\"><img src=\\"http://placehold.jp/150x150.png\\" alt=\\"ダミー1アイコン\\" class=\\"base-img--extend base-img--lg\\">
+    ダミー1
   </a></div>"
 `;

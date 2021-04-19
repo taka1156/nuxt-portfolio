@@ -23,52 +23,52 @@ const dummyFactory = (num, fn) => {
 };
 
 // template
-const dummyNavTemplate = () => ({
-  name: 'ダミーナビゲーション',
+const dummyNavTemplate = i => ({
+  name: `ダミー${i}`,
   to: '/test1',
   img: dummyImgUrl
 });
 
-const dummyCardTemplate = () => ({
-  title: 'ダミーカード',
+const dummyCardTemplate = i => ({
+  title: `ダミー${i}`,
   img: { url: dummyImgUrl },
   content2:
     'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい'
 });
 
 const dummyCardLinkTemplate = i => ({
-  title: 'ダミーカード',
+  title: `ダミー${i}`,
   img: { url: dummyImgUrl },
   content2:
     'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れてい',
   link: i % 2 === 0 ? GITHUB_URL : WEBSITE_URL
 });
 
-const dummyExamsTemplate = () => {
-  return 'ダミープロフ';
+const dummyExamsTemplate = i => {
+  return `ダミー${i}`;
 };
 
-const dummySnsIconTemplate = () => ({
-  name: 'ダミーアイコン',
+const dummySnsIconTemplate = i => ({
+  name: `ダミー${i}`,
   img: dummyImgUrl,
   link: dummyUrl
 });
 
 const dummyImg = {
   imgUrl: dummyImgUrl,
-  imgAlt: 'ダミーの画像'
+  imgAlt: 'ダミーイメージ'
 };
 
-const dummyRoutes = dummyFactory(MAX_NAV_DATA, () => dummyNavTemplate());
+const dummyRoutes = dummyFactory(MAX_NAV_DATA, i => dummyNavTemplate(i));
 
-const dummyCards = dummyFactory(MAX_CARD_DATA, () => dummyCardTemplate());
+const dummyCards = dummyFactory(MAX_CARD_DATA, i => dummyCardTemplate(i));
 
 const dummyCardsLink = dummyFactory(MAX_CARD_DATA, i => dummyCardLinkTemplate(i));
 
-const dummySnsIcons = dummyFactory(MAX_ICONS_DATA, () => dummySnsIconTemplate());
+const dummySnsIcons = dummyFactory(MAX_ICONS_DATA, i => dummySnsIconTemplate(i));
 
 const dummyExams = {
-  title: 'ダミータイトル',
+  title: 'ダミー',
   values: dummyFactory(MAX_PROFILE_DATA, () => dummyExamsTemplate())
 };
 
@@ -78,7 +78,7 @@ const dummyProfile = {
     'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。'
 };
 
-const dummyLogo = 'ダミーロゴ';
+const dummyLogo = 'ダミー';
 
 export {
   dummyOutsideLink,
