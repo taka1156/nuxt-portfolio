@@ -7,15 +7,15 @@
 
 <script>
 import BaseHeading1 from '@/components/atoms/BaseHeading1/BaseHeading1';
-import CardList from '@/components/organisms/CardList/CardList.vue';
+import CardList from '@/components/organisms/CardList/CardList';
 import meta from 'assets/js/mixin/meta.mixin.js';
 const CONTENT_MAX = 20;
 
 export default {
   name: 'Skill',
   components: {
-    'base-heading1': BaseHeading1,
-    'card-list': CardList
+    BaseHeading1,
+    CardList
   },
   mixins: [meta],
   async asyncData({ $axios, payload }) {

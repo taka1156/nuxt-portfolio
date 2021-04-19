@@ -10,7 +10,7 @@ import BaseImg from '../../atoms/BaseImg/BaseImg';
 export default {
   name: 'ContributionBox',
   components: {
-    'base-img': BaseImg
+    BaseImg
   },
   props: {
     /**

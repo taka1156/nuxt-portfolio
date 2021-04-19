@@ -28,9 +28,9 @@ import BaseImgLazy from '../../atoms/BaseImgLazy/BaseImgLazy';
 export default {
   name: 'CardListItem',
   components: {
-    'base-text': BaseText,
-    'base-link': BaseLink,
-    'base-img-lazy': BaseImgLazy
+    BaseText,
+    BaseLink,
+    BaseImgLazy
   },
   props: {
     /**

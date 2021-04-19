@@ -13,7 +13,7 @@ import meta from 'assets/js/mixin/meta.mixin.js';
 export default {
   name: 'Top',
   components: {
-    'base-heading1': BaseHeading1
+    BaseHeading1
   },
   mixins: [meta],
   head() {

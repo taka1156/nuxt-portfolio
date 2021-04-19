@@ -17,7 +17,7 @@
 
     <section class="contents">
       <h2 class="contents__heading">取得した資格</h2>
-      <proflie-list :profile="exams" />
+      <profile-list :profile="exams" />
     </section>
 
     <section class="contents">
@@ -37,7 +37,6 @@ import meta from 'assets/js/mixin/meta.mixin.js';
 import {
   PROFILE,
   GITHUB_CONTRIBUTION_IMG,
-  EXPERIENCES,
   EXAMS,
   SNS_ICONS
 } from '@/constants/index.js';
@@ -45,13 +44,21 @@ import {
 export default {
   name: 'Profile',
   components: {
-    'base-heading1': BaseHeading1,
-    'profile-box': ProfileBox,
-    'contribution-box': ContributionBox,
-    'proflie-list': ProfileList,
-    'sns-icons': SnsIcons
+    BaseHeading1,
+    ProfileBox,
+    ContributionBox,
+    ProfileList,
+    SnsIcons
   },
   mixins: [meta],
+  data() {
+    return {
+      profile: PROFILE,
+      contributionImg: GITHUB_CONTRIBUTION_IMG,
+      exams: EXAMS,
+      snsIcons: SNS_ICONS
+    };
+  },
   head() {
     // metaタグの設定
     this.meta.title = 'Profile';
@@ -95,13 +102,6 @@ export default {
         }
       ]
     };
-  },
-  computed: {
-    profile: () => PROFILE,
-    contributionImg: () => GITHUB_CONTRIBUTION_IMG,
-    experiences: () => EXPERIENCES,
-    exams: () => EXAMS,
-    snsIcons: () => SNS_ICONS
   }
 };
 </script>
