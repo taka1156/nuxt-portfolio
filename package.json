@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.14.8",
-    "@babel/preset-env": "7.14.8",
+    "@babel/preset-env": "7.14.9",
     "@storybook/addon-actions": "6.3.6",
     "@storybook/addon-backgrounds": "6.3.6",
     "@storybook/addon-essentials": "6.3.6",
