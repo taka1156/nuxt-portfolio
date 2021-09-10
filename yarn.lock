@@ -8721,10 +8721,10 @@ find-up@^5.0.0:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
 
-firebase-tools@9.17.0:
-  version "9.17.0"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-9.17.0.tgz#34d924a81aecc7c59eb4193a774d8408f571d02a"
-  integrity sha512-+srVeGz6w3ouR567ELHe33Nm0nwhhVvu5IHuQOaH0qQvDzX8LgBGqCpatqgYToUmPgDMGG34f1d+aa8vQ0pEBw==
+firebase-tools@9.18.0:
+  version "9.18.0"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-9.18.0.tgz#70e07132f3c10edfd8b73005a4b608294ca42a1b"
+  integrity sha512-yth3C6ZdzkXbQVKgmrIYn/NBvkCnstEfsTsqvLUL+Mo0s5Cq+JR8A8DKLJHyWBrWjKkT5R9VfefnkhHCUrjRNw==
   dependencies:
     "@google-cloud/pubsub" "^2.7.0"
     "@types/archiver" "^5.1.0"
@@ -14637,10 +14637,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prettier@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"
-  integrity sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==
+prettier@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.0.tgz#85bdfe0f70c3e777cf13a4ffff39713ca6f64cba"
+  integrity sha512-DsEPLY1dE5HF3BxCRBmD4uYZ+5DCbvatnolqTqcxEgKVZnL2kUfyu7b8pPQ5+hTBkdhU9SLUmK0/pHb07RE4WQ==
 
 prettier@^1.18.2:
   version "1.19.1"
